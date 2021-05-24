@@ -1,0 +1,252 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/cuboid.hh
+iostream
+-
+fstream
+-
+cmath
+-
+iomanip
+-
+vector3D.hh
+../inc/vector3D.hh
+matrix3x3.hh
+../inc/matrix3x3.hh
+matrix.hh
+../inc/matrix.hh
+lacze_do_gnuplota.hh
+../inc/lacze_do_gnuplota.hh
+
+../inc/lacze_do_gnuplota.hh
+string
+-
+list
+-
+vector
+-
+
+../inc/matrix.hh
+size.hh
+../inc/size.hh
+vector.hh
+../inc/vector.hh
+iostream
+-
+cstdlib
+-
+cmath
+-
+
+../inc/matrix2x2.hh
+matrix.hh
+../inc/matrix.hh
+
+../inc/matrix3x3.hh
+matrix.hh
+../inc/matrix.hh
+
+../inc/matrix4x4.hh
+matrix.hh
+../inc/matrix.hh
+vector3D.hh
+../inc/vector3D.hh
+
+../inc/scene.hh
+iostream
+-
+fstream
+-
+cmath
+-
+iomanip
+-
+filesystem
+-
+vector
+-
+vector.hh
+../inc/vector.hh
+matrix.hh
+../inc/matrix.hh
+cuboid.hh
+../inc/cuboid.hh
+lacze_do_gnuplota.hh
+../inc/lacze_do_gnuplota.hh
+
+../inc/size.hh
+
+../inc/vector.hh
+size.hh
+../inc/size.hh
+iostream
+-
+iomanip
+-
+fstream
+-
+stdexcept
+-
+cmath
+-
+
+../inc/vector2D.hh
+vector.hh
+../inc/vector.hh
+
+../inc/vector3D.hh
+vector.hh
+../inc/vector.hh
+
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
+signal.h
+-
+iosfwd
+-
+cstddef
+-
+ostream
+-
+ciso646
+-
+type_traits
+-
+doctest_fwd.h
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest_fwd.h
+ctime
+-
+cmath
+-
+climits
+-
+math.h
+-
+new
+-
+cstdio
+-
+cstdlib
+-
+cstring
+-
+limits
+-
+utility
+-
+fstream
+-
+sstream
+-
+iostream
+-
+algorithm
+-
+iomanip
+-
+vector
+-
+atomic
+-
+mutex
+-
+set
+-
+map
+-
+exception
+-
+stdexcept
+-
+csignal
+-
+cfloat
+-
+cctype
+-
+cstdint
+-
+sys/types.h
+-
+unistd.h
+-
+sys/sysctl.h
+-
+AfxWin.h
+-
+windows.h
+-
+io.h
+-
+sys/time.h
+-
+unistd.h
+-
+
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/main.cpp
+../tests/doctest/doctest.h
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
+
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/test_cuboid.cpp
+../tests/doctest/doctest.h
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
+cuboid.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/cuboid.hh
+
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/test_matrix2x2.cpp
+../tests/doctest/doctest.h
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
+matrix.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/matrix.hh
+matrix2x2.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/matrix2x2.hh
+vector2D.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/vector2D.hh
+
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/test_matrix3x3.cpp
+../tests/doctest/doctest.h
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
+matrix.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/matrix.hh
+matrix3x3.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/matrix3x3.hh
+vector3D.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/vector3D.hh
+
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/test_matrix4x4.cpp
+../tests/doctest/doctest.h
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
+matrix.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/matrix.hh
+matrix4x4.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/matrix4x4.hh
+vector3D.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/vector3D.hh
+
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/test_scene.cpp
+../tests/doctest/doctest.h
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
+scene.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/scene.hh
+
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/test_vector2D.cpp
+../tests/doctest/doctest.h
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
+vector.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/vector.hh
+vector2D.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/vector2D.hh
+
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/test_vector3D.cpp
+../tests/doctest/doctest.h
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
+vector.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/vector.hh
+vector3D.hh
+/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/tests/vector3D.hh
+

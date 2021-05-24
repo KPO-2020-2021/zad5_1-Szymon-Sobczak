@@ -1,0 +1,26 @@
+/*!
+    \mainpage Rotacja3D - Zadanie 4.
+    
+    \author Szymon Sobczak nr 259275.
+    \date 24.05.2021
+    \version 1.0
+
+    Aplikacja realizuje rotację prostopadłościanu wokół osi w ukladzie lokalnym oraz translacje o wektor.
+    Wyniki przeksztalcen prezentowane sa w 3D w programie Gnuplot. 
+    
+    \section etykieta-cel-cw Cel ćwiczenia
+    Wykształcenie umiejętnosci modelowania kluczowych dla danego problemu pojęć.\n
+    Generowanienie dokumentacji z wykorzystaniem systemu doxygen. 
+
+    \section etykieta-najw-elem Najwazniejsze elementy programu.
+        - Obrot bryly o zadane katy wzgledem wybranych osi z zadana iloscia powtorzen wraz ze sprawdzeniem dlugosci przeciwleglych bokow.
+        - Potwatrzanie poprzedniego obrotu.
+        - Wyswietlanie macierzy rotacji.
+        - Przesuniecie bryly o zadany wektor.
+        - Wyswietlanie wspolrzednych wierzcholkow.
+        - Wyswietlanie menu.
+
+    \section etykieta-dodatkowe-elem Dodatkowe elementy programu.
+        - Dodawnie wielu prostopadloscianow do sceny. 
+        - Rysowanie pelnych prostopadloscianow.
+*/
