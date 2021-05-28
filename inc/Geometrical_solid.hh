@@ -9,10 +9,9 @@
 class Geometrical_solid{
     private:
         std::string Name_of_file_global;
-        std::string Name_of_file_prattern;
     public:
         Vector3D Scale;
+        Geometrical_solid();
         std::string const & Get_Name_of_file_global (); 
-        std::string const & Get_Name_of_file_pattern (); 
-        Vector3D const scale(Vector3D const & pattern_vector);
+        void udpate_scale(Vector3D const & new_scale);
 };

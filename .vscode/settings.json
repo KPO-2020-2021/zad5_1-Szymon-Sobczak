@@ -56,6 +56,10 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "thread": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "ranges": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "stop_token": "cpp"
     }
 }

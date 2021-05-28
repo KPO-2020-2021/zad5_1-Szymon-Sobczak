@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak
-BuildDirectory: /home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/build
+SourceDirectory: /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak
+BuildDirectory: /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: Ubu
+Site: Ader
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-c++
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak"
+ConfigureCommand: "/usr/bin/cmake" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
@@ -63,12 +63,14 @@ UpdateType: git
 
 # Compiler info
 Compiler: /usr/bin/c++
-CompilerVersion: 9.3.0
+CompilerVersion: 10.3.0
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
 ValgrindCommand: 
 ValgrindCommandOptions: 
+DrMemoryCommand: 
+DrMemoryCommandOptions: 
 MemoryCheckType: 
 MemoryCheckSanitizerOptions: 
 MemoryCheckCommand: MEMORYCHECK_COMMAND-NOTFOUND

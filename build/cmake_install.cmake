@@ -1,4 +1,4 @@
-# Install script for directory: /home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak
+# Install script for directory: /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,9 +37,14 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+endif()
+
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/build/tests/cmake_install.cmake")
+  include("/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

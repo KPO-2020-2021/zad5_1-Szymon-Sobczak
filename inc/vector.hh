@@ -37,7 +37,7 @@ class Vector{
 
         /*! \brief Konstruktor klasy z parametrem. */
         Vector(double [Size]); 
-        
+
         /*! \brief Operator dodawania dwoch wektorow. */
         Vector operator + (const Vector &v);   
         
@@ -47,6 +47,9 @@ class Vector{
         /*! \brief Operator mnozenia wektora i liczby typu double. */
         Vector operator * (const double &tmp);  
         
+        /*! \brief Operator zwielokrotnienia wartosci wektora wartosciami drugiego wektora */
+        Vector operator * (const Vector &v);  
+
         /*! \brief Operator dzielenia wektora i liczby typu double. */
         Vector operator / (const double &tmp); 
         
@@ -148,6 +151,25 @@ Vector<Size> Vector<Size>::operator * (const double &tmp){
     Vector result;
     for (unsigned int i = 0; i < Size; ++i){
         result[i] = size[i] * tmp;
+    }
+    return result;
+}
+
+/*!
+    Realizuje zwielokrotnienie wartosci pol wektora przez odpowaidajace pola drugiego wektora.               
+                                                                   
+    \param [in] this - pierwszy skladnik zwielokrotnienia (wektor),                           
+    \param [in] v - drugi skladnik zwielokrotnienia (wektor).                     
+                                                                   
+    \return Wektor poczatkowy zwielokrotniony o wartosici drugiego wektora.                                                          
+ */
+
+template <unsigned int Size>
+Vector<Size> Vector<Size>::operator * (const Vector<Size> &v){
+    Vector result;
+    
+    for (unsigned int i = 0; i < Size; ++i){
+        result[i] = size[i] * v[i];
     }
     return result;
 }

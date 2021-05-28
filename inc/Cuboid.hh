@@ -5,12 +5,27 @@
 #include <cmath>
 #include <iomanip>
 #include "vector3D.hh"
+#include "matrix3x3.hh"
 #include "Geometrical_solid.hh"
 
-class Cuboid: public Geometrical_solid{
+class Cuboid2: public Geometrical_solid{
     private:
-        Vector3D location;
+        Vector3D center_of_cuboid;
+
+        Vector3D Local_corners[8]; 
+
+        Vector3D Global_corners[8]; 
+
         double Roration_angle_Zaxis;
     public:
-        Vector3D const Transform_to_global_coords(Vector3D const & vec);
+        Cuboid2();
+        void Transform_to_global_coords(Vector3D const & vec);
+
+
+        /*! \brief Przeciazenie operatora indeksujacego */
+        const Vector3D & operator [] (int index) const;         
+        
+        /*! \brief Przeciazenie operatora indeksujacego */
+        Vector3D & operator [] (int index);
+
 };

@@ -4,12 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/src/cuboid.cpp" "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/cuboid.cpp.o"
-  "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/src/lacze_do_gnuplota.cpp" "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
-  "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/src/matrix2x2.cpp" "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/matrix2x2.cpp.o"
-  "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/src/matrix3x3.cpp" "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/matrix3x3.cpp.o"
-  "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/src/matrix4x4.cpp" "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/matrix4x4.cpp.o"
-  "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/src/scene.cpp" "/home/ader/Pulpit/Zad 5.1 Dron GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/scene.cpp.o"
+  "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Cuboid.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/Cuboid.cpp.o"
+  "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Drone.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/Drone.cpp.o"
+  "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Geometrical_solid.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/Geometrical_solid.cpp.o"
+  "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Hexagonal_prism.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o"
+  "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/cuboid.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/cuboid.cpp.o"
+  "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/lacze_do_gnuplota.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
+  "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/matrix3x3.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/matrix3x3.cpp.o"
+  "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/scene.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/scene.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
