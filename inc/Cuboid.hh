@@ -19,8 +19,7 @@ class Cuboid2: public Geometrical_solid{
         double Roration_angle_Zaxis;
     public:
         Cuboid2();
-        void Transform_to_global_coords(Vector3D const & vec);
-
+        void Transform_to_global_coords(Vector3D const & vec,double const &);
 
         /*! \brief Przeciazenie operatora indeksujacego */
         const Vector3D & operator [] (int index) const;         
@@ -29,3 +28,8 @@ class Cuboid2: public Geometrical_solid{
         Vector3D & operator [] (int index);
 
 };
+
+
+/*! \brief Przeciazenie operatora << sluzace wyswietlaniu wartosci prostopadloscianu */ 
+std::ostream & operator << (std::ostream & Strm, const Cuboid2 & Rc);    
+ 

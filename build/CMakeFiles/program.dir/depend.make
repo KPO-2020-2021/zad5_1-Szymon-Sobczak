@@ -28,6 +28,13 @@ CMakeFiles/program.dir/src/Geometrical_solid.cpp.o: ../inc/vector.hh
 CMakeFiles/program.dir/src/Geometrical_solid.cpp.o: ../inc/vector3D.hh
 CMakeFiles/program.dir/src/Geometrical_solid.cpp.o: ../src/Geometrical_solid.cpp
 
+CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../inc/Geometrical_solid.hh
+CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../inc/Hexagonal_prism.hh
+CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../inc/matrix.hh
+CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../inc/matrix3x3.hh
+CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../inc/size.hh
+CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../inc/vector.hh
+CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../inc/vector3D.hh
 CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../src/Hexagonal_prism.cpp
 
 CMakeFiles/program.dir/src/cuboid.cpp.o: ../inc/cuboid.hh

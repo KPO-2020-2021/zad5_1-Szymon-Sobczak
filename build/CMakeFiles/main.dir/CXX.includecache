@@ -31,6 +31,8 @@ cmath
 -
 iomanip
 -
+unistd.h
+-
 matrix3x3.hh
 ../inc/matrix3x3.hh
 vector3D.hh
@@ -65,26 +67,10 @@ iomanip
 -
 vector3D.hh
 ../inc/vector3D.hh
-Geometrical_solid.hh
-../inc/Geometrical_solid.hh
-
-../inc/cuboid.hh
-iostream
--
-fstream
--
-cmath
--
-iomanip
--
-vector3D.hh
-../inc/vector3D.hh
 matrix3x3.hh
 ../inc/matrix3x3.hh
-matrix.hh
-../inc/matrix.hh
-lacze_do_gnuplota.hh
-../inc/lacze_do_gnuplota.hh
+Geometrical_solid.hh
+../inc/Geometrical_solid.hh
 
 ../inc/lacze_do_gnuplota.hh
 string
@@ -109,28 +95,6 @@ cmath
 ../inc/matrix3x3.hh
 matrix.hh
 ../inc/matrix.hh
-
-../inc/scene.hh
-iostream
--
-fstream
--
-cmath
--
-iomanip
--
-filesystem
--
-vector
--
-vector.hh
-../inc/vector.hh
-matrix.hh
-../inc/matrix.hh
-cuboid.hh
-../inc/cuboid.hh
-lacze_do_gnuplota.hh
-../inc/lacze_do_gnuplota.hh
 
 ../inc/size.hh
 
@@ -169,10 +133,6 @@ matrix3x3.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/matrix3x3.hh
 vector3D.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/vector3D.hh
-cuboid.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/cuboid.hh
-scene.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/scene.hh
 ../inc/lacze_do_gnuplota.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/inc/lacze_do_gnuplota.hh
 

@@ -19,15 +19,14 @@ users, this can be left out. */
 #include "vector3D.hh"
 #include "matrix3x3.hh"
 #include "vector3D.hh"
-#include "cuboid.hh"
-#include "scene.hh"
 #include "../inc/lacze_do_gnuplota.hh"
 
 /*! \brief Glowna funkcja programu.*/
 
 int main(){
- 
+  
 
+    
 
   //  unsigned int active_cuboid = 0;   /* Inicjalizacja zmiennych tymczasowych */
   //  double angle = 0, multiplier = 1, tr_X = 0, tr_Y = 0,tr_Z = 0; 
@@ -45,21 +44,50 @@ int main(){
     
    
 
-    PzG::LaczeDoGNUPlota Link;
 
    // adresses_of_files.push_back("../datasets/cuboid1.dat");  
 
   //  Link.DodajNazwePliku(adresses_of_files.at(0).c_str(),PzG::RR_Ciagly,2); /* Rysowanie prostopadloscianu jako linia ciagla o grubosci 2 pikseli. */ 
     
-    Link.DodajNazwePliku("../datasets/Global_cords_file_fusledge",PzG::RR_Ciagly,2);
-    
+    PzG::LaczeDoGNUPlota Link;
+
+    Link.Inicjalizuj();
+
+    //Link.DodajNazwePliku("../datasets/bed.dat",PzG::RR_Ciagly,2);
+
+    PzG::InfoPlikuDoRysowania *File_info_d1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_fusledge");
+    File_info_d1->ZmienKolor(1);
+    File_info_d1->ZmienSzerokosc(2);
+
+    PzG::InfoPlikuDoRysowania *File_info_bed = & Link.DodajNazwePliku("../datasets/bed.dat");
+    File_info_bed->ZmienKolor(1);
+    File_info_bed->ZmienSzerokosc(2);
+
+       PzG::InfoPlikuDoRysowania *File_info_rot0 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_0");
+    File_info_rot0->ZmienKolor(1);
+    File_info_rot0->ZmienSzerokosc(2);
+
+       PzG::InfoPlikuDoRysowania *File_info_rot1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_1");
+    File_info_rot1->ZmienKolor(1);
+    File_info_rot1->ZmienSzerokosc(2);
+
+       PzG::InfoPlikuDoRysowania *File_info_rot2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_2");
+    File_info_rot2->ZmienKolor(1);
+    File_info_rot2->ZmienSzerokosc(2);
+
+       PzG::InfoPlikuDoRysowania *File_info_rot3 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_3");
+    File_info_rot3->ZmienKolor(1);
+    File_info_rot3->ZmienSzerokosc(2);
+ 
     Link.ZmienTrybRys(PzG::TR_3D); /* Ustawienie trybu rysowania w gnuplot na 3D. */
 
-    Link.UstawZakresY(-150,150);   /* Uwstawienie zakresu osi OX, OY i OZ w Gnuplot */ 
-    Link.UstawZakresX(-150,150);
-    Link.UstawZakresZ(-150,150); 
+    Link.UstawZakresY(0,200);   /* Uwstawienie zakresu osi OX, OY i OZ w Gnuplot */ 
+    Link.UstawZakresX(0,200);
+    Link.UstawZakresZ(0,150); 
 
-    Vector3D test;
+    double val[3]={100,100,3};
+    
+    Vector3D test(val);
     
     Drone drone1(test);
     
@@ -70,20 +98,12 @@ int main(){
     std::cout << "Nacisnij ENTER, aby zakonczyc ... " << std::flush;
     std::cin.ignore(10000,'\n');
 
-    for (int i = 1; i<=10; ++i){
-        drone1.drone_go_verical(5*i,Link);
-          Link.Rysuj();
-        usleep(200000);
-    }
+    drone1.drone_go_verical(100,Link);
     
     std::cout << "Nacisnij ENTER, aby zakonczyc ... " << std::flush;
     std::cin.ignore(10000,'\n');
     
-    for (int i = 1; i<=10; ++i){
-        drone1.drone_go_verical(-5*i,Link);
-        Link.Rysuj();
-        usleep(200000);
-    }
+    drone1.drone_go_verical(-100,Link);
 
     std::cout << "Nacisnij ENTER, aby zakonczyc ... " << std::flush;
     std::cin.ignore(10000,'\n');

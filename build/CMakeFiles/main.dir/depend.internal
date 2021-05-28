@@ -6,11 +6,9 @@ CMakeFiles/main.dir/app/main.cpp.o
  ../inc/Drone.hh
  ../inc/Geometrical_solid.hh
  ../inc/Hexagonal_prism.hh
- ../inc/cuboid.hh
  ../inc/lacze_do_gnuplota.hh
  ../inc/matrix.hh
  ../inc/matrix3x3.hh
- ../inc/scene.hh
  ../inc/size.hh
  ../inc/vector.hh
  ../inc/vector3D.hh

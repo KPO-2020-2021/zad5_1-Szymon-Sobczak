@@ -4,6 +4,7 @@
 #include <fstream>
 #include <cmath>
 #include <iomanip>
+#include <unistd.h>
 #include "matrix3x3.hh"
 #include "vector3D.hh"
 #include "Cuboid.hh"
@@ -22,10 +23,7 @@ class Drone{
 
         void Calculate_and_save_to_file_fusleage();
 
-        void Calculate_and_save_to_file_rotor();
-
-    protected:
-        Vector3D const Transform_to_global_coords(Vector3D const & vec);
+        void Calculate_and_save_to_file_rotor(unsigned int index, Vector3D Trasnlation);
 
     public:
         Drone(Vector3D location);

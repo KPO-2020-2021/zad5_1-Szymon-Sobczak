@@ -29,6 +29,13 @@ CMakeFiles/program.dir/src/Geometrical_solid.cpp.o
  ../inc/vector3D.hh
  /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Geometrical_solid.cpp
 CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o
+ ../inc/Geometrical_solid.hh
+ ../inc/Hexagonal_prism.hh
+ ../inc/matrix.hh
+ ../inc/matrix3x3.hh
+ ../inc/size.hh
+ ../inc/vector.hh
+ ../inc/vector3D.hh
  /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Hexagonal_prism.cpp
 CMakeFiles/program.dir/src/cuboid.cpp.o
  ../inc/cuboid.hh
@@ -40,7 +47,7 @@ CMakeFiles/program.dir/src/cuboid.cpp.o
  ../inc/vector3D.hh
  /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/cuboid.cpp
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
- /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/inc/lacze_do_gnuplota.hh
+ ../inc/lacze_do_gnuplota.hh
  /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/lacze_do_gnuplota.cpp
 CMakeFiles/program.dir/src/matrix3x3.cpp.o
  ../inc/matrix.hh
