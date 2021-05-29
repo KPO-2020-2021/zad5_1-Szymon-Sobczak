@@ -22,8 +22,9 @@ Cuboid2::Cuboid2(){
     Roration_angle_Zaxis = 0;
 }
 
-void Cuboid2::Transform_to_global_coords(Vector3D const & vec){
+void Cuboid2::Transform_to_global_coords(Vector3D const & vec, double const & angle){
     center_of_cuboid = vec;
+    Roration_angle_Zaxis = angle;
     Matrix3x3 Rotation_matrix = Fill_matrix_OZ(Roration_angle_Zaxis);
    // double values[3] = {0,0,0.5};
    // Vector3D lift(values);

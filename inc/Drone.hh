@@ -28,6 +28,8 @@ class Drone{
     public:
         Drone(Vector3D location);
 
+        void plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link);
+
         void drone_go_verical(double altitude, PzG::LaczeDoGNUPlota & Link);
 
         void drone_go_horizontal(double distance, PzG::LaczeDoGNUPlota & Link);

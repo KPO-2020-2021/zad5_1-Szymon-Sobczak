@@ -24,90 +24,122 @@ users, this can be left out. */
 /*! \brief Glowna funkcja programu.*/
 
 int main(){
-  
+   char Option;
+   double temp_angle=0,path_angle=0,distance = 0;
+   std::vector <Vector3D> path_points;
+
+   PzG::LaczeDoGNUPlota Link;
+
+   Link.ZmienTrybRys(PzG::TR_3D); /* Ustawienie trybu rysowania w gnuplot na 3D. */
+
+   Link.UstawZakresY(0,200);   /* Uwstawienie zakresu osi OX, OY i OZ w Gnuplot */ 
+   Link.UstawZakresX(0,200);
+   Link.UstawZakresZ(0,150); 
+
+   PzG::InfoPlikuDoRysowania *File_info_d1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_fusledge");
+   File_info_d1->ZmienKolor(1);
+   File_info_d1->ZmienSzerokosc(2);
+
+   PzG::InfoPlikuDoRysowania *File_info_bed = & Link.DodajNazwePliku("../datasets/bed.dat");
+   File_info_bed->ZmienKolor(4);
+   File_info_bed->ZmienSzerokosc(2);
 
     
 
-  //  unsigned int active_cuboid = 0;   /* Inicjalizacja zmiennych tymczasowych */
-  //  double angle = 0, multiplier = 1, tr_X = 0, tr_Y = 0,tr_Z = 0; 
-   // char Option;
 
-             /* Zmienna potrzebna do wizualizacji rysunku prostopadloscianu */
-    //Vector3D T_vector, ctr_of_new_cub; /* Inicjalizacja wektorow tymczasowych */
-   // Matrix3x3 temp_rot_matrix;         /* Inicjalizacja macierzy tymczasowej  */
-    
-    //Scene Scenery; /* Inicjalizacja sceny */
+ /*   PzG::InfoPlikuDoRysowania *File_info_rot0 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_0");
+   File_info_rot0->ZmienKolor(1);
+   File_info_rot0->ZmienSzerokosc(2);
 
-    //std::vector <std::string> adresses_of_files; /* Inicjalizacja wektora zapamietujacego nazwy plikow z danymi poszczegolnych prostopadloscianow */
+   PzG::InfoPlikuDoRysowania *File_info_rot1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_1");
+   File_info_rot1->ZmienKolor(1);
+   File_info_rot1->ZmienSzerokosc(2);
 
-    //std::string name_of_new_file;  /* Inicjalizacja zmiennej typu string - nazwy pojedynczego pliku ze wspolrzednymi prostopadloscianu */
-    
-   
+   PzG::InfoPlikuDoRysowania *File_info_rot2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_2");
+   File_info_rot2->ZmienKolor(1);
+   File_info_rot2->ZmienSzerokosc(2);
 
-
-   // adresses_of_files.push_back("../datasets/cuboid1.dat");  
-
-  //  Link.DodajNazwePliku(adresses_of_files.at(0).c_str(),PzG::RR_Ciagly,2); /* Rysowanie prostopadloscianu jako linia ciagla o grubosci 2 pikseli. */ 
-    
-    PzG::LaczeDoGNUPlota Link;
-
-    Link.Inicjalizuj();
-
-    //Link.DodajNazwePliku("../datasets/bed.dat",PzG::RR_Ciagly,2);
-
-    PzG::InfoPlikuDoRysowania *File_info_d1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_fusledge");
-    File_info_d1->ZmienKolor(1);
-    File_info_d1->ZmienSzerokosc(2);
-
-    PzG::InfoPlikuDoRysowania *File_info_bed = & Link.DodajNazwePliku("../datasets/bed.dat");
-    File_info_bed->ZmienKolor(1);
-    File_info_bed->ZmienSzerokosc(2);
-
-       PzG::InfoPlikuDoRysowania *File_info_rot0 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_0");
-    File_info_rot0->ZmienKolor(1);
-    File_info_rot0->ZmienSzerokosc(2);
-
-       PzG::InfoPlikuDoRysowania *File_info_rot1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_1");
-    File_info_rot1->ZmienKolor(1);
-    File_info_rot1->ZmienSzerokosc(2);
-
-       PzG::InfoPlikuDoRysowania *File_info_rot2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_2");
-    File_info_rot2->ZmienKolor(1);
-    File_info_rot2->ZmienSzerokosc(2);
-
-       PzG::InfoPlikuDoRysowania *File_info_rot3 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_3");
-    File_info_rot3->ZmienKolor(1);
-    File_info_rot3->ZmienSzerokosc(2);
+   PzG::InfoPlikuDoRysowania *File_info_rot3 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_3");
+   File_info_rot3->ZmienKolor(1);
+   File_info_rot3->ZmienSzerokosc(2); */
  
-    Link.ZmienTrybRys(PzG::TR_3D); /* Ustawienie trybu rysowania w gnuplot na 3D. */
 
-    Link.UstawZakresY(0,200);   /* Uwstawienie zakresu osi OX, OY i OZ w Gnuplot */ 
-    Link.UstawZakresX(0,200);
-    Link.UstawZakresZ(0,150); 
+   PzG::InfoPlikuDoRysowania *File_info_path = & Link.DodajNazwePliku("../datasets/path.dat");
+      File_info_path->ZmienKolor(3);
+      File_info_path->ZmienSzerokosc(2);;
+   Link.UsunNazwePliku("../datasets/path.dat");
+   double val[3]={100,100,3};
+    
+   Vector3D test(val);
+    
+   Drone drone1(test);
+    
+   Link.Inicjalizuj();
+   drone1.Calculate_and_save_to_file_drone();
+   Link.Rysuj();
+     
+   std::cout << "Menu wyboru opcji:" << std::endl
+             << "\ta - wybierz aktywnego drona" << std::endl
+             << "\tp - zadaj parametry przelotu" << std::endl
+             << "\tm - wyswietl menu" << std::endl << std::endl
+             << "\tk - koniec dzialania programu" << std::endl << std::endl;
+   while (Option != 'k'){ /* Glowna petla menu, dzialajaca do czasu wybrania opcji zakonczenia- k */
+      std::cout << "Twoj wybor? (m - menu) > ";
+      std::cin >> Option;
+      switch(Option){  
+         case 'a':
 
-    double val[3]={100,100,3};
-    
-    Vector3D test(val);
-    
-    Drone drone1(test);
-    
-    drone1.Calculate_and_save_to_file_drone();
-    
-    Link.Rysuj();
+         break;
+         
+         case 'p':
+            std::cout << "Podaj kat obrotu w stopniach > ";
+            std::cin >> temp_angle;
+            path_angle += temp_angle;
+            std::cout << "Podaj dlugosc lotu > ";
+            std::cin >> distance;
+           
+            std::cout << "Rysowanie zaplanowanej sciezki przelotu ... " << std::endl;
+            drone1.plan_path(temp_angle,distance,Link);
 
-    std::cout << "Nacisnij ENTER, aby zakonczyc ... " << std::flush;
-    std::cin.ignore(10000,'\n');
+            Link.DodajNazwePliku("../datasets/path.dat");
 
-    drone1.drone_go_verical(100,Link);
-    
-    std::cout << "Nacisnij ENTER, aby zakonczyc ... " << std::flush;
-    std::cin.ignore(10000,'\n');
-    
-    drone1.drone_go_verical(-100,Link);
+            usleep(100000);
+            std::cout << "Wznoszenie ... " << std::endl;    
+            drone1.drone_go_verical(ALTITUDE,Link);
+                   usleep(100000);
+                 
+            std::cout << "Przelot ... " << std::endl;    
+            drone1.drone_go_horizontal(50,Link);
+                usleep(100000);
+            
+            std::cout << "Ladowanie ... " << std::endl;    
+            drone1.drone_go_verical(-ALTITUDE,Link);
+               usleep(100000);
 
-    std::cout << "Nacisnij ENTER, aby zakonczyc ... " << std::flush;
-    std::cin.ignore(10000,'\n');
+            std::cout << "Dron wyladowal ... " << std::endl; 
+            Link.UsunNazwePliku("../datasets/path.dat");
+            Link.Rysuj();
+         break;
+         
+         case 'm':
+             std::cout << "Menu wyboru opcji:" << std::endl
+             << "\ta - wybierz aktywnego drona" << std::endl
+             << "\tp - zadaj parametry przelotu" << std::endl
+             << "\tm - wyswietl menu" << std::endl << std::endl
+             << "\tk - koniec dzialania programu" << std::endl << std::endl;
+         break;
 
+             
+         case 'k':
+            std::cout << "Konczenie pracy programu ..." << std::endl;
+         break;
+
+         default:   /* dzialanie, gdy podana opcja nie bedzie uprzednio zdefiniowana */
+            std::cout << ":/ Opcja niezdefiniowana" << std::endl;
+      }
+   }
+   return 0;
+} 
     // try{
         
 
@@ -318,5 +350,4 @@ int main(){
     //     exit(1);
     // }
 
-    return 0;
-} 
+

@@ -20,7 +20,7 @@ class Hexagonal_prism: public Geometrical_solid{
     public:
         Hexagonal_prism();
         
-        void Transform_to_global_coords(Vector3D const & vec, Vector3D const & position_of_drone,double const & drone_angle);
+        void Transform_to_global_coords(Vector3D const & vec, Vector3D const & position_of_drone, double const & drone_angle);
 
         /*! \brief Przeciazenie operatora indeksujacego */
         const Vector3D & operator [] (int index) const;         
