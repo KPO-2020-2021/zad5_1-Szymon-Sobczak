@@ -72,6 +72,26 @@ matrix3x3.hh
 Geometrical_solid.hh
 ../inc/Geometrical_solid.hh
 
+../inc/Scene.hh
+iostream
+-
+fstream
+-
+cmath
+-
+iomanip
+-
+vector3D.hh
+../inc/vector3D.hh
+Cuboid.hh
+../inc/Cuboid.hh
+Drone.hh
+../inc/Drone.hh
+Hexagonal_prism.hh
+../inc/Hexagonal_prism.hh
+lacze_do_gnuplota.hh
+../inc/lacze_do_gnuplota.hh
+
 ../inc/lacze_do_gnuplota.hh
 string
 -
@@ -121,8 +141,6 @@ vector.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
 exampleConfig.h
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/exampleConfig.h
-Drone.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/Drone.hh
 vector.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/vector.hh
 matrix.hh
@@ -133,6 +151,10 @@ matrix3x3.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/matrix3x3.hh
 vector3D.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/vector3D.hh
+Drone.hh
+/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/Drone.hh
+Scene.hh
+/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/Scene.hh
 ../inc/lacze_do_gnuplota.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/inc/lacze_do_gnuplota.hh
 

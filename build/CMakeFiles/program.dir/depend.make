@@ -37,6 +37,19 @@ CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../inc/vector.hh
 CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../inc/vector3D.hh
 CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../src/Hexagonal_prism.cpp
 
+CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/Cuboid.hh
+CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/Drone.hh
+CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/Geometrical_solid.hh
+CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/Hexagonal_prism.hh
+CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/Scene.hh
+CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/lacze_do_gnuplota.hh
+CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/matrix.hh
+CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/matrix3x3.hh
+CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/size.hh
+CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/vector.hh
+CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/vector3D.hh
+CMakeFiles/program.dir/src/Scene.cpp.o: ../src/Scene.cpp
+
 CMakeFiles/program.dir/src/cuboid.cpp.o: ../inc/cuboid.hh
 CMakeFiles/program.dir/src/cuboid.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/cuboid.cpp.o: ../inc/matrix.hh

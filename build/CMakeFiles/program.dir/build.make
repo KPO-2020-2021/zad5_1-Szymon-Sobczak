@@ -180,6 +180,19 @@ CMakeFiles/program.dir/src/matrix3x3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/matrix3x3.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/matrix3x3.cpp" -o CMakeFiles/program.dir/src/matrix3x3.cpp.s
 
+CMakeFiles/program.dir/src/Scene.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/Scene.cpp.o: ../src/Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/program.dir/src/Scene.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Scene.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Scene.cpp"
+
+CMakeFiles/program.dir/src/Scene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Scene.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Scene.cpp" > CMakeFiles/program.dir/src/Scene.cpp.i
+
+CMakeFiles/program.dir/src/Scene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Scene.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Scene.cpp" -o CMakeFiles/program.dir/src/Scene.cpp.s
+
 program: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
 program: CMakeFiles/program.dir/src/cuboid.cpp.o
 program: CMakeFiles/program.dir/src/Cuboid.cpp.o
@@ -188,6 +201,7 @@ program: CMakeFiles/program.dir/src/Geometrical_solid.cpp.o
 program: CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o
 program: CMakeFiles/program.dir/src/scene.cpp.o
 program: CMakeFiles/program.dir/src/matrix3x3.cpp.o
+program: CMakeFiles/program.dir/src/Scene.cpp.o
 program: CMakeFiles/program.dir/build.make
 
 .PHONY : program

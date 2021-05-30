@@ -12,6 +12,6 @@ class Geometrical_solid{
     public:
         Vector3D Scale;
         Geometrical_solid();
-        std::string const & Get_Name_of_file_global (); 
+        std::string const & Get_Name_of_file_global(); 
         void udpate_scale(Vector3D const & new_scale);
 };

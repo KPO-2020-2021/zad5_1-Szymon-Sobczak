@@ -13,12 +13,13 @@ users, this can be left out. */
 #endif
 
 #include "exampleConfig.h"
-#include "Drone.hh"
 #include "vector.hh"
 #include "matrix.hh"
 #include "vector3D.hh"
 #include "matrix3x3.hh"
 #include "vector3D.hh"
+#include "Drone.hh"
+#include "Scene.hh"
 #include "../inc/lacze_do_gnuplota.hh"
 
 /*! \brief Glowna funkcja programu.*/
@@ -26,8 +27,9 @@ users, this can be left out. */
 int main(){
    char Option;
    double temp_angle=0,path_angle=0,distance = 0;
-   std::vector <Vector3D> path_points;
-
+   unsigned int nbr_of_act_drone=1;
+   Scene Scenery;
+ 
    PzG::LaczeDoGNUPlota Link;
 
    Link.ZmienTrybRys(PzG::TR_3D); /* Ustawienie trybu rysowania w gnuplot na 3D. */
@@ -36,46 +38,63 @@ int main(){
    Link.UstawZakresX(0,200);
    Link.UstawZakresZ(0,150); 
 
-   PzG::InfoPlikuDoRysowania *File_info_d1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_fusledge");
-   File_info_d1->ZmienKolor(1);
-   File_info_d1->ZmienSzerokosc(2);
+   PzG::InfoPlikuDoRysowania *File_info_fsd1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_fuselage.dat");
+   File_info_fsd1 ->ZmienKolor(1);
+   File_info_fsd1 ->ZmienSzerokosc(2);
+
+   PzG::InfoPlikuDoRysowania *File_info_fsd2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_fuselage.dat");
+   File_info_fsd2->ZmienKolor(2);
+   File_info_fsd2->ZmienSzerokosc(2);
 
    PzG::InfoPlikuDoRysowania *File_info_bed = & Link.DodajNazwePliku("../datasets/bed.dat");
    File_info_bed->ZmienKolor(4);
    File_info_bed->ZmienSzerokosc(2);
 
-    
+/*    PzG::InfoPlikuDoRysowania *File_info_rot0_no1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor0.dat");
+   File_info_rot0_no1->ZmienKolor(1);
+   File_info_rot0_no1->ZmienSzerokosc(2);
 
+   PzG::InfoPlikuDoRysowania *File_info_rot1_no1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor1.dat");
+   File_info_rot1_no1->ZmienKolor(1);
+   File_info_rot1_no1->ZmienSzerokosc(2);
 
- /*   PzG::InfoPlikuDoRysowania *File_info_rot0 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_0");
-   File_info_rot0->ZmienKolor(1);
-   File_info_rot0->ZmienSzerokosc(2);
+   PzG::InfoPlikuDoRysowania *File_info_rot2_no1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor2.dat");
+   File_info_rot2_no1->ZmienKolor(1);
+   File_info_rot2_no1->ZmienSzerokosc(2);
 
-   PzG::InfoPlikuDoRysowania *File_info_rot1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_1");
-   File_info_rot1->ZmienKolor(1);
-   File_info_rot1->ZmienSzerokosc(2);
+   PzG::InfoPlikuDoRysowania *File_info_rot3_no1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor3.dat");
+   File_info_rot3_no1->ZmienKolor(1);
+   File_info_rot3_no1->ZmienSzerokosc(2); 
 
-   PzG::InfoPlikuDoRysowania *File_info_rot2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_2");
-   File_info_rot2->ZmienKolor(1);
-   File_info_rot2->ZmienSzerokosc(2);
+   PzG::InfoPlikuDoRysowania *File_info_rot0_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_No_2_file_rotor0.dat");
+   File_info_rot0_no2->ZmienKolor(1);
+   File_info_rot0_no2->ZmienSzerokosc(2);
 
-   PzG::InfoPlikuDoRysowania *File_info_rot3 = & Link.DodajNazwePliku("../datasets/Global_cords_file_rotor_3");
-   File_info_rot3->ZmienKolor(1);
-   File_info_rot3->ZmienSzerokosc(2); */
+   PzG::InfoPlikuDoRysowania *File_info_rot1_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_No_2_file_rotor1.dat");
+   File_info_rot1_no2->ZmienKolor(1);
+   File_info_rot1_no2->ZmienSzerokosc(2);
+
+   PzG::InfoPlikuDoRysowania *File_info_rot2_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_No_2_file_rotor2.dat");
+   File_info_rot2_no2->ZmienKolor(1);
+   File_info_rot2_no2->ZmienSzerokosc(2);
+
+   PzG::InfoPlikuDoRysowania *File_info_rot3_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_No_2_file_rotor3.dat");
+   File_info_rot3_no2->ZmienKolor(1);
+   File_info_rot3_no2->ZmienSzerokosc(2);  */
  
-
    PzG::InfoPlikuDoRysowania *File_info_path = & Link.DodajNazwePliku("../datasets/path.dat");
-      File_info_path->ZmienKolor(3);
-      File_info_path->ZmienSzerokosc(2);;
+   File_info_path->ZmienKolor(3);
+   File_info_path->ZmienSzerokosc(2);;
    Link.UsunNazwePliku("../datasets/path.dat");
-   double val[3]={100,100,3};
-    
-   Vector3D test(val);
-    
-   Drone drone1(test);
-    
+   
    Link.Inicjalizuj();
-   drone1.Calculate_and_save_to_file_drone();
+
+   Scenery.use_active_drone().Calculate_and_save_to_file_drone();
+   Scenery.choose_drone(2);
+
+   Scenery.use_active_drone().Calculate_and_save_to_file_drone();
+   Scenery.choose_drone(1);
+   
    Link.Rysuj();
      
    std::cout << "Menu wyboru opcji:" << std::endl
@@ -88,7 +107,21 @@ int main(){
       std::cin >> Option;
       switch(Option){  
          case 'a':
-
+            std::cout << "Obecnie aktywny dron: "<< nbr_of_act_drone << std::endl;
+            std::cout << "Wybor aktywnego drona: "<< std::endl;
+            
+            Scenery.choose_drone(1);
+            std::cout << "1. Polozenie " << Scenery.use_active_drone().get_drone_location() << std::endl;
+            
+            Scenery.choose_drone(2);
+            std::cout << "2. Polozenie " << Scenery.use_active_drone().get_drone_location() << std::endl;
+            
+            std::cout << "Podaj numer drona, ktory ma byc aktywny: "<< std::endl;
+            std::cin >> nbr_of_act_drone;
+            if(std::cin.fail() || nbr_of_act_drone > 2)
+               throw std::invalid_argument(":/ Podano bledny numer prostopadloscianu ");
+            else   
+               Scenery.choose_drone(nbr_of_act_drone);
          break;
          
          case 'p':
@@ -99,25 +132,27 @@ int main(){
             std::cin >> distance;
            
             std::cout << "Rysowanie zaplanowanej sciezki przelotu ... " << std::endl;
-            drone1.plan_path(temp_angle,distance,Link);
+            Scenery.use_active_drone().plan_path(temp_angle,distance,Link);
 
             Link.DodajNazwePliku("../datasets/path.dat");
 
             usleep(100000);
             std::cout << "Wznoszenie ... " << std::endl;    
-            drone1.drone_go_verical(ALTITUDE,Link);
-                   usleep(100000);
+            Scenery.use_active_drone().drone_go_verical(ALTITUDE,Link);
+                   usleep(1000000);
                  
             std::cout << "Przelot ... " << std::endl;    
-            drone1.drone_go_horizontal(50,Link);
+            Scenery.use_active_drone().drone_go_horizontal(distance,Link);
                 usleep(100000);
             
             std::cout << "Ladowanie ... " << std::endl;    
-            drone1.drone_go_verical(-ALTITUDE,Link);
+            Scenery.use_active_drone().drone_go_verical(-ALTITUDE,Link);
                usleep(100000);
 
             std::cout << "Dron wyladowal ... " << std::endl; 
+            
             Link.UsunNazwePliku("../datasets/path.dat");
+
             Link.Rysuj();
          break;
          
@@ -128,7 +163,6 @@ int main(){
              << "\tm - wyswietl menu" << std::endl << std::endl
              << "\tk - koniec dzialania programu" << std::endl << std::endl;
          break;
-
              
          case 'k':
             std::cout << "Konczenie pracy programu ..." << std::endl;

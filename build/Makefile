@@ -704,6 +704,33 @@ src/Hexagonal_prism.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Hexagonal_prism.cpp.s
 .PHONY : src/Hexagonal_prism.cpp.s
 
+src/Scene.o: src/Scene.cpp.o
+
+.PHONY : src/Scene.o
+
+# target to build an object file
+src/Scene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Scene.cpp.o
+.PHONY : src/Scene.cpp.o
+
+src/Scene.i: src/Scene.cpp.i
+
+.PHONY : src/Scene.i
+
+# target to preprocess a source file
+src/Scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Scene.cpp.i
+.PHONY : src/Scene.cpp.i
+
+src/Scene.s: src/Scene.cpp.s
+
+.PHONY : src/Scene.s
+
+# target to generate assembly for a file
+src/Scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Scene.cpp.s
+.PHONY : src/Scene.cpp.s
+
 src/cuboid.o: src/cuboid.cpp.o
 
 .PHONY : src/cuboid.o
@@ -869,6 +896,9 @@ help:
 	@echo "... src/Hexagonal_prism.o"
 	@echo "... src/Hexagonal_prism.i"
 	@echo "... src/Hexagonal_prism.s"
+	@echo "... src/Scene.o"
+	@echo "... src/Scene.i"
+	@echo "... src/Scene.s"
 	@echo "... src/cuboid.o"
 	@echo "... src/cuboid.i"
 	@echo "... src/cuboid.s"

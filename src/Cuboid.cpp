@@ -24,10 +24,8 @@ Cuboid2::Cuboid2(){
 
 void Cuboid2::Transform_to_global_coords(Vector3D const & vec, double const & angle){
     center_of_cuboid = vec;
-    Roration_angle_Zaxis = angle;
+    Roration_angle_Zaxis += angle;
     Matrix3x3 Rotation_matrix = Fill_matrix_OZ(Roration_angle_Zaxis);
-   // double values[3] = {0,0,0.5};
-   // Vector3D lift(values);
     for (unsigned int i=0; i < 8; ++i)
         Global_corners [i] = Rotation_matrix * (Local_corners[i] * Scale) + center_of_cuboid;
 }

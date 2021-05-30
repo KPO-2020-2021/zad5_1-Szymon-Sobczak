@@ -21,12 +21,18 @@ class Drone{
 
         double Orientation_angle;
 
-        void Calculate_and_save_to_file_fusleage();
+        unsigned int Drone_ID;
+
+        void Calculate_and_save_to_file_fuselage();
 
         void Calculate_and_save_to_file_rotor(unsigned int index, Vector3D Trasnlation);
 
     public:
         Drone(Vector3D location);
+
+        void set_ID( unsigned int new_ID);
+
+        Vector3D  get_drone_location();        
 
         void plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link);
 

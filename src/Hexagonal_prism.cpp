@@ -1,7 +1,6 @@
 #include "Hexagonal_prism.hh"
 
 Hexagonal_prism::Hexagonal_prism(){
-
     double values[3] = {8,8,2};
     Vector3D rotor_scale(values);
     udpate_scale(rotor_scale);
@@ -37,7 +36,7 @@ void Hexagonal_prism::Transform_to_global_coords(Vector3D const & vec, Vector3D 
 
 const Vector3D & Hexagonal_prism::operator [] (int index) const {
     if (index < 0 || index >= 12) {
-        throw std::runtime_error("Bledna wartosc indeksu wierzcholka prostopadloscianu");
+        throw std::runtime_error("Bledna wartosc indeksu wierzcholka graniastoslupa");
     } 
     return Global_corners[index];
 }
@@ -50,7 +49,7 @@ const Vector3D & Hexagonal_prism::operator [] (int index) const {
 
  Vector3D & Hexagonal_prism::operator[](int index) {
     if (index < 0 || index >= 12) {
-        throw std::runtime_error("Bledna wartosc indeksu wierzcholka prostopadloscianu");
+        throw std::runtime_error("Bledna wartosc indeksu wierzcholka graniastoslupa");
     } 
     return const_cast <Vector3D &> (const_cast <const Hexagonal_prism *> (this)->operator[](index));
 }

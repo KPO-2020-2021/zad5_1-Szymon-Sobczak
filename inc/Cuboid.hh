@@ -19,6 +19,7 @@ class Cuboid2: public Geometrical_solid{
         double Roration_angle_Zaxis;
     public:
         Cuboid2();
+        
         void Transform_to_global_coords(Vector3D const & vec,double const & angle);
 
         /*! \brief Przeciazenie operatora indeksujacego */
