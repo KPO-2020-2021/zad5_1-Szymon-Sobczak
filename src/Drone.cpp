@@ -8,7 +8,7 @@ Drone::Drone(Vector3D location){
 
 void Drone::Calculate_and_save_to_file_fuselage(){
 
-    fuselage.Transform_to_global_coords(drone_location, 0);
+    fuselage.Transform_to_global_coords(drone_location, Orientation_angle);
 
     std::ofstream  FileStrm;
     Vector3D P1,P2, temp_vec[]={fuselage[0],fuselage[7],fuselage[2],fuselage[5]};
@@ -183,14 +183,12 @@ void Drone::drone_go_horizontal(double distance, PzG::LaczeDoGNUPlota & Link){
     Vector3D unit_vector(unit_values);
     std::cout << Orientation_angle << std::endl;
 
-
-    for (int i = 0; i < FRAMES/2; ++i){
-        fuselage.Transform_to_global_coords(drone_location, Orientation_angle/FRAMES*2);
+    for (int i = 0; i < FRAMES; ++i){
+        /* fuselage.update_angle(Orientation_angle/FRAMES); */
         Calculate_and_save_to_file_drone();
         usleep(20000);
         Link.Rysuj();
     } 
-
 
     Matrix3x3 Rotation_matrix = Fill_matrix_OZ(Orientation_angle);
     
@@ -206,6 +204,8 @@ void Drone::drone_go_horizontal(double distance, PzG::LaczeDoGNUPlota & Link){
     }
     Link.Rysuj();
 }
+
+
 
 std::ostream & operator << (std::ostream & Out, const Cuboid2 & Rc){
     for (int i = 0; i < CORNERS; i++){

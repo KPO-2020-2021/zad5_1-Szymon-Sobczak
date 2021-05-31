@@ -31,7 +31,7 @@ void Hexagonal_prism::Transform_to_global_coords(Vector3D const & vec, Vector3D 
     center_of_prism = position_of_drone;
     Matrix3x3 Rotation_matrix = Fill_matrix_OZ(drone_angle), Animation_matrix = Fill_matrix_OZ(Roration_angle_Zaxis);
     for (unsigned int i=0; i < 12; ++i)
-        Global_corners [i] = Animation_matrix * (Rotation_matrix * (Local_corners[i] * Scale) + center_of_prism) + vec;
+        Global_corners [i] = Rotation_matrix * (Animation_matrix * (Local_corners[i] * Scale) + vec) + center_of_prism ;
 }
 
 const Vector3D & Hexagonal_prism::operator [] (int index) const {

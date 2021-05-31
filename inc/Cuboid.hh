@@ -22,6 +22,8 @@ class Cuboid2: public Geometrical_solid{
         
         void Transform_to_global_coords(Vector3D const & vec,double const & angle);
 
+        void update_angle(double additional_angle);
+
         /*! \brief Przeciazenie operatora indeksujacego */
         const Vector3D & operator [] (int index) const;         
         

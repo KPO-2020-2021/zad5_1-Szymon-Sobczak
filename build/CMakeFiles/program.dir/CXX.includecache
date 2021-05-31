@@ -22,28 +22,6 @@ matrix3x3.hh
 Geometrical_solid.hh
 ../inc/Geometrical_solid.hh
 
-../inc/Drone.hh
-iostream
--
-fstream
--
-cmath
--
-iomanip
--
-unistd.h
--
-matrix3x3.hh
-../inc/matrix3x3.hh
-vector3D.hh
-../inc/vector3D.hh
-Cuboid.hh
-../inc/Cuboid.hh
-Hexagonal_prism.hh
-../inc/Hexagonal_prism.hh
-lacze_do_gnuplota.hh
-../inc/lacze_do_gnuplota.hh
-
 ../inc/Geometrical_solid.hh
 iostream
 -
@@ -55,50 +33,6 @@ iomanip
 -
 vector3D.hh
 ../inc/vector3D.hh
-
-../inc/Hexagonal_prism.hh
-iostream
--
-fstream
--
-cmath
--
-iomanip
--
-vector3D.hh
-../inc/vector3D.hh
-matrix3x3.hh
-../inc/matrix3x3.hh
-Geometrical_solid.hh
-../inc/Geometrical_solid.hh
-
-../inc/Scene.hh
-iostream
--
-fstream
--
-cmath
--
-iomanip
--
-vector3D.hh
-../inc/vector3D.hh
-Cuboid.hh
-../inc/Cuboid.hh
-Drone.hh
-../inc/Drone.hh
-Hexagonal_prism.hh
-../inc/Hexagonal_prism.hh
-lacze_do_gnuplota.hh
-../inc/lacze_do_gnuplota.hh
-
-../inc/lacze_do_gnuplota.hh
-string
--
-list
--
-vector
--
 
 ../inc/matrix.hh
 size.hh
@@ -139,16 +73,4 @@ vector.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Cuboid.cpp
 Cuboid.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Cuboid.hh
-
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Drone.cpp
-Drone.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Drone.hh
-
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Geometrical_solid.cpp
-Geometrical_solid.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Geometrical_solid.hh
-
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Scene.cpp
-Scene.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Scene.hh
 
