@@ -30,6 +30,8 @@ class Cuboid2: public Geometrical_solid{
         /*! \brief Przeciazenie operatora indeksujacego */
         Vector3D & operator [] (int index);
 
+        double get_angle();
+
 };
 
 

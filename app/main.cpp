@@ -42,9 +42,6 @@ int main(){
    File_info_fsd1 ->ZmienKolor(1);
    File_info_fsd1 ->ZmienSzerokosc(2);
 
-   PzG::InfoPlikuDoRysowania *File_info_fsd2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_fuselage.dat");
-   File_info_fsd2->ZmienKolor(2);
-   File_info_fsd2->ZmienSzerokosc(2);
 
    PzG::InfoPlikuDoRysowania *File_info_bed = & Link.DodajNazwePliku("../datasets/bed.dat");
    File_info_bed->ZmienKolor(4);
@@ -66,26 +63,30 @@ int main(){
    File_info_rot3_no1->ZmienKolor(1);
    File_info_rot3_no1->ZmienSzerokosc(2); 
 
-  /*  PzG::InfoPlikuDoRysowania *File_info_rot0_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_No_2_file_rotor0.dat");
-   File_info_rot0_no2->ZmienKolor(1);
+   PzG::InfoPlikuDoRysowania *File_info_fsd2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_fuselage.dat");
+   File_info_fsd2->ZmienKolor(2);
+   File_info_fsd2->ZmienSzerokosc(2);
+
+   PzG::InfoPlikuDoRysowania *File_info_rot0_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor0.dat");
+   File_info_rot0_no2->ZmienKolor(2);
    File_info_rot0_no2->ZmienSzerokosc(2);
 
-   PzG::InfoPlikuDoRysowania *File_info_rot1_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_No_2_file_rotor1.dat");
-   File_info_rot1_no2->ZmienKolor(1);
+   PzG::InfoPlikuDoRysowania *File_info_rot1_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor1.dat");
+   File_info_rot1_no2->ZmienKolor(2);
    File_info_rot1_no2->ZmienSzerokosc(2);
 
-   PzG::InfoPlikuDoRysowania *File_info_rot2_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_No_2_file_rotor2.dat");
-   File_info_rot2_no2->ZmienKolor(1);
+   PzG::InfoPlikuDoRysowania *File_info_rot2_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor2.dat");
+   File_info_rot2_no2->ZmienKolor(2);
    File_info_rot2_no2->ZmienSzerokosc(2);
 
-   PzG::InfoPlikuDoRysowania *File_info_rot3_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_No_2_file_rotor3.dat");
-   File_info_rot3_no2->ZmienKolor(1);
-   File_info_rot3_no2->ZmienSzerokosc(2);   */
-  
-   PzG::InfoPlikuDoRysowania *File_info_path = & Link.DodajNazwePliku("../datasets/path.dat");
+   PzG::InfoPlikuDoRysowania *File_info_rot3_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor3.dat");
+   File_info_rot3_no2->ZmienKolor(2);
+   File_info_rot3_no2->ZmienSzerokosc(2);  
+/*   
+   PzG::InfoPlikuDoRysowania *File_info_path = &  Link.DodajNazwePliku("../datasets/path.dat");
    File_info_path->ZmienKolor(3);
    File_info_path->ZmienSzerokosc(2);;
-   Link.UsunNazwePliku("../datasets/path.dat");
+   Link.UsunNazwePliku("../datasets/path.dat");  */
    
    Link.Inicjalizuj();
 

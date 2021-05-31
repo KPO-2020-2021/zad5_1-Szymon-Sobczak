@@ -158,7 +158,7 @@ void Drone::Calculate_and_save_to_file_rotor(unsigned int index, Vector3D Trasnl
 
 void Drone::Calculate_and_save_to_file_drone(){
     double val_rot1[3]={5,4,4},val_rot2[3]={-5,4,4},val_rot3[3]={5,-4,4},val_rot4[3]={-5,-4,4};
-    Vector3D vec_rot1(val_rot1),vec_rot2(val_rot2),vec_rot3(val_rot3),vec_rot4(val_rot4);
+    Vector3D vec_rot1(val_rot1), vec_rot2(val_rot2), vec_rot3(val_rot3), vec_rot4(val_rot4);
     
     Calculate_and_save_to_file_fuselage();
 
@@ -181,10 +181,13 @@ void Drone::drone_go_verical(double altitude, PzG::LaczeDoGNUPlota & Link){
 void Drone::drone_go_horizontal(double distance, PzG::LaczeDoGNUPlota & Link){
     double unit_values[3]={1,0,0};
     Vector3D unit_vector(unit_values);
+
     std::cout << Orientation_angle << std::endl;
 
+    double rotation = Orientation_angle - fuselage.get_angle();
+    
     for (int i = 0; i < FRAMES; ++i){
-        /* fuselage.update_angle(Orientation_angle/FRAMES); */
+        fuselage.update_angle(rotation/FRAMES); 
         Calculate_and_save_to_file_drone();
         usleep(20000);
         Link.Rysuj();
@@ -260,4 +263,4 @@ void Drone::set_ID(unsigned int new_ID){
 
 Vector3D  Drone::get_drone_location(){
     return drone_location;
-}
+} 

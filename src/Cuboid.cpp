@@ -24,9 +24,12 @@ Cuboid2::Cuboid2(){
 
 void Cuboid2::Transform_to_global_coords(Vector3D const & vec, double const & angle){
     center_of_cuboid = vec;
-    double temp = angle - Roration_angle_Zaxis;
-    Roration_angle_Zaxis +=temp;
-    std::cout << Roration_angle_Zaxis << " TEMP: "<< temp << std::endl;
+ /* 
+    double temp = (angle - Roration_angle_Zaxis)/ FRAMES;
+    Roration_angle_Zaxis +=temp;   */
+
+     std::cout << Roration_angle_Zaxis << " Angle: "<< angle << std::endl; 
+
     Matrix3x3 Rotation_matrix = Fill_matrix_OZ(Roration_angle_Zaxis);
     for (unsigned int i=0; i < 8; ++i)
         Global_corners [i] = Rotation_matrix * (Local_corners[i] * Scale) + center_of_cuboid;
@@ -54,4 +57,7 @@ const Vector3D & Cuboid2::operator [] (int index) const {
 
  void Cuboid2::update_angle(double additional_angle){
      Roration_angle_Zaxis += additional_angle;
+ }
+  double Cuboid2::get_angle(){
+    return Roration_angle_Zaxis;
  }
