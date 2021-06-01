@@ -53,3 +53,8 @@ const Vector3D & Hexagonal_prism::operator [] (int index) const {
     } 
     return const_cast <Vector3D &> (const_cast <const Hexagonal_prism *> (this)->operator[](index));
 }
+
+
+ void Hexagonal_prism::update_angle(double additional_angle){
+     Roration_angle_Zaxis += additional_angle;
+ }

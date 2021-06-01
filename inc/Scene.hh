@@ -19,7 +19,7 @@ class Scene{
         unsigned int nbr_of_active_drone;
 
     public:
-        Scene();
+        Scene(PzG::LaczeDoGNUPlota & Link);
 
         void choose_drone(unsigned int active_drone);
 

@@ -17,9 +17,12 @@ class Hexagonal_prism: public Geometrical_solid{
         Vector3D Global_corners[12]; 
 
         double Roration_angle_Zaxis;
+        
     public:
         Hexagonal_prism();
         
+        void update_angle(double additional_angle);
+
         void Transform_to_global_coords(Vector3D const & vec, Vector3D const & position_of_drone, double const & drone_angle);
 
         /*! \brief Przeciazenie operatora indeksujacego */

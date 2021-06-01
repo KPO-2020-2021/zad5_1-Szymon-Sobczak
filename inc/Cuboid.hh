@@ -20,7 +20,7 @@ class Cuboid2: public Geometrical_solid{
     public:
         Cuboid2();
         
-        void Transform_to_global_coords(Vector3D const & vec,double const & angle);
+        void Transform_to_global_coords(Vector3D const & vec);
 
         void update_angle(double additional_angle);
 
@@ -31,7 +31,6 @@ class Cuboid2: public Geometrical_solid{
         Vector3D & operator [] (int index);
 
         double get_angle();
-
 };
 
 

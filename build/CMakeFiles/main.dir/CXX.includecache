@@ -149,8 +149,8 @@ vector3D.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/vector3D.hh
 matrix3x3.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/matrix3x3.hh
-vector3D.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/vector3D.hh
+vector.hh
+/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/vector.hh
 Drone.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/app/Drone.hh
 Scene.hh

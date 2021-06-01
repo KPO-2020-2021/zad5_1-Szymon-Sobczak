@@ -38,6 +38,8 @@ class Vector{
         /*! \brief Konstruktor klasy z parametrem. */
         Vector(double [Size]); 
 
+        ~Vector();
+
         /*! \brief Operator dodawania dwoch wektorow. */
         Vector operator + (const Vector &v);   
         
@@ -58,8 +60,15 @@ class Vector{
         
         /*! \brief Przeciazenia operatora indeksujacego. */
         double & operator [] (unsigned int index);
+
+        static int counter_actual_vectors;
+
+        static int counter_all_vectors;
 };
 
+int get_counter_actual_vectors();
+
+int get_counter_all_vectors();
 
 /*! \brief Funkcja pomocnicza, pozwala zmierzyc odlegosc pomiedzy dwoma wektorami, tworzacymi nowy wektor */ 
 template <unsigned int Size>
@@ -73,6 +82,17 @@ std::ostream & operator << (std::ostream &out, Vector<Size> const &tmp);
 template <unsigned int Size>
 std::istream & operator >> (std::istream &in, Vector<Size> &tmp); 
 
+/* template <unsigned int Size>
+int get_counter_actual_vectors(){
+    return vector.counter_actual_vectors;
+}
+
+template <unsigned int Size>
+int get_counter_all_vectors(){
+    return Vector.counter_all_vectors;
+}
+
+ */
 /*!
     Konstruktor bezparametryczny klasy Vector tworzacy wektor zerowy o zadanej dlugosci.                                              
 
@@ -99,6 +119,14 @@ Vector<Size>::Vector(double tmp[Size]){
     for (unsigned int i = 0; i < Size; ++i){
         size[i] = tmp[i];
     }
+/*    ++counter_all_vectors;
+   ++counter_actual_vectors; */
+}
+
+
+template <unsigned int Size>
+Vector<Size>::~Vector(){
+/*  --counter_actual_vectors; */
 }
 
 /*!
@@ -117,6 +145,8 @@ Vector<Size>  Vector<Size>::operator + (const Vector<Size> &v){
         result[i] = size[i] + v[i];
     }
     return result;
+    ++counter_all_vectors;
+    ++counter_actual_vectors;
 }
 
 /*!

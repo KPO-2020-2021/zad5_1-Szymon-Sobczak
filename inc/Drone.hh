@@ -32,13 +32,15 @@ class Drone{
 
         void set_ID( unsigned int new_ID);
 
-        Vector3D  get_drone_location();        
+        Vector3D const get_drone_location() const;        
 
         void plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link);
 
-        void drone_go_verical(double altitude, PzG::LaczeDoGNUPlota & Link);
+        void go_verical(double altitude, PzG::LaczeDoGNUPlota & Link);
 
-        void drone_go_horizontal(double distance, PzG::LaczeDoGNUPlota & Link);
+        void rotate_drone(double user_angle,PzG::LaczeDoGNUPlota & Link);
+
+        void go_horizontal(double distance, double user_angle, PzG::LaczeDoGNUPlota & Link);
 
         void Calculate_and_save_to_file_drone();
 };
