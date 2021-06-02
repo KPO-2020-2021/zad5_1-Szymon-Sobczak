@@ -731,33 +731,6 @@ src/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/Scene.cpp.s
 .PHONY : src/Scene.cpp.s
 
-src/cuboid.o: src/cuboid.cpp.o
-
-.PHONY : src/cuboid.o
-
-# target to build an object file
-src/cuboid.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/cuboid.cpp.o
-.PHONY : src/cuboid.cpp.o
-
-src/cuboid.i: src/cuboid.cpp.i
-
-.PHONY : src/cuboid.i
-
-# target to preprocess a source file
-src/cuboid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/cuboid.cpp.i
-.PHONY : src/cuboid.cpp.i
-
-src/cuboid.s: src/cuboid.cpp.s
-
-.PHONY : src/cuboid.s
-
-# target to generate assembly for a file
-src/cuboid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/cuboid.cpp.s
-.PHONY : src/cuboid.cpp.s
-
 src/lacze_do_gnuplota.o: src/lacze_do_gnuplota.cpp.o
 
 .PHONY : src/lacze_do_gnuplota.o
@@ -811,33 +784,6 @@ src/matrix3x3.s: src/matrix3x3.cpp.s
 src/matrix3x3.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/matrix3x3.cpp.s
 .PHONY : src/matrix3x3.cpp.s
-
-src/scene.o: src/scene.cpp.o
-
-.PHONY : src/scene.o
-
-# target to build an object file
-src/scene.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scene.cpp.o
-.PHONY : src/scene.cpp.o
-
-src/scene.i: src/scene.cpp.i
-
-.PHONY : src/scene.i
-
-# target to preprocess a source file
-src/scene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scene.cpp.i
-.PHONY : src/scene.cpp.i
-
-src/scene.s: src/scene.cpp.s
-
-.PHONY : src/scene.s
-
-# target to generate assembly for a file
-src/scene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/program.dir/build.make CMakeFiles/program.dir/src/scene.cpp.s
-.PHONY : src/scene.cpp.s
 
 # Help Target
 help:
@@ -899,18 +845,12 @@ help:
 	@echo "... src/Scene.o"
 	@echo "... src/Scene.i"
 	@echo "... src/Scene.s"
-	@echo "... src/cuboid.o"
-	@echo "... src/cuboid.i"
-	@echo "... src/cuboid.s"
 	@echo "... src/lacze_do_gnuplota.o"
 	@echo "... src/lacze_do_gnuplota.i"
 	@echo "... src/lacze_do_gnuplota.s"
 	@echo "... src/matrix3x3.o"
 	@echo "... src/matrix3x3.i"
 	@echo "... src/matrix3x3.s"
-	@echo "... src/scene.o"
-	@echo "... src/scene.i"
-	@echo "... src/scene.s"
 .PHONY : help
 
 

@@ -11,11 +11,6 @@
 },
 {
   "directory": "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build",
-  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build\" -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/inc\" -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/external/doctest/doctest\" -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/cuboid.cpp.o -c \"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/cuboid.cpp\"",
-  "file": "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/cuboid.cpp"
-},
-{
-  "directory": "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build",
   "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build\" -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/inc\" -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/external/doctest/doctest\" -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Cuboid.cpp.o -c \"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Cuboid.cpp\"",
   "file": "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Cuboid.cpp"
 },
@@ -33,11 +28,6 @@
   "directory": "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build",
   "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build\" -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/inc\" -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/external/doctest/doctest\" -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o -c \"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Hexagonal_prism.cpp\"",
   "file": "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Hexagonal_prism.cpp"
-},
-{
-  "directory": "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build",
-  "command": "/usr/bin/c++ -DENABLE_DOCTEST_IN_LIBRARY -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build\" -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/inc\" -I\"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/external/doctest/doctest\" -g -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/scene.cpp.o -c \"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/scene.cpp\"",
-  "file": "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/scene.cpp"
 },
 {
   "directory": "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build",

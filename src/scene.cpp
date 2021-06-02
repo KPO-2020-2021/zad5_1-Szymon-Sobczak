@@ -12,9 +12,9 @@
 */
 
 Scene::~Scene(){
-    std::string datasets_path = "../datasets";
+     std::string datasets_path = "../datasets";
     for (const auto& entry : std::filesystem::directory_iterator(datasets_path)) 
-        std::filesystem::remove_all(entry.path());
+        std::filesystem::remove_all(entry.path()); 
 }
 
 /*!

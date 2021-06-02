@@ -21,9 +21,9 @@ Scene::Scene(PzG::LaczeDoGNUPlota & Link){
     File_info_fsd1 -> ZmienKolor(1);
     File_info_fsd1 -> ZmienSzerokosc(2);
 
-/*     PzG::InfoPlikuDoRysowania *File_info_bed = & Link.DodajNazwePliku("../datasets/bed.dat");
+    PzG::InfoPlikuDoRysowania *File_info_bed = & Link.DodajNazwePliku("../datasets/bed.dat");
     File_info_bed -> ZmienKolor(4);
-    File_info_bed -> ZmienSzerokosc(2); */
+    File_info_bed -> ZmienSzerokosc(2); 
 
     PzG::InfoPlikuDoRysowania *File_info_rot0_no1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor0.dat");
     File_info_rot0_no1->ZmienKolor(1);

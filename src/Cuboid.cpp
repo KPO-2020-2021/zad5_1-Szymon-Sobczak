@@ -1,9 +1,10 @@
 #include "Cuboid.hh"
 
 Cuboid2::Cuboid2(){
-
     double values[3] = {10,8,6};
+    
     Vector3D fusledge_scale(values);
+    
     udpate_scale(fusledge_scale);
 
     double v_Apx1[3]={-0.5,0.5,-0.5},v_Apx2[3]={-0.5,-0.5,-0.5},v_Apx3[3]={0.5,0.5,-0.5},v_Apx4[3]={0.5,-0.5,-0.5},

@@ -89,22 +89,9 @@ CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/lacze_do_gnuplota.cpp" -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s
 
-CMakeFiles/program.dir/src/cuboid.cpp.o: CMakeFiles/program.dir/flags.make
-CMakeFiles/program.dir/src/cuboid.cpp.o: ../src/cuboid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/cuboid.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/cuboid.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/cuboid.cpp"
-
-CMakeFiles/program.dir/src/cuboid.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/cuboid.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/cuboid.cpp" > CMakeFiles/program.dir/src/cuboid.cpp.i
-
-CMakeFiles/program.dir/src/cuboid.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/cuboid.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/cuboid.cpp" -o CMakeFiles/program.dir/src/cuboid.cpp.s
-
 CMakeFiles/program.dir/src/Cuboid.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Cuboid.cpp.o: ../src/Cuboid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/program.dir/src/Cuboid.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/Cuboid.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Cuboid.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Cuboid.cpp"
 
 CMakeFiles/program.dir/src/Cuboid.cpp.i: cmake_force
@@ -117,7 +104,7 @@ CMakeFiles/program.dir/src/Cuboid.cpp.s: cmake_force
 
 CMakeFiles/program.dir/src/Drone.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Drone.cpp.o: ../src/Drone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/program.dir/src/Drone.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/program.dir/src/Drone.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Drone.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Drone.cpp"
 
 CMakeFiles/program.dir/src/Drone.cpp.i: cmake_force
@@ -130,7 +117,7 @@ CMakeFiles/program.dir/src/Drone.cpp.s: cmake_force
 
 CMakeFiles/program.dir/src/Geometrical_solid.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Geometrical_solid.cpp.o: ../src/Geometrical_solid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/program.dir/src/Geometrical_solid.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/program.dir/src/Geometrical_solid.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Geometrical_solid.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Geometrical_solid.cpp"
 
 CMakeFiles/program.dir/src/Geometrical_solid.cpp.i: cmake_force
@@ -143,7 +130,7 @@ CMakeFiles/program.dir/src/Geometrical_solid.cpp.s: cmake_force
 
 CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o: ../src/Hexagonal_prism.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Hexagonal_prism.cpp"
 
 CMakeFiles/program.dir/src/Hexagonal_prism.cpp.i: cmake_force
@@ -154,22 +141,9 @@ CMakeFiles/program.dir/src/Hexagonal_prism.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Hexagonal_prism.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Hexagonal_prism.cpp" -o CMakeFiles/program.dir/src/Hexagonal_prism.cpp.s
 
-CMakeFiles/program.dir/src/scene.cpp.o: CMakeFiles/program.dir/flags.make
-CMakeFiles/program.dir/src/scene.cpp.o: ../src/scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/program.dir/src/scene.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/scene.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/scene.cpp"
-
-CMakeFiles/program.dir/src/scene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/scene.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/scene.cpp" > CMakeFiles/program.dir/src/scene.cpp.i
-
-CMakeFiles/program.dir/src/scene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/scene.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/scene.cpp" -o CMakeFiles/program.dir/src/scene.cpp.s
-
 CMakeFiles/program.dir/src/matrix3x3.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/matrix3x3.cpp.o: ../src/matrix3x3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/program.dir/src/matrix3x3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/program.dir/src/matrix3x3.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/matrix3x3.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/matrix3x3.cpp"
 
 CMakeFiles/program.dir/src/matrix3x3.cpp.i: cmake_force
@@ -182,7 +156,7 @@ CMakeFiles/program.dir/src/matrix3x3.cpp.s: cmake_force
 
 CMakeFiles/program.dir/src/Scene.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/Scene.cpp.o: ../src/Scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/program.dir/src/Scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/program.dir/src/Scene.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Scene.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Scene.cpp"
 
 CMakeFiles/program.dir/src/Scene.cpp.i: cmake_force
@@ -194,12 +168,10 @@ CMakeFiles/program.dir/src/Scene.cpp.s: cmake_force
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Scene.cpp" -o CMakeFiles/program.dir/src/Scene.cpp.s
 
 program: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
-program: CMakeFiles/program.dir/src/cuboid.cpp.o
 program: CMakeFiles/program.dir/src/Cuboid.cpp.o
 program: CMakeFiles/program.dir/src/Drone.cpp.o
 program: CMakeFiles/program.dir/src/Geometrical_solid.cpp.o
 program: CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o
-program: CMakeFiles/program.dir/src/scene.cpp.o
 program: CMakeFiles/program.dir/src/matrix3x3.cpp.o
 program: CMakeFiles/program.dir/src/Scene.cpp.o
 program: CMakeFiles/program.dir/build.make

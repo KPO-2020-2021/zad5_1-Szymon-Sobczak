@@ -36,6 +36,8 @@ class Drone{
 
         void plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link);
 
+/*         void plan_reacon(PzG::LaczeDoGNUPlota & Link); */
+
         void go_verical(double altitude, PzG::LaczeDoGNUPlota & Link);
 
         void rotate_drone(double user_angle,PzG::LaczeDoGNUPlota & Link);

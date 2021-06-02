@@ -41,12 +41,10 @@ find_lto(CXX)
 
 set(SOURCES          # All .cpp files in src/
     src/lacze_do_gnuplota.cpp
-    src/cuboid.cpp
     src/Cuboid.cpp
     src/Drone.cpp
     src/Geometrical_solid.cpp
     src/Hexagonal_prism.cpp
-    src/scene.cpp
     src/matrix3x3.cpp
     src/Scene.cpp
 )

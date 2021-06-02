@@ -96,23 +96,19 @@ main_OBJECTS = \
 # External object files for target main
 main_EXTERNAL_OBJECTS = \
 "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o" \
-"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/cuboid.cpp.o" \
 "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/Cuboid.cpp.o" \
 "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/Drone.cpp.o" \
 "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/Geometrical_solid.cpp.o" \
 "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o" \
-"/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/scene.cpp.o" \
 "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/matrix3x3.cpp.o" \
 "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles/program.dir/src/Scene.cpp.o"
 
 main: CMakeFiles/main.dir/app/main.cpp.o
 main: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
-main: CMakeFiles/program.dir/src/cuboid.cpp.o
 main: CMakeFiles/program.dir/src/Cuboid.cpp.o
 main: CMakeFiles/program.dir/src/Drone.cpp.o
 main: CMakeFiles/program.dir/src/Geometrical_solid.cpp.o
 main: CMakeFiles/program.dir/src/Hexagonal_prism.cpp.o
-main: CMakeFiles/program.dir/src/scene.cpp.o
 main: CMakeFiles/program.dir/src/matrix3x3.cpp.o
 main: CMakeFiles/program.dir/src/Scene.cpp.o
 main: CMakeFiles/main.dir/build.make

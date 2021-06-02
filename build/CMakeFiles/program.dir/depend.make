@@ -50,15 +50,6 @@ CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/vector.hh
 CMakeFiles/program.dir/src/Scene.cpp.o: ../inc/vector3D.hh
 CMakeFiles/program.dir/src/Scene.cpp.o: ../src/Scene.cpp
 
-CMakeFiles/program.dir/src/cuboid.cpp.o: ../inc/cuboid.hh
-CMakeFiles/program.dir/src/cuboid.cpp.o: ../inc/lacze_do_gnuplota.hh
-CMakeFiles/program.dir/src/cuboid.cpp.o: ../inc/matrix.hh
-CMakeFiles/program.dir/src/cuboid.cpp.o: ../inc/matrix3x3.hh
-CMakeFiles/program.dir/src/cuboid.cpp.o: ../inc/size.hh
-CMakeFiles/program.dir/src/cuboid.cpp.o: ../inc/vector.hh
-CMakeFiles/program.dir/src/cuboid.cpp.o: ../inc/vector3D.hh
-CMakeFiles/program.dir/src/cuboid.cpp.o: ../src/cuboid.cpp
-
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../inc/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../src/lacze_do_gnuplota.cpp
 
@@ -67,14 +58,4 @@ CMakeFiles/program.dir/src/matrix3x3.cpp.o: ../inc/matrix3x3.hh
 CMakeFiles/program.dir/src/matrix3x3.cpp.o: ../inc/size.hh
 CMakeFiles/program.dir/src/matrix3x3.cpp.o: ../inc/vector.hh
 CMakeFiles/program.dir/src/matrix3x3.cpp.o: ../src/matrix3x3.cpp
-
-CMakeFiles/program.dir/src/scene.cpp.o: ../inc/cuboid.hh
-CMakeFiles/program.dir/src/scene.cpp.o: ../inc/lacze_do_gnuplota.hh
-CMakeFiles/program.dir/src/scene.cpp.o: ../inc/matrix.hh
-CMakeFiles/program.dir/src/scene.cpp.o: ../inc/matrix3x3.hh
-CMakeFiles/program.dir/src/scene.cpp.o: ../inc/scene.hh
-CMakeFiles/program.dir/src/scene.cpp.o: ../inc/size.hh
-CMakeFiles/program.dir/src/scene.cpp.o: ../inc/vector.hh
-CMakeFiles/program.dir/src/scene.cpp.o: ../inc/vector3D.hh
-CMakeFiles/program.dir/src/scene.cpp.o: ../src/scene.cpp
 

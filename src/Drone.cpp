@@ -61,32 +61,6 @@ void Drone::Calculate_and_save_to_file_fuselage(){
     FileStrm.close();
 }
 
-
-/* Opcja dodajaca do sceny nowy prostopadloscian */
-    //                 std::cout << "Podaj wspolrzedne punktow, na ktorych zostanie rozpiety nowy prostopadloscian: " << std::endl; 
-    //                 std::cout << "Podaj wspolrzedne x y z pierwszego punktu: "; 
-    //                 std::cin >> ctr_of_new_cub;
-    //                 std::cout << "Podaj wartosci dlugosci o jakie punkt ma zostac rozsuniety na osiach OX, OY, OZ " << std::endl; 
-    //                 std::cin >> tr_X >> tr_Y >> tr_Z;
-    //                 if (std::cin.fail() || (tr_X == 0 && tr_Y == 0 && tr_Z == 0)){
-    //                     std::cerr << ":( Niepoprawne oznaczenie dlugosci, dodawanie przerwane." << std::endl; 
-    //                     std::cin.clear();
-    //                     std::cin.ignore(10000,'\n');   
-    //                     break;
-    //                 }
-
-    //                 name_of_new_file = "../datasets/cuboid.dat";
-    //                 name_of_new_file.insert(18, std::to_string(Scenery.how_many_cuboids() + 1));
-    //                 adresses_of_files.push_back(name_of_new_file);
-    //                 Link.DodajNazwePliku(name_of_new_file.c_str(),PzG::RR_Ciagly, 2);
-
-    //                 Scenery.Add_cuboid(ctr_of_new_cub,tr_X,tr_Y,tr_Z);
-
-    //                 Scenery[Scenery.how_many_cuboids()-1].Write_cub_to_file(name_of_new_file.c_str());
-
-    //                 Link.Rysuj();
-    //             break;
-
 void Drone::Calculate_and_save_to_file_rotor(unsigned int index, Vector3D Trasnlation){
     
     rotors[index].Transform_to_global_coords(Trasnlation, drone_location, fuselage.get_angle());
@@ -170,6 +144,12 @@ void Drone::Calculate_and_save_to_file_drone(){
 
 void Drone::go_verical(double altitude, PzG::LaczeDoGNUPlota & Link){
     for (int i = 0; i < FRAMES; ++i){
+        
+        rotors[0].update_angle(-5);
+        rotors[1].update_angle(5);
+        rotors[2].update_angle(5);
+        rotors[3].update_angle(-5);
+        
         drone_location[2]+=altitude/FRAMES;
         Calculate_and_save_to_file_drone();
         Link.Rysuj();
@@ -188,24 +168,18 @@ void Drone::rotate_drone(double user_angle, PzG::LaczeDoGNUPlota & Link){
             rotors[3].update_angle(-5);
         }
         else if (user_angle > 0){
-            for (Hexagonal_prism rotors : rotors)
-            rotors[i].update_angle(-5);
-            rotors[1].update_angle(5);
-            rotors[2].update_angle(5);
-            rotors[3].update_angle(-5);
+            for (unsigned int i = 0;i < 4; i++)
+                rotors[i].update_angle(-5);
         }
         else{
-            rotors[0].update_angle(5);
-            rotors[1].update_angle(-5);
-            rotors[2].update_angle(-5);
-            rotors[3].update_angle(5);
+            for (unsigned int i = 0;i < 4; i++)
+                rotors[i].update_angle(5);
         }
         Calculate_and_save_to_file_drone();
         usleep(20000);
         Link.Rysuj();
     } 
 }
-
 
 void Drone::go_horizontal(double distance, double user_angle, PzG::LaczeDoGNUPlota & Link){
     double unit_values[3]={1,0,0};
@@ -217,10 +191,14 @@ void Drone::go_horizontal(double distance, double user_angle, PzG::LaczeDoGNUPlo
     
     unit_vector = Rotation_matrix * unit_vector;
     
-    Vector3D translation_vector = (unit_vector*distance)/FRAMES;
+    Vector3D translation_vector = (unit_vector * distance) / FRAMES;
     
     for (int i = 0; i < FRAMES; ++i){
         drone_location = drone_location + translation_vector;
+        rotors[0].update_angle(-5);
+        rotors[1].update_angle(5);
+        rotors[2].update_angle(5);
+        rotors[3].update_angle(-5);
         Calculate_and_save_to_file_drone();
         Link.Rysuj();
         usleep(20000);
@@ -228,8 +206,6 @@ void Drone::go_horizontal(double distance, double user_angle, PzG::LaczeDoGNUPlo
 
     Link.Rysuj();
 }
-
-
 
 std::ostream & operator << (std::ostream & Out, const Cuboid2 & Rc){
     for (int i = 0; i < CORNERS; i++){
@@ -240,10 +216,9 @@ std::ostream & operator << (std::ostream & Out, const Cuboid2 & Rc){
     return Out;
 }
 
-
 void Drone::plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link){
     std::ofstream  FileStrm;
-    std::string name_of_file = "../datasets/path.dat";
+    std::string name_of_file = "../datasets/path_reacon.dat";
     Vector3D path_point_location = drone_location;
      
     Orientation_angle += angle;
@@ -275,6 +250,10 @@ void Drone::plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link
 
     FileStrm.close();
 } 
+/* 
+void Drone::plan_reacon(PzG::LaczeDoGNUPlota & Link){
+    
+} */
 
 void Drone::set_ID(unsigned int new_ID){
     Drone_ID = new_ID;

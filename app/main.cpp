@@ -47,7 +47,8 @@ int main(){
    std::cout << "Menu wyboru opcji:" << std::endl
              << "\ta - wybierz aktywnego drona" << std::endl
              << "\tp - zadaj parametry przelotu" << std::endl
-             << "\tm - wyswietl menu" << std::endl << std::endl
+             << "\tm - wyswietl menu" << std::endl 
+             << "\tz - wykonaj zwiad" << std::endl << std::endl
              << "\tk - koniec dzialania programu" << std::endl << std::endl;
    while (Option != 'k'){ /* Glowna petla menu, dzialajaca do czasu wybrania opcji zakonczenia- k */
       std::cout << "Twoj wybor? (m - menu) > ";
@@ -79,21 +80,20 @@ int main(){
            
             std::cout << "Rysowanie zaplanowanej sciezki przelotu ... " << std::endl;
             Scenery.use_active_drone().plan_path(user_angle,distance,Link);
-
             Link.DodajNazwePliku("../datasets/path.dat");
-
             usleep(100000);
+            
             std::cout << "Wznoszenie ... " << std::endl;    
             Scenery.use_active_drone().go_verical(ALTITUDE,Link);
-                   usleep(1000000);
+            usleep(1000000);
                  
             std::cout << "Przelot ... " << std::endl;    
             Scenery.use_active_drone().go_horizontal(distance,user_angle,Link);
-                usleep(100000);
+            usleep(100000);
             
             std::cout << "Ladowanie ... " << std::endl;    
             Scenery.use_active_drone().go_verical(-ALTITUDE,Link);
-               usleep(100000);
+            usleep(100000);
 
             std::cout << "Dron wyladowal ... " << std::endl; 
             
@@ -106,7 +106,8 @@ int main(){
              std::cout << "Menu wyboru opcji:" << std::endl
              << "\ta - wybierz aktywnego drona" << std::endl
              << "\tp - zadaj parametry przelotu" << std::endl
-             << "\tm - wyswietl menu" << std::endl << std::endl
+             << "\tm - wyswietl menu" << std::endl 
+             << "\tz - wykonaj zwiad" << std::endl << std::endl
              << "\tk - koniec dzialania programu" << std::endl << std::endl;
          break;
              
@@ -114,12 +115,69 @@ int main(){
             std::cout << "Konczenie pracy programu ..." << std::endl;
          break;
 
+         case 'z':
+            std::cout << "Wykonywanie zwiadu ..." << std::endl;
+            Scenery.use_active_drone().go_verical(ALTITUDE,Link);
+            usleep(1000000);
+            
+            Scenery.use_active_drone().plan_path(30,0,Link);
+
+            Scenery.use_active_drone().go_horizontal(30,0,Link);
+            usleep(100000);
+
+            Scenery.use_active_drone().plan_path(30/sqrt(2),112.5,Link);
+
+            Scenery.use_active_drone().go_horizontal(30/sqrt(2),112.5,Link);
+            usleep(100000);
+
+            Scenery.use_active_drone().plan_path(30/sqrt(2),45,Link);
+
+            Scenery.use_active_drone().go_horizontal(30/sqrt(2),45,Link);
+            usleep(100000);
+
+             Scenery.use_active_drone().plan_path(30/sqrt(2),45,Link);
+
+            Scenery.use_active_drone().go_horizontal(30/sqrt(2),45,Link);
+            usleep(100000);
+
+          Scenery.use_active_drone().plan_path(30/sqrt(2),45,Link);
+
+
+            Scenery.use_active_drone().go_horizontal(30/sqrt(2),45,Link);
+            usleep(100000);
+
+             Scenery.use_active_drone().plan_path(30/sqrt(2),45,Link);
+
+
+            Scenery.use_active_drone().go_horizontal(30/sqrt(2),45,Link);
+            usleep(100000);
+
+             Scenery.use_active_drone().plan_path(30/sqrt(2),45,Link);
+
+
+            Scenery.use_active_drone().go_horizontal(30/sqrt(2),45,Link);
+            usleep(100000);
+
+
+            Scenery.use_active_drone().plan_path(30,112.5,Link);
+
+            Scenery.use_active_drone().go_horizontal(30,112.5,Link);
+            usleep(100000);
+
+            Scenery.use_active_drone().plan_path(0,180,Link);
+
+            Scenery.use_active_drone().go_horizontal(0,180,Link);
+            usleep(100000);
+
+            Scenery.use_active_drone().go_verical(-ALTITUDE,Link);
+            usleep(1000000);
+         break;
+
          default:   /* dzialanie, gdy podana opcja nie bedzie uprzednio zdefiniowana */
             std::cout << ":/ Opcja niezdefiniowana" << std::endl;
       }
 
-/*        std::cout << "Aktualna ilosc obiektow Wektor3D: " << test.counter_actual_vectors << std::endl;
-
+/*    std::cout << "Aktualna ilosc obiektow Wektor3D: " << test.counter_actual_vectors << std::endl;
       std::cout << "Laczna ilosc obiektow Wektor3D: " << test.counter_all_vectors << std::endl;  */
    }
    return 0;
