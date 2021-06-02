@@ -23,7 +23,7 @@ class Cuboid: public Geometrical_solid{
         
         void Transform_to_global_coords(Vector3D const & vec);
 
-        void update_angleZ(double additional_angle);
+        void update_angleZ(double const & additional_angle);
         
         /*! \brief Przeciazenie operatora indeksujacego */
         const Vector3D & operator [] (int index) const;         
@@ -31,9 +31,8 @@ class Cuboid: public Geometrical_solid{
         /*! \brief Przeciazenie operatora indeksujacego */
         Vector3D & operator [] (int index);
 
-        double get_angle();
+        double get_angle() const;
 };
-
 
 /*! \brief Przeciazenie operatora << sluzace wyswietlaniu wartosci prostopadloscianu */ 
 std::ostream & operator << (std::ostream & Strm, const Cuboid & Rc);    

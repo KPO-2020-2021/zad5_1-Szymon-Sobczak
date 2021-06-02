@@ -31,14 +31,17 @@ class Vector{
         /*! \brief Tablica wartosci wektora. */
         double size[Size];     
 
+        static int counter_actual_vectors;
+
+        static int counter_all_vectors;
     public:
         /*! \brief Bezparametryczny konstruktor klasy. */
-        Vector();  
+        Vector<Size>();  
 
         /*! \brief Konstruktor klasy z parametrem. */
-        Vector(double [Size]); 
+        Vector<Size>(double [Size]); 
 
-        ~Vector();
+        ~Vector<Size>();
 
         /*! \brief Operator dodawania dwoch wektorow. */
         Vector operator + (const Vector &v);   
@@ -61,14 +64,18 @@ class Vector{
         /*! \brief Przeciazenia operatora indeksujacego. */
         double & operator [] (unsigned int index);
 
-        static int counter_actual_vectors;
+        static int get_counter_actual_vectors();        
 
-        static int counter_all_vectors;
+        static int get_counter_all_vectors();      
 };
 
-int get_counter_actual_vectors();
 
-int get_counter_all_vectors();
+template <unsigned int Size>
+int Vector<Size>::counter_all_vectors = 0;
+
+template <unsigned int Size>
+int Vector<Size>::counter_actual_vectors = 0;
+
 
 /*! \brief Funkcja pomocnicza, pozwala zmierzyc odlegosc pomiedzy dwoma wektorami, tworzacymi nowy wektor */ 
 template <unsigned int Size>
@@ -82,17 +89,18 @@ std::ostream & operator << (std::ostream &out, Vector<Size> const &tmp);
 template <unsigned int Size>
 std::istream & operator >> (std::istream &in, Vector<Size> &tmp); 
 
-/* template <unsigned int Size>
-int get_counter_actual_vectors(){
-    return vector.counter_actual_vectors;
-}
 
 template <unsigned int Size>
-int get_counter_all_vectors(){
-    return Vector.counter_all_vectors;
+int Vector<Size>::get_counter_actual_vectors(){
+    return counter_actual_vectors;
+}    
+
+
+template <unsigned int Size>
+int Vector<Size>::get_counter_all_vectors(){
+     return counter_all_vectors;
 }
 
- */
 /*!
     Konstruktor bezparametryczny klasy Vector tworzacy wektor zerowy o zadanej dlugosci.                                              
 
@@ -104,6 +112,8 @@ Vector<Size>::Vector(){
     for (unsigned int i = 0; i < Size; ++i){
         size[i] = 0;
     }
+    ++counter_all_vectors;
+    ++counter_actual_vectors;
 }
 
 /*!
@@ -119,14 +129,14 @@ Vector<Size>::Vector(double tmp[Size]){
     for (unsigned int i = 0; i < Size; ++i){
         size[i] = tmp[i];
     }
-/*    ++counter_all_vectors;
-   ++counter_actual_vectors; */
+   ++counter_all_vectors;
+   ++counter_actual_vectors; 
 }
 
 
 template <unsigned int Size>
 Vector<Size>::~Vector(){
-/*  --counter_actual_vectors; */
+  --counter_actual_vectors;
 }
 
 /*!

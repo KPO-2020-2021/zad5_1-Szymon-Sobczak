@@ -51,11 +51,11 @@ const Vector3D & Cuboid::operator [] (int index) const {
     return const_cast <Vector3D &> (const_cast <const Cuboid *> (this)->operator[](index));
 }
 
- void Cuboid::update_angleZ(double additional_angle){
+void Cuboid::update_angleZ(double const & additional_angle){
      Roration_angle_Zaxis += additional_angle;
- }
+}
 
  
-  double Cuboid::get_angle(){
+double Cuboid::get_angle() const{
     return Roration_angle_Zaxis;
- }
+}

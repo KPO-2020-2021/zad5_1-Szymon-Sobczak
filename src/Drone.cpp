@@ -1,13 +1,12 @@
 #include "Drone.hh"
 
-Drone::Drone(Vector3D location){
+Drone::Drone(Vector3D const & location){
     drone_location = location;
     Drone_ID = 0;
     Orientation_angle = 0;
 }
 
 void Drone::Calculate_and_save_to_file_fuselage(){
-
     fuselage.Transform_to_global_coords(drone_location);
 
     std::ofstream  FileStrm;
@@ -61,7 +60,7 @@ void Drone::Calculate_and_save_to_file_fuselage(){
     FileStrm.close();
 }
 
-void Drone::Calculate_and_save_to_file_rotor(unsigned int index, Vector3D Trasnlation){
+void Drone::Calculate_and_save_to_file_rotor(unsigned int index, Vector3D const & Trasnlation){
     
     rotors[index].Transform_to_global_coords(Trasnlation, drone_location, fuselage.get_angle());
 
@@ -142,7 +141,7 @@ void Drone::Calculate_and_save_to_file_drone(){
     Calculate_and_save_to_file_rotor(3,vec_rot4);
 }
 
-void Drone::go_verical(double altitude, PzG::LaczeDoGNUPlota & Link){
+void Drone::go_verical(double const & altitude, PzG::LaczeDoGNUPlota & Link){
     for (int i = 0; i < FRAMES; ++i){
         if (altitude >= 0){
         rotors[0].update_angle(-10);
@@ -164,7 +163,7 @@ void Drone::go_verical(double altitude, PzG::LaczeDoGNUPlota & Link){
     Link.Rysuj();
 }
 
-void Drone::rotate_drone(double user_angle, PzG::LaczeDoGNUPlota & Link){
+void Drone::rotate_drone(double const & user_angle, PzG::LaczeDoGNUPlota & Link){
     for (int i = 0; i < FRAMES; ++i){
         fuselage.update_angleZ(user_angle/FRAMES); 
         if((user_angle == 0)){
@@ -191,7 +190,7 @@ void Drone::rotate_drone(double user_angle, PzG::LaczeDoGNUPlota & Link){
     } 
 }
 
-void Drone::go_horizontal(double distance, double user_angle, PzG::LaczeDoGNUPlota & Link){
+void Drone::go_horizontal(double const & distance, double const & user_angle, PzG::LaczeDoGNUPlota & Link){
     double unit_values[3]={1,0,0};
     Vector3D unit_vector(unit_values);
     
@@ -225,7 +224,7 @@ std::ostream & operator << (std::ostream & Out, const Cuboid & Rc){
     return Out;
 }
 
-void Drone::plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link){
+void Drone::plan_path(double const & angle, double const & distance, PzG::LaczeDoGNUPlota & Link){
     std::ofstream  FileStrm;
     std::string name_of_file = "../datasets/path.dat";
     Vector3D path_point_location = drone_location;
@@ -259,7 +258,6 @@ void Drone::plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link
 
     FileStrm.close();
 } 
-
 
 void Drone::plan_reacon(PzG::LaczeDoGNUPlota & Link){
     std::ofstream  FileStrm;
@@ -308,7 +306,7 @@ void Drone::plan_reacon(PzG::LaczeDoGNUPlota & Link){
     FileStrm.close();
 } 
 
-void Drone::set_ID(unsigned int new_ID){
+void Drone::set_ID(unsigned int const & new_ID){
     Drone_ID = new_ID;
 }
 
@@ -316,6 +314,6 @@ Vector3D const Drone::get_drone_location() const{
     return drone_location;
 } 
 
-void Drone::update_angle(double additional_angle){
+void Drone::update_angle(double const & additional_angle){
      Orientation_angle += additional_angle;
 }

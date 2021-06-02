@@ -55,7 +55,7 @@ const Vector3D & Hexagonal_prism::operator [] (int index) const {
 }
 
 
- void Hexagonal_prism::update_angle(double additional_angle){
+void Hexagonal_prism::update_angle(double const & additional_angle){
     Roration_angle_Zaxis += additional_angle;
     if(Roration_angle_Zaxis >=360)
         Roration_angle_Zaxis -=360;

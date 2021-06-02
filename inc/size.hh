@@ -16,4 +16,4 @@ constexpr int FRAMES = 100;
 
 constexpr double ALTITUDE = 100;   
 
-constexpr int REACON_RADIUS = 50;  
+constexpr int REACON_RADIUS = 40;  

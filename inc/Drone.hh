@@ -25,26 +25,26 @@ class Drone{
 
         void Calculate_and_save_to_file_fuselage();
 
-        void Calculate_and_save_to_file_rotor(unsigned int index, Vector3D Trasnlation);
+        void Calculate_and_save_to_file_rotor(unsigned int index, Vector3D const & Trasnlation);
 
     public:
-        Drone(Vector3D location);
+        Drone(Vector3D const & location);
 
-        void set_ID(unsigned int new_ID);
+        void set_ID(unsigned int const & new_ID);
 
         Vector3D const get_drone_location() const;        
 
-        void plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link);
+        void plan_path(double const & angle, double const & distance, PzG::LaczeDoGNUPlota & Link);
 
         void plan_reacon(PzG::LaczeDoGNUPlota & Link);
 
-        void update_angle(double additional_angle);
+        void update_angle(double const &  additional_angle);
 
-        void go_verical(double altitude, PzG::LaczeDoGNUPlota & Link);
+        void go_verical(double const &  altitude, PzG::LaczeDoGNUPlota & Link);
 
-        void rotate_drone(double user_angle,PzG::LaczeDoGNUPlota & Link);
+        void rotate_drone(double const &  user_angle,PzG::LaczeDoGNUPlota & Link);
 
-        void go_horizontal(double distance, double user_angle, PzG::LaczeDoGNUPlota & Link);
+        void go_horizontal(double const & distance, double const & user_angle, PzG::LaczeDoGNUPlota & Link);
 
         void Calculate_and_save_to_file_drone();
 

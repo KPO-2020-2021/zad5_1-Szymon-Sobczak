@@ -21,17 +21,17 @@ Scene::Scene(PzG::LaczeDoGNUPlota & Link){
     File_info_bed -> ZmienKolor(4);
     File_info_bed -> ZmienSzerokosc(2); 
 
-    tab_of_properties_d1[0] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_fuselage.dat");
-    tab_of_properties_d1[1] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor0.dat");
-    tab_of_properties_d1[2] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor1.dat");
-    tab_of_properties_d1[3] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor2.dat");
-    tab_of_properties_d1[4] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor3.dat");
+    tab_of_properties_d1[0] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_1_fuselage.dat");
+    tab_of_properties_d1[1] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_1_rotor0.dat");
+    tab_of_properties_d1[2] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_1_rotor1.dat");
+    tab_of_properties_d1[3] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_1_rotor2.dat");
+    tab_of_properties_d1[4] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_1_rotor3.dat");
     
-    tab_of_properties_d2[0] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_fuselage.dat");
-    tab_of_properties_d2[1] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor0.dat");
-    tab_of_properties_d2[2] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor1.dat");
-    tab_of_properties_d2[3] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor2.dat");
-    tab_of_properties_d2[4] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor3.dat");
+    tab_of_properties_d2[0] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_2_fuselage.dat");
+    tab_of_properties_d2[1] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_2_rotor0.dat");
+    tab_of_properties_d2[2] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_2_rotor1.dat");
+    tab_of_properties_d2[3] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_2_rotor2.dat");
+    tab_of_properties_d2[4] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_2_rotor3.dat");
  
     for (unsigned int i = 0; i < 5; ++i){
         tab_of_properties_d1[i] -> ZmienSzerokosc(2);
@@ -44,14 +44,13 @@ void Scene::choose_drone(unsigned int active_drone){
       throw std::invalid_argument(":/ Podano bledny numer drona ");
     else    
         nbr_of_active_drone = active_drone;
-
+        
     if (active_drone==1){
         for (unsigned int i = 0; i < 5; ++i){
             tab_of_properties_d1[i] -> ZmienKolor(1);
             tab_of_properties_d2[i] -> ZmienKolor(8);
         }  
     }
-
     if (active_drone==2){
         for (unsigned int i = 0; i < 5; ++i){
             tab_of_properties_d1[i] -> ZmienKolor(8);
