@@ -22,44 +22,21 @@ Scene::Scene(PzG::LaczeDoGNUPlota & Link){
     File_info_bed -> ZmienSzerokosc(2); 
 
     tab_of_properties_d1[0] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_fuselage.dat");
-    tab_of_properties_d1[0] -> ZmienKolor(1);
-    tab_of_properties_d1[0] -> ZmienSzerokosc(2);
-
     tab_of_properties_d1[1] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor0.dat");
-    tab_of_properties_d1[1] -> ZmienKolor(1);
-    tab_of_properties_d1[1] -> ZmienSzerokosc(2);
-
     tab_of_properties_d1[2] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor1.dat");
-    tab_of_properties_d1[2] -> ZmienKolor(1);
-    tab_of_properties_d1[2] -> ZmienSzerokosc(2);
-
     tab_of_properties_d1[3] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor2.dat");
-    tab_of_properties_d1[3] -> ZmienKolor(1);
-    tab_of_properties_d1[3] -> ZmienSzerokosc(2);
-
     tab_of_properties_d1[4] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor3.dat");
-    tab_of_properties_d1[4] -> ZmienKolor(1);
-    tab_of_properties_d1[4] -> ZmienSzerokosc(2); 
-
+    
     tab_of_properties_d2[0] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_fuselage.dat");
-    tab_of_properties_d2[0] -> ZmienKolor(2);
-    tab_of_properties_d2[0] -> ZmienSzerokosc(2);
-
     tab_of_properties_d2[1] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor0.dat");
-    tab_of_properties_d2[1] -> ZmienKolor(2);
-    tab_of_properties_d2[1] -> ZmienSzerokosc(2);
-
     tab_of_properties_d2[2] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor1.dat");
-    tab_of_properties_d2[2] -> ZmienKolor(2);
-    tab_of_properties_d2[2] -> ZmienSzerokosc(2);
-
     tab_of_properties_d2[3] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor2.dat");
-    tab_of_properties_d2[3] -> ZmienKolor(2);
-    tab_of_properties_d2[3] -> ZmienSzerokosc(2);
-
     tab_of_properties_d2[4] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor3.dat");
-    tab_of_properties_d2[4] -> ZmienKolor(2);
-    tab_of_properties_d2[4] -> ZmienSzerokosc(2);  
+ 
+    for (unsigned int i = 0; i < 5; ++i){
+        tab_of_properties_d1[i] -> ZmienSzerokosc(2);
+        tab_of_properties_d2[i] -> ZmienSzerokosc(2);
+    } 
 }
 
 void Scene::choose_drone(unsigned int active_drone){
@@ -70,7 +47,7 @@ void Scene::choose_drone(unsigned int active_drone){
 
     if (active_drone==1){
         for (unsigned int i = 0; i < 5; ++i){
-            tab_of_properties_d1[i] -> ZmienKolor(2);
+            tab_of_properties_d1[i] -> ZmienKolor(1);
             tab_of_properties_d2[i] -> ZmienKolor(8);
         }  
     }
@@ -78,7 +55,7 @@ void Scene::choose_drone(unsigned int active_drone){
     if (active_drone==2){
         for (unsigned int i = 0; i < 5; ++i){
             tab_of_properties_d1[i] -> ZmienKolor(8);
-            tab_of_properties_d2[i] -> ZmienKolor(2);
+            tab_of_properties_d2[i] -> ZmienKolor(1);
         }  
     }
 }

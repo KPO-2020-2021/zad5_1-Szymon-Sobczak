@@ -278,7 +278,7 @@ void Drone::plan_reacon(PzG::LaczeDoGNUPlota & Link){
     double unit_values[3]={1,0,0};
     Vector3D unit_vector(unit_values);
     
-    Matrix3x3 Rotation_matrix = Fill_matrix_OZ(0);
+    Matrix3x3 Rotation_matrix = Fill_matrix_OZ(Orientation_angle);
     unit_vector = Rotation_matrix * unit_vector;
     path_point_location = path_point_location + (unit_vector*REACON_RADIUS);
     FileStrm << path_point_location << std::endl;
