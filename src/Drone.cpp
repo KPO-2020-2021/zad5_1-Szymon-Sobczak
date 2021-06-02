@@ -144,12 +144,18 @@ void Drone::Calculate_and_save_to_file_drone(){
 
 void Drone::go_verical(double altitude, PzG::LaczeDoGNUPlota & Link){
     for (int i = 0; i < FRAMES; ++i){
-        
-        rotors[0].update_angle(-5);
-        rotors[1].update_angle(5);
-        rotors[2].update_angle(5);
-        rotors[3].update_angle(-5);
-        
+        if (altitude >= 0){
+        rotors[0].update_angle(-10);
+        rotors[1].update_angle(10);
+        rotors[2].update_angle(10);
+        rotors[3].update_angle(-10);
+        }
+        else{
+            rotors[0].update_angle(-3);
+            rotors[1].update_angle(3);
+            rotors[2].update_angle(3);
+            rotors[3].update_angle(-3);
+        }
         drone_location[2]+=altitude/FRAMES;
         Calculate_and_save_to_file_drone();
         Link.Rysuj();
@@ -160,7 +166,7 @@ void Drone::go_verical(double altitude, PzG::LaczeDoGNUPlota & Link){
 
 void Drone::rotate_drone(double user_angle, PzG::LaczeDoGNUPlota & Link){
     for (int i = 0; i < FRAMES; ++i){
-        fuselage.update_angle(user_angle/FRAMES); 
+        fuselage.update_angleZ(user_angle/FRAMES); 
         if((user_angle == 0)){
             rotors[0].update_angle(-5);
             rotors[1].update_angle(5);
@@ -168,12 +174,16 @@ void Drone::rotate_drone(double user_angle, PzG::LaczeDoGNUPlota & Link){
             rotors[3].update_angle(-5);
         }
         else if (user_angle > 0){
-            for (unsigned int i = 0;i < 4; i++)
-                rotors[i].update_angle(-5);
+            rotors[0].update_angle(-10);
+            rotors[1].update_angle(3);
+            rotors[2].update_angle(3);
+            rotors[3].update_angle(-10);
         }
         else{
-            for (unsigned int i = 0;i < 4; i++)
-                rotors[i].update_angle(5);
+            rotors[0].update_angle(-3);
+            rotors[1].update_angle(10);
+            rotors[2].update_angle(10);
+            rotors[3].update_angle(-3);
         }
         Calculate_and_save_to_file_drone();
         usleep(20000);
@@ -186,7 +196,7 @@ void Drone::go_horizontal(double distance, double user_angle, PzG::LaczeDoGNUPlo
     Vector3D unit_vector(unit_values);
     
     rotate_drone(user_angle,Link);
-
+    
     Matrix3x3 Rotation_matrix = Fill_matrix_OZ(Orientation_angle);
     
     unit_vector = Rotation_matrix * unit_vector;
@@ -203,11 +213,10 @@ void Drone::go_horizontal(double distance, double user_angle, PzG::LaczeDoGNUPlo
         Link.Rysuj();
         usleep(20000);
     }
-
     Link.Rysuj();
 }
 
-std::ostream & operator << (std::ostream & Out, const Cuboid2 & Rc){
+std::ostream & operator << (std::ostream & Out, const Cuboid & Rc){
     for (int i = 0; i < CORNERS; i++){
         Out << Rc[i] << std::endl;
         if(i%2==1)
@@ -218,7 +227,7 @@ std::ostream & operator << (std::ostream & Out, const Cuboid2 & Rc){
 
 void Drone::plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link){
     std::ofstream  FileStrm;
-    std::string name_of_file = "../datasets/path_reacon.dat";
+    std::string name_of_file = "../datasets/path.dat";
     Vector3D path_point_location = drone_location;
      
     Orientation_angle += angle;
@@ -250,16 +259,63 @@ void Drone::plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link
 
     FileStrm.close();
 } 
-/* 
+
+
 void Drone::plan_reacon(PzG::LaczeDoGNUPlota & Link){
+    std::ofstream  FileStrm;
+    std::string name_of_file = "../datasets/path_reacon.dat";
+    Vector3D path_point_location = drone_location;
+     
+    FileStrm.open(name_of_file);
+    if (!FileStrm.is_open()){
+      throw std::runtime_error(":(  Operacja otwarcia pliku do zapisu nie powiodla sie.");
+    }
+
+    FileStrm << path_point_location << std::endl;
+    path_point_location[2] += ALTITUDE; 
+    FileStrm << path_point_location << std::endl;
+
+    double unit_values[3]={1,0,0};
+    Vector3D unit_vector(unit_values);
     
-} */
+    Matrix3x3 Rotation_matrix = Fill_matrix_OZ(0);
+    unit_vector = Rotation_matrix * unit_vector;
+    path_point_location = path_point_location + (unit_vector*REACON_RADIUS);
+    FileStrm << path_point_location << std::endl;
+   
+    Rotation_matrix = Fill_matrix_OZ(112.5);
+    unit_vector = Rotation_matrix * unit_vector;
+    path_point_location = path_point_location + (unit_vector*REACON_RADIUS/sqrt((2+sqrt(2))/2));
+    FileStrm << path_point_location << std::endl;
+   
+    for (unsigned int i = 0;i < 7 ; ++i){
+        Rotation_matrix = Fill_matrix_OZ(45);
+        unit_vector = Rotation_matrix * unit_vector;
+        path_point_location = path_point_location + (unit_vector*REACON_RADIUS/sqrt((2+sqrt(2))/2));
+        FileStrm << path_point_location << std::endl;
+    }
+   
+    Rotation_matrix = Fill_matrix_OZ(112.5);
+    unit_vector = Rotation_matrix * unit_vector;
+    path_point_location = path_point_location + (unit_vector*REACON_RADIUS);
+    FileStrm << path_point_location << std::endl;
+   
+    path_point_location[2] -= ALTITUDE; 
+    FileStrm << path_point_location << std::endl;
+
+    Link.Rysuj();
+
+    FileStrm.close();
+} 
 
 void Drone::set_ID(unsigned int new_ID){
     Drone_ID = new_ID;
 }
 
-
 Vector3D const Drone::get_drone_location() const{
     return drone_location;
 } 
+
+void Drone::update_angle(double additional_angle){
+     Orientation_angle += additional_angle;
+}

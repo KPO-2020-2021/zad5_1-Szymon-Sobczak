@@ -15,3 +15,5 @@ constexpr double MAX_VALUE_DIFF = 0.0000000001;
 constexpr int FRAMES = 100;  
 
 constexpr double ALTITUDE = 100;   
+
+constexpr int REACON_RADIUS = 50;  

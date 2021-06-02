@@ -1,6 +1,6 @@
 #include "Cuboid.hh"
 
-Cuboid2::Cuboid2(){
+Cuboid::Cuboid(){
     double values[3] = {10,8,6};
     
     Vector3D fusledge_scale(values);
@@ -23,16 +23,15 @@ Cuboid2::Cuboid2(){
     Roration_angle_Zaxis = 0;
 }
 
-void Cuboid2::Transform_to_global_coords(Vector3D const & vec){
+void Cuboid::Transform_to_global_coords(Vector3D const & vec){
     center_of_cuboid = vec;
 
-    Matrix3x3 Rotation_matrix = Fill_matrix_OZ(Roration_angle_Zaxis);
-
+    Matrix3x3 Rotation_matrixZ = Fill_matrix_OZ(Roration_angle_Zaxis);
     for (unsigned int i=0; i < 8; ++i)
-        Global_corners [i] = Rotation_matrix * (Local_corners[i] * Scale) + center_of_cuboid;
+        Global_corners [i] = Rotation_matrixZ * (Local_corners[i] * Scale) + center_of_cuboid;
 }
 
-const Vector3D & Cuboid2::operator [] (int index) const {
+const Vector3D & Cuboid::operator [] (int index) const {
     if (index < 0 || index >= CORNERS) {
         throw std::runtime_error("Bledna wartosc indeksu wierzcholka prostopadloscianu");
     } 
@@ -45,17 +44,18 @@ const Vector3D & Cuboid2::operator [] (int index) const {
     \return Wartosc wierzcholka globalnego prostopadloscianu w danym miejscu tablicy.                           
 */
 
- Vector3D & Cuboid2::operator[](int index) {
+ Vector3D & Cuboid::operator[](int index) {
     if (index < 0 || index >= CORNERS) {
         throw std::runtime_error("Bledna wartosc indeksu wierzcholka prostopadloscianu");
     } 
-    return const_cast <Vector3D &> (const_cast <const Cuboid2 *> (this)->operator[](index));
+    return const_cast <Vector3D &> (const_cast <const Cuboid *> (this)->operator[](index));
 }
 
- void Cuboid2::update_angle(double additional_angle){
+ void Cuboid::update_angleZ(double additional_angle){
      Roration_angle_Zaxis += additional_angle;
  }
+
  
-  double Cuboid2::get_angle(){
+  double Cuboid::get_angle(){
     return Roration_angle_Zaxis;
  }

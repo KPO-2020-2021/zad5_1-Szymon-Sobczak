@@ -8,7 +8,7 @@
 #include "matrix3x3.hh"
 #include "Geometrical_solid.hh"
 
-class Cuboid2: public Geometrical_solid{
+class Cuboid: public Geometrical_solid{
     private:
         Vector3D center_of_cuboid;
 
@@ -17,13 +17,14 @@ class Cuboid2: public Geometrical_solid{
         Vector3D Global_corners[8]; 
 
         double Roration_angle_Zaxis;
+
     public:
-        Cuboid2();
+        Cuboid();
         
         void Transform_to_global_coords(Vector3D const & vec);
 
-        void update_angle(double additional_angle);
-
+        void update_angleZ(double additional_angle);
+        
         /*! \brief Przeciazenie operatora indeksujacego */
         const Vector3D & operator [] (int index) const;         
         
@@ -35,5 +36,5 @@ class Cuboid2: public Geometrical_solid{
 
 
 /*! \brief Przeciazenie operatora << sluzace wyswietlaniu wartosci prostopadloscianu */ 
-std::ostream & operator << (std::ostream & Strm, const Cuboid2 & Rc);    
+std::ostream & operator << (std::ostream & Strm, const Cuboid & Rc);    
  

@@ -14,6 +14,10 @@ class Scene{
     private:
         std::vector <Drone> Drones;
 
+        PzG::InfoPlikuDoRysowania *tab_of_properties_d1[5];
+
+        PzG::InfoPlikuDoRysowania *tab_of_properties_d2[5];
+
         PzG::LaczeDoGNUPlota Link;
 
         unsigned int nbr_of_active_drone;

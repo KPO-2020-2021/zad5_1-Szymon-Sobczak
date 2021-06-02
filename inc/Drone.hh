@@ -17,7 +17,7 @@ class Drone{
 
         Hexagonal_prism rotors[4];
 
-        Cuboid2 fuselage;
+        Cuboid fuselage;
 
         double Orientation_angle;
 
@@ -30,13 +30,15 @@ class Drone{
     public:
         Drone(Vector3D location);
 
-        void set_ID( unsigned int new_ID);
+        void set_ID(unsigned int new_ID);
 
         Vector3D const get_drone_location() const;        
 
         void plan_path(double angle, double distance, PzG::LaczeDoGNUPlota & Link);
 
-/*         void plan_reacon(PzG::LaczeDoGNUPlota & Link); */
+        void plan_reacon(PzG::LaczeDoGNUPlota & Link);
+
+        void update_angle(double additional_angle);
 
         void go_verical(double altitude, PzG::LaczeDoGNUPlota & Link);
 
@@ -45,4 +47,5 @@ class Drone{
         void go_horizontal(double distance, double user_angle, PzG::LaczeDoGNUPlota & Link);
 
         void Calculate_and_save_to_file_drone();
+
 };

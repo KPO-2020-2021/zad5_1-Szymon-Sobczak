@@ -59,17 +59,22 @@ int main(){
             std::cout << "Wybor aktywnego drona: "<< std::endl;
             
             Scenery.choose_drone(1);
-            std::cout << "1. Polozenie " << Scenery.get_active_drone().get_drone_location() << std::endl;
+            std::cout << "Dron 1. Polozenie x: " 
+                      << std::fixed << std::setprecision(5) << Scenery.get_active_drone().get_drone_location()[0] << "\ty: " 
+                      << std::fixed << std::setprecision(5) << Scenery.get_active_drone().get_drone_location()[1] << std::endl;
             
             Scenery.choose_drone(2);
-            std::cout << "2. Polozenie " << Scenery.get_active_drone().get_drone_location() << std::endl;
-            
+            std::cout << "Dron 2. Polozenie x: "   
+                      << std::fixed << std::setprecision(5) << Scenery.get_active_drone().get_drone_location()[0] << "\ty: " 
+                      << std::fixed << std::setprecision(5) << Scenery.get_active_drone().get_drone_location()[1] << std::endl;
+
             std::cout << "Podaj numer drona, ktory ma byc aktywny: "<< std::endl;
             std::cin >> nbr_of_act_drone;
             if(std::cin.fail() || nbr_of_act_drone > 2)
                throw std::invalid_argument(":/ Podano bledny numer prostopadloscianu ");
             else   
                Scenery.choose_drone(nbr_of_act_drone);
+            Link.Rysuj();
          break;
          
          case 'p':
@@ -117,60 +122,47 @@ int main(){
 
          case 'z':
             std::cout << "Wykonywanie zwiadu ..." << std::endl;
+
+            std::cout << "Rysowanie zaplanowanej sciezki przelotu ... " << std::endl;
+            Scenery.use_active_drone().plan_reacon(Link);
+            Link.DodajNazwePliku("../datasets/path_reacon.dat");
+            Link.Rysuj();
+            usleep(100000);
+
+            std::cout << "Wznoszenie ... " << std::endl;    
             Scenery.use_active_drone().go_verical(ALTITUDE,Link);
             usleep(1000000);
             
-            Scenery.use_active_drone().plan_path(30,0,Link);
-
-            Scenery.use_active_drone().go_horizontal(30,0,Link);
+            std::cout << "Przelot ... " << std::endl;   
+            Scenery.use_active_drone().go_horizontal(REACON_RADIUS,0,Link);
             usleep(100000);
 
-            Scenery.use_active_drone().plan_path(30/sqrt(2),112.5,Link);
-
-            Scenery.use_active_drone().go_horizontal(30/sqrt(2),112.5,Link);
+            Scenery.use_active_drone().update_angle(112.5);
+            Scenery.use_active_drone().go_horizontal(REACON_RADIUS/sqrt((2+sqrt(2))/2),112.5,Link);
             usleep(100000);
 
-            Scenery.use_active_drone().plan_path(30/sqrt(2),45,Link);
-
-            Scenery.use_active_drone().go_horizontal(30/sqrt(2),45,Link);
+            for (unsigned int i = 0;i < 7 ; ++i){
+               Scenery.use_active_drone().update_angle(45);
+               Scenery.use_active_drone().go_horizontal(REACON_RADIUS/sqrt((2+sqrt(2))/2),45,Link);
+               usleep(100000);
+            }
+         
+            Scenery.use_active_drone().update_angle(112.5);
+            Scenery.use_active_drone().go_horizontal(REACON_RADIUS,112.5,Link);
             usleep(100000);
 
-             Scenery.use_active_drone().plan_path(30/sqrt(2),45,Link);
-
-            Scenery.use_active_drone().go_horizontal(30/sqrt(2),45,Link);
-            usleep(100000);
-
-          Scenery.use_active_drone().plan_path(30/sqrt(2),45,Link);
-
-
-            Scenery.use_active_drone().go_horizontal(30/sqrt(2),45,Link);
-            usleep(100000);
-
-             Scenery.use_active_drone().plan_path(30/sqrt(2),45,Link);
-
-
-            Scenery.use_active_drone().go_horizontal(30/sqrt(2),45,Link);
-            usleep(100000);
-
-             Scenery.use_active_drone().plan_path(30/sqrt(2),45,Link);
-
-
-            Scenery.use_active_drone().go_horizontal(30/sqrt(2),45,Link);
-            usleep(100000);
-
-
-            Scenery.use_active_drone().plan_path(30,112.5,Link);
-
-            Scenery.use_active_drone().go_horizontal(30,112.5,Link);
-            usleep(100000);
-
-            Scenery.use_active_drone().plan_path(0,180,Link);
-
+            Scenery.use_active_drone().update_angle(180);
             Scenery.use_active_drone().go_horizontal(0,180,Link);
-            usleep(100000);
+            usleep(10000);
 
+            std::cout << "Ladowanie ... " << std::endl;    
             Scenery.use_active_drone().go_verical(-ALTITUDE,Link);
-            usleep(1000000);
+            usleep(100000); 
+
+            std::cout << "Dron wyladowal ... " << std::endl; 
+
+            Link.UsunNazwePliku("../datasets/path_reacon.dat");
+            Link.Rysuj();
          break;
 
          default:   /* dzialanie, gdy podana opcja nie bedzie uprzednio zdefiniowana */

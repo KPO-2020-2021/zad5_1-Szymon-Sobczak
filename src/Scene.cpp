@@ -17,49 +17,49 @@ Scene::Scene(PzG::LaczeDoGNUPlota & Link){
     Link.UstawZakresX(0,200);
     Link.UstawZakresZ(0,150); 
 
-    PzG::InfoPlikuDoRysowania *File_info_fsd1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_fuselage.dat");
-    File_info_fsd1 -> ZmienKolor(1);
-    File_info_fsd1 -> ZmienSzerokosc(2);
-
     PzG::InfoPlikuDoRysowania *File_info_bed = & Link.DodajNazwePliku("../datasets/bed.dat");
     File_info_bed -> ZmienKolor(4);
     File_info_bed -> ZmienSzerokosc(2); 
 
-    PzG::InfoPlikuDoRysowania *File_info_rot0_no1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor0.dat");
-    File_info_rot0_no1->ZmienKolor(1);
-    File_info_rot0_no1->ZmienSzerokosc(2);
+    tab_of_properties_d1[0] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_fuselage.dat");
+    tab_of_properties_d1[0] -> ZmienKolor(1);
+    tab_of_properties_d1[0] -> ZmienSzerokosc(2);
 
-    PzG::InfoPlikuDoRysowania *File_info_rot1_no1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor1.dat");
-    File_info_rot1_no1->ZmienKolor(1);
-    File_info_rot1_no1->ZmienSzerokosc(2);
+    tab_of_properties_d1[1] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor0.dat");
+    tab_of_properties_d1[1] -> ZmienKolor(1);
+    tab_of_properties_d1[1] -> ZmienSzerokosc(2);
 
-    PzG::InfoPlikuDoRysowania *File_info_rot2_no1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor2.dat");
-    File_info_rot2_no1->ZmienKolor(1);
-    File_info_rot2_no1->ZmienSzerokosc(2);
+    tab_of_properties_d1[2] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor1.dat");
+    tab_of_properties_d1[2] -> ZmienKolor(1);
+    tab_of_properties_d1[2] -> ZmienSzerokosc(2);
 
-    PzG::InfoPlikuDoRysowania *File_info_rot3_no1 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor3.dat");
-    File_info_rot3_no1->ZmienKolor(1);
-    File_info_rot3_no1->ZmienSzerokosc(2); 
+    tab_of_properties_d1[3] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor2.dat");
+    tab_of_properties_d1[3] -> ZmienKolor(1);
+    tab_of_properties_d1[3] -> ZmienSzerokosc(2);
 
-    PzG::InfoPlikuDoRysowania *File_info_fsd2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_fuselage.dat");
-    File_info_fsd2->ZmienKolor(2);
-    File_info_fsd2->ZmienSzerokosc(2);
+    tab_of_properties_d1[4] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_1_rotor3.dat");
+    tab_of_properties_d1[4] -> ZmienKolor(1);
+    tab_of_properties_d1[4] -> ZmienSzerokosc(2); 
 
-    PzG::InfoPlikuDoRysowania *File_info_rot0_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor0.dat");
-    File_info_rot0_no2->ZmienKolor(2);
-    File_info_rot0_no2->ZmienSzerokosc(2);
+    tab_of_properties_d2[0] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_fuselage.dat");
+    tab_of_properties_d2[0] -> ZmienKolor(2);
+    tab_of_properties_d2[0] -> ZmienSzerokosc(2);
 
-    PzG::InfoPlikuDoRysowania *File_info_rot1_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor1.dat");
-    File_info_rot1_no2->ZmienKolor(2);
-    File_info_rot1_no2->ZmienSzerokosc(2);
+    tab_of_properties_d2[1] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor0.dat");
+    tab_of_properties_d2[1] -> ZmienKolor(2);
+    tab_of_properties_d2[1] -> ZmienSzerokosc(2);
 
-    PzG::InfoPlikuDoRysowania *File_info_rot2_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor2.dat");
-    File_info_rot2_no2->ZmienKolor(2);
-    File_info_rot2_no2->ZmienSzerokosc(2);
+    tab_of_properties_d2[2] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor1.dat");
+    tab_of_properties_d2[2] -> ZmienKolor(2);
+    tab_of_properties_d2[2] -> ZmienSzerokosc(2);
 
-    PzG::InfoPlikuDoRysowania *File_info_rot3_no2 = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor3.dat");
-    File_info_rot3_no2->ZmienKolor(2);
-    File_info_rot3_no2->ZmienSzerokosc(2);  
+    tab_of_properties_d2[3] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor2.dat");
+    tab_of_properties_d2[3] -> ZmienKolor(2);
+    tab_of_properties_d2[3] -> ZmienSzerokosc(2);
+
+    tab_of_properties_d2[4] = & Link.DodajNazwePliku("../datasets/Global_cords_file_No_2_rotor3.dat");
+    tab_of_properties_d2[4] -> ZmienKolor(2);
+    tab_of_properties_d2[4] -> ZmienSzerokosc(2);  
 }
 
 void Scene::choose_drone(unsigned int active_drone){
@@ -67,6 +67,20 @@ void Scene::choose_drone(unsigned int active_drone){
       throw std::invalid_argument(":/ Podano bledny numer drona ");
     else    
         nbr_of_active_drone = active_drone;
+
+    if (active_drone==1){
+        for (unsigned int i = 0; i < 5; ++i){
+            tab_of_properties_d1[i] -> ZmienKolor(2);
+            tab_of_properties_d2[i] -> ZmienKolor(8);
+        }  
+    }
+
+    if (active_drone==2){
+        for (unsigned int i = 0; i < 5; ++i){
+            tab_of_properties_d1[i] -> ZmienKolor(8);
+            tab_of_properties_d2[i] -> ZmienKolor(2);
+        }  
+    }
 }
 
 Drone const & Scene::get_active_drone(){
