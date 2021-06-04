@@ -31,8 +31,10 @@ class Vector{
         /*! \brief Tablica wartosci wektora. */
         double size[Size];     
 
+        /*! \brief Licznik ilosci aktualnie istniejacych instancji obietkow Vector<Size> */
         static int counter_actual_vectors;
 
+        /*! \brief Licznik ilosci wszystkich istniejacych instancji obietkow Vector<Size> */
         static int counter_all_vectors;
     public:
         /*! \brief Bezparametryczny konstruktor klasy. */
@@ -41,7 +43,14 @@ class Vector{
         /*! \brief Konstruktor klasy z parametrem. */
         Vector<Size>(double [Size]); 
 
+        /*! \brief Destruktor klasy Vector<Size>. */
         ~Vector<Size>();
+
+        /*! \brief Metoda statyczna pozwalajaca pobrac liczbe aktualnie istniejacych instancji obietkow Vector<Size>. */
+        static int get_counter_actual_vectors();        
+
+        /*! \brief Metoda statyczna pozwalajaca pobrac liczbe wszystich instancji obietkow Vector<Size>. */
+        static int get_counter_all_vectors();      
 
         /*! \brief Operator dodawania dwoch wektorow. */
         Vector operator + (const Vector &v);   
@@ -64,18 +73,16 @@ class Vector{
         /*! \brief Przeciazenia operatora indeksujacego. */
         double & operator [] (unsigned int index);
 
-        static int get_counter_actual_vectors();        
 
-        static int get_counter_all_vectors();      
 };
 
-
+/*! \brief Inicjalizacja pola statycznego counter_all_vecors*/
 template <unsigned int Size>
 int Vector<Size>::counter_all_vectors = 0;
 
+/*! \brief Inicjalizacja pola statycznego counter_actual_vectors*/
 template <unsigned int Size>
 int Vector<Size>::counter_actual_vectors = 0;
-
 
 /*! \brief Funkcja pomocnicza, pozwala zmierzyc odlegosc pomiedzy dwoma wektorami, tworzacymi nowy wektor */ 
 template <unsigned int Size>
@@ -90,20 +97,10 @@ template <unsigned int Size>
 std::istream & operator >> (std::istream &in, Vector<Size> &tmp); 
 
 
-template <unsigned int Size>
-int Vector<Size>::get_counter_actual_vectors(){
-    return counter_actual_vectors;
-}    
-
-
-template <unsigned int Size>
-int Vector<Size>::get_counter_all_vectors(){
-     return counter_all_vectors;
-}
 
 /*!
     Konstruktor bezparametryczny klasy Vector tworzacy wektor zerowy o zadanej dlugosci.                                              
-
+    Inkrementuje liczbe wszystkich i aktualnie znajdujacych sie w programie obiektow typu Vector<Size>.
     \return Tablice wypelniona wartoscia 0.                                       
 */
 
@@ -118,7 +115,7 @@ Vector<Size>::Vector(){
 
 /*!
     Konstruktor wieloparametryczny klasy Vector tworzacy wektor o zadanej dlugosci wypelniony warosciami pochodzacymi z parametru - tablicy wartosci typu double.                                                 
-
+    Inkrementuje liczbe wszystkich i aktualnie znajdujacych sie w programie obiektow typu Vector<Size>.
     \param [in] tmp - Jednowymiarowa tablica typu double.                             
                                                              
     \return  Tablice wypelniona wartosciami podanymi w argumencie.                 
@@ -133,10 +130,33 @@ Vector<Size>::Vector(double tmp[Size]){
    ++counter_actual_vectors; 
 }
 
+/*!
+    Destruktor klasy Vector, dekrementuje liczbe aktualnie znajdujacych sie w programie obiektow typu Vector<Size>.
+*/
 
 template <unsigned int Size>
 Vector<Size>::~Vector(){
-  --counter_actual_vectors;
+    std::cout << counter_actual_vectors << std::endl;
+    --counter_actual_vectors;
+}
+
+
+/*!
+    \return Liczbe (typu int) aktualnie znajdujacych sie w programie obiektow klasy Vector<Size>.
+*/
+
+template <unsigned int Size>
+int Vector<Size>::get_counter_actual_vectors(){
+    return counter_actual_vectors;
+}    
+
+/*!
+    \return Liczbe (typu int) wszystkich obiektow klasy Vector<Size>, ktore powstaly w trakcie jego dzialania.
+*/
+
+template <unsigned int Size>
+int Vector<Size>::get_counter_all_vectors(){
+     return counter_all_vectors;
 }
 
 /*!

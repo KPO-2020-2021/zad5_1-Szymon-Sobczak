@@ -8,21 +8,52 @@
 #include "matrix3x3.hh"
 #include "Geometrical_solid.hh"
 
+/*!
+    \file
+        \brief  Definicja klasy Cuboid.
+
+    Prototypy funkcji i metod klasy Hexagonal_prism, dziedziczacej z klasy Geometrical_solid.
+*/
+
+/*!
+    \brief Klasa modelujaca w programie pojecie graniastoslupa prawidlowego szesciokatnego, ktorego wierzcholki i centrum sa wyrazone za pomoca wektorow.
+
+    Klasa posiada:
+        - prywatne pole "Local_corners" bedace tablica wektorow, opisuje ono wektorowo pozycje wierzcholkow lokalnych graniastoslupa prawidlowego szesciokatnego.
+        - prywatne pole "Global_corners" bedace tablica wektorow, opisuje ono wektorowo pozycje wierzcholkow globalnych graniastoslupa prawidlowego szesciokatnego.
+        - prywatne pole "Center_of_cuboid" bedace wektorem, opisuje ono wektorowo pozycje globalnego srodka graniastoslupa prawidlowego szesciokatnego.
+        - prywatne pole "Roration_angle_Zaxis" opisujace obrot rotora w osi Z. 
+        - publiczny konstruktor domyśly, nadajacy prostopadloscianowi wartosci wierzcholkow lokalnych.
+    
+    Klasa posiada publiczne metody pozwalajace na:
+        - Transformacje prostopadlosiacnu z ukladu lokalnego do ukladu globalnego, przechodzac przez uklad graniastoslupa prawidlowego szesciokatnego.
+        - Aktualizajce kata obrotu graniastoslupa prawidlowego szesciokatnego.
+        - Przeciazenie operatorow indeksujacych, umozliwajacych odczytywanie i zmiane wartosci reprezentujacych wierzcholki graniastoslupa prawidlowego szesciokatnego w ukladzie globalnym.   
+        - Pobranie aktualngo kata obrotu graniastoslupa prawidlowego szesciokatnego.                                                        
+*/
+
 class Hexagonal_prism: public Geometrical_solid{
     private:
+        /*! \brief Wektor3D reprezentujacy srodek graniastoslupa prawidlowego szesciokatnego w przestrzeni globalnej */
         Vector3D center_of_prism;
 
+        /*! \brief Tablica wektorow3D reprezentujacych rozklad wierzcholkow graniastoslupa prawidlowego szesciokatnego w ukladzie lokalnym */
         Vector3D Local_corners[12]; 
 
+        /*! \brief Tablica wektorow3D reprezentujacych rozklad wierzcholkow graniastoslupa prawidlowego szesciokatnego w ukladzie globalnym */
         Vector3D Global_corners[12]; 
 
+        /*! Wartosc double reprezentujaca kat obrotu graniastoslupa prawidlowego szesciokatnego */
         double Roration_angle_Zaxis;
         
     public:
+        /*! \brief Bezparametryczny konstrukotr klasy*/
         Hexagonal_prism();
         
+        /*! \brief Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego */
         void update_angle(double const & additional_angle);
 
+        /*! \brief Metoda pozawlajaca na transforamacje graniastoslupa prawidlowego szesciokatnego z ukladu lokalnego do globalnego sceny, z przejsciem przez uklad prostopadloscianu */
         void Transform_to_global_coords(Vector3D const & vec, Vector3D const & position_of_drone, double const & drone_angle);
 
         /*! \brief Przeciazenie operatora indeksujacego */

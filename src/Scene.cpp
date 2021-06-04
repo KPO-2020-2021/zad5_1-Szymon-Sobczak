@@ -21,6 +21,14 @@ Scene::Scene(PzG::LaczeDoGNUPlota & Link){
     File_info_bed -> ZmienKolor(4);
     File_info_bed -> ZmienSzerokosc(2); 
 
+    PzG::InfoPlikuDoRysowania *File_info_cam1 = & Link.DodajNazwePliku("../datasets/Glb_crd_No_1_front_camera.dat");
+    File_info_cam1 -> ZmienKolor(2);
+    File_info_cam1-> ZmienSzerokosc(2); 
+
+    PzG::InfoPlikuDoRysowania *File_info_cam2 = & Link.DodajNazwePliku("../datasets/Glb_crd_No_2_front_camera.dat");
+    File_info_cam2 -> ZmienKolor(2);
+    File_info_cam2 -> ZmienSzerokosc(2); 
+
     tab_of_properties_d1[0] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_1_fuselage.dat");
     tab_of_properties_d1[1] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_1_rotor0.dat");
     tab_of_properties_d1[2] = & Link.DodajNazwePliku("../datasets/Glb_crd_No_1_rotor1.dat");

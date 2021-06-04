@@ -60,6 +60,78 @@ void Drone::Calculate_and_save_to_file_fuselage(){
     FileStrm.close();
 }
 
+void Drone::Calculate_and_save_to_file_front_camera(Vector3D const & Trasnlation){
+    double camera_scale_scale[3]={3,8,2};
+    Vector3D camera_scale(camera_scale_scale);
+    front_camera.update_scale(camera_scale);
+
+    front_camera.Transform_to_global_coords(Trasnlation, drone_location, fuselage.get_angle());
+
+    std::ofstream  FileStrm;
+    Vector3D P1,P2;
+    
+    std::string name_of_file = front_camera.Get_Name_of_file_global() + "No_" + std::to_string(Drone_ID) + "_front_camera.dat";
+
+    FileStrm.open(name_of_file);
+    if (!FileStrm.is_open()){
+      throw std::runtime_error(":(  Operacja otwarcia pliku do zapisu nie powiodla sie.");
+    }
+    
+    P1 = (front_camera[0] + front_camera[3])/2;
+    P2 = (front_camera[6] + front_camera[9])/2;
+
+    FileStrm << P1 << std::endl
+             << front_camera[0] << std::endl
+             << front_camera[6] << std::endl
+             << P2 << std::endl
+             << '#' << std::endl
+             << std::endl;
+
+    FileStrm << P1 << std::endl
+             << front_camera[1] << std::endl
+             << front_camera[7] << std::endl
+             << P2 << std::endl
+             << '#' << std::endl
+             << std::endl; 
+     
+    FileStrm << P1 << std::endl
+             << front_camera[2] << std::endl
+             << front_camera[8] << std::endl
+             << P2 << std::endl
+             << '#' << std::endl
+             << std::endl;       
+      
+    FileStrm << P1 << std::endl
+             << front_camera[3] << std::endl
+             << front_camera[9] << std::endl
+             << P2 << std::endl
+             << '#' << std::endl
+             << std::endl;       
+      
+    FileStrm << P1 << std::endl
+             << front_camera[4] << std::endl
+             << front_camera[10] << std::endl
+             << P2 << std::endl
+             << '#' << std::endl
+             << std::endl;                
+
+    FileStrm << P1 << std::endl
+             << front_camera[5] << std::endl
+             << front_camera[11] << std::endl
+             << P2 << std::endl
+             << '#' << std::endl
+             << std::endl;     
+
+    FileStrm << P1 << std::endl
+             << front_camera[0] << std::endl
+             << front_camera[6] << std::endl
+             << P2 << std::endl
+             << '#' << std::endl
+             << std::endl;
+       
+    FileStrm.close();
+}
+
 void Drone::Calculate_and_save_to_file_rotor(unsigned int index, Vector3D const & Trasnlation){
     
     rotors[index].Transform_to_global_coords(Trasnlation, drone_location, fuselage.get_angle());
@@ -130,10 +202,12 @@ void Drone::Calculate_and_save_to_file_rotor(unsigned int index, Vector3D const 
 }
 
 void Drone::Calculate_and_save_to_file_drone(){
-    double val_rot1[3]={5,4,4},val_rot2[3]={-5,4,4},val_rot3[3]={5,-4,4},val_rot4[3]={-5,-4,4};
-    Vector3D vec_rot1(val_rot1), vec_rot2(val_rot2), vec_rot3(val_rot3), vec_rot4(val_rot4);
+    double val_rot1[3]={5,4,4},val_rot2[3]={-5,4,4},val_rot3[3]={5,-4,4},val_rot4[3]={-5,-4,4},val_cam[3]={5,0,0};
+    Vector3D vec_rot1(val_rot1), vec_rot2(val_rot2), vec_rot3(val_rot3), vec_rot4(val_rot4),vec_cam(val_cam);
     
     Calculate_and_save_to_file_fuselage();
+
+    Calculate_and_save_to_file_front_camera(vec_cam);
 
     Calculate_and_save_to_file_rotor(0,vec_rot1);
     Calculate_and_save_to_file_rotor(1,vec_rot2);

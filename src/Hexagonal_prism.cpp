@@ -3,7 +3,7 @@
 Hexagonal_prism::Hexagonal_prism(){
     double values[3] = {8,8,2};
     Vector3D rotor_scale(values);
-    udpate_scale(rotor_scale);
+    update_scale(rotor_scale);
 
     double v_Apx1[3]={0.5,0,-0.5},v_Apx2[3]={0.25,0.433,-0.5},v_Apx3[3]={-0.25,0.433,-0.5},v_Apx4[3]={-0.5,0,-0.5},
            v_Apx5[3]={-0.25,-0.433,-0.5},v_Apx6[3]={0.25,-0.433,-0.5},v_Apx7[3]={0.5,0,0.5},v_Apx8[3]={0.25,0.433,0.5},
@@ -31,7 +31,7 @@ void Hexagonal_prism::Transform_to_global_coords(Vector3D const & vec, Vector3D 
     center_of_prism = position_of_drone;
     Matrix3x3 Rotation_matrix = Fill_matrix_OZ(drone_angle), Animation_matrix = Fill_matrix_OZ(Roration_angle_Zaxis);
     for (unsigned int i=0; i < 12; ++i)
-        Global_corners [i] = Rotation_matrix * (Animation_matrix * (Local_corners[i] * Scale) + vec) + center_of_prism ;
+        Global_corners [i] = Rotation_matrix * (Animation_matrix * (Local_corners[i] * get_scale()) + vec) + center_of_prism ;
 }
 
 const Vector3D & Hexagonal_prism::operator [] (int index) const {

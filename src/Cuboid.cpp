@@ -5,7 +5,7 @@ Cuboid::Cuboid(){
     
     Vector3D fusledge_scale(values);
     
-    udpate_scale(fusledge_scale);
+    update_scale(fusledge_scale);
 
     double v_Apx1[3]={-0.5,0.5,-0.5},v_Apx2[3]={-0.5,-0.5,-0.5},v_Apx3[3]={0.5,0.5,-0.5},v_Apx4[3]={0.5,-0.5,-0.5},
            v_Apx5[3]={0.5,0.5,0.5},v_Apx6[3]={0.5,-0.5,0.5},v_Apx7[3]={-0.5,0.5,0.5},v_Apx8[3]={-0.5,-0.5,0.5};
@@ -24,11 +24,11 @@ Cuboid::Cuboid(){
 }
 
 void Cuboid::Transform_to_global_coords(Vector3D const & vec){
-    center_of_cuboid = vec;
+    Center_of_cuboid = vec;
 
     Matrix3x3 Rotation_matrixZ = Fill_matrix_OZ(Roration_angle_Zaxis);
     for (unsigned int i=0; i < 8; ++i)
-        Global_corners [i] = Rotation_matrixZ * (Local_corners[i] * Scale) + center_of_cuboid;
+        Global_corners [i] = Rotation_matrixZ * (Local_corners[i] * get_scale()) + Center_of_cuboid;
 }
 
 const Vector3D & Cuboid::operator [] (int index) const {
