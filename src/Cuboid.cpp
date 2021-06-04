@@ -1,8 +1,24 @@
 #include "Cuboid.hh"
 
+
+/*!
+    \file
+        \brief Definicje metod klasy Cuboid.
+
+    Zawiera definicje funkcji i metod klasy Cuboid.
+*/
+
+/*!
+    Domyślny konstruktor obiektu typu Cuboid. 
+    Nadaje domyślne wartosci wierzcholkow lokalnych prostopadloscianowi. 
+    Ustawia kat obrotu prostopadloscianu w osi Z na wartosc 0.     
+    Ustawia domsylna skale prostopadloscianu.         
+                                                                                                                                              
+    \return Prostopaloscian o srodku w ukladzie loklanym w punkcie (0, 0, 0), o wszystkich bokach dlugosci 1.        
+*/
+
 Cuboid::Cuboid(){
     double values[3] = {10,8,6};
-    
     Vector3D fusledge_scale(values);
     
     update_scale(fusledge_scale);
@@ -23,6 +39,12 @@ Cuboid::Cuboid(){
     Roration_angle_Zaxis = 0;
 }
 
+/*!
+    Metoda realizuje przechodzenie pomiedzy ukladem loklanym prostopadloscianu do ukladu globalnego sceny. 
+
+    \param [in] vec - wektor przesuniecia globalnego srodka prostopadloscianu.
+*/
+
 void Cuboid::Transform_to_global_coords(Vector3D const & vec){
     Center_of_cuboid = vec;
 
@@ -30,6 +52,12 @@ void Cuboid::Transform_to_global_coords(Vector3D const & vec){
     for (unsigned int i=0; i < 8; ++i)
         Global_corners [i] = Rotation_matrixZ * (Local_corners[i] * get_scale()) + Center_of_cuboid;
 }
+
+/*!                                                                                                         
+    \param[in] index - index wierzcholka globalnego prostopadloscianu.                                             
+                                                                   
+    \return Wartosc wierzcholka globalnego prostopadloscianu w danym miejscu wektora jako stala.                
+*/
 
 const Vector3D & Cuboid::operator [] (int index) const {
     if (index < 0 || index >= CORNERS) {
@@ -41,7 +69,7 @@ const Vector3D & Cuboid::operator [] (int index) const {
 /*!                                                                                                 
     \param[in]  index - index wierzcholka globalnego prostopadloscianu.                                             
                                                                   
-    \return Wartosc wierzcholka globalnego prostopadloscianu w danym miejscu tablicy.                           
+    \return Wartosc wierzcholka globalnego prostopadloscianu w danym miejscu wektora.                           
 */
 
  Vector3D & Cuboid::operator[](int index) {
@@ -51,11 +79,23 @@ const Vector3D & Cuboid::operator [] (int index) const {
     return const_cast <Vector3D &> (const_cast <const Cuboid *> (this)->operator[](index));
 }
 
+
+/*! 
+    Zadany dodatkowy kat obrotu prostopadloscianu zostanie zsumowany z aktualnym katem obrotu prostopadloscianu.
+
+    \param [in] additional_angle - dodtkowy kat, o ktory prostopadloscian zostanie obrocony.
+*/
+
 void Cuboid::update_angleZ(double const & additional_angle){
      Roration_angle_Zaxis += additional_angle;
 }
 
- 
+/*! 
+    Metoda zwraca aktualny kat obrotu prostopadloscianu.
+
+    \return Kat obrou prostopadloscianu, jako wartosc typu double.
+*/
+
 double Cuboid::get_angle() const{
     return Roration_angle_Zaxis;
 }

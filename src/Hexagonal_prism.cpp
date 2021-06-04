@@ -1,5 +1,21 @@
 #include "Hexagonal_prism.hh"
 
+/*!
+    \file
+        \brief Definicje metod klasy Cuboid
+
+    Zawiera definicje funkcji i metod klasy Cuboid.
+*/
+
+/*!
+    Domyślny konstruktor obiektu typu Hexagonal_prism. 
+    Nadaje domyślne wartosci wierzcholkow lokalnych graniastoslupowi prawidlowemu szesciokatnemu. 
+    Ustawia kat obrotu graniastoslupa w osi Z na wartosc 0.     
+    Ustawia domsylna skale graniastoslupa.         
+                                                                                                                                              
+    \return graniastoslupup o srodku w ukladzie loklanym w punkcie (0, 0, 0), o wszystkich bokach dlugosci 1.        
+*/
+
 Hexagonal_prism::Hexagonal_prism(){
     double values[3] = {8,8,2};
     Vector3D rotor_scale(values);
@@ -27,12 +43,26 @@ Hexagonal_prism::Hexagonal_prism(){
     Roration_angle_Zaxis = 0;
 }
 
+/*!
+    Metoda realizuje przechodzenie pomiedzy ukladem loklanym graniastoslupa prawidlowego szesciokatnego do ukladu globalnego sceny poprzez uklad lokalny prostopdloscianu. 
+    
+    \param [in] vec - wektor przesuniecia rotora w ukladzie prostopadloscianu.
+    \param [in] position_of_drone - wektor przesuniecia rotora w ukladzie globalnym.
+    \param [in] drone_angle - kat obrotu drona. 
+*/
+
 void Hexagonal_prism::Transform_to_global_coords(Vector3D const & vec, Vector3D const & position_of_drone,double const & drone_angle){
     center_of_prism = position_of_drone;
     Matrix3x3 Rotation_matrix = Fill_matrix_OZ(drone_angle), Animation_matrix = Fill_matrix_OZ(Roration_angle_Zaxis);
     for (unsigned int i=0; i < 12; ++i)
         Global_corners [i] = Rotation_matrix * (Animation_matrix * (Local_corners[i] * get_scale()) + vec) + center_of_prism ;
 }
+
+/*!                                                                                                         
+    \param[in] index - index wierzcholka globalnego graniastoslupa prawidlowego szesciokatnego.                                             
+                                                                   
+    \return Wartosc wierzcholka globalnego graniastoslupa prawidlowego szesciokatnego w danym miejscu wektora jako stala.                
+*/
 
 const Vector3D & Hexagonal_prism::operator [] (int index) const {
     if (index < 0 || index >= 12) {
@@ -42,9 +72,9 @@ const Vector3D & Hexagonal_prism::operator [] (int index) const {
 }
 
 /*!                                                                                                 
-    \param[in]  index - index wierzcholka globalnego prostopadloscianu.                                             
+    \param[in]  index - index wierzcholka globalnego graniastoslupa prawidlowego szesciokatnego.                                             
                                                                   
-    \return Wartosc wierzcholka globalnego prostopadloscianu w danym miejscu tablicy.                           
+    \return Wartosc wierzcholka globalnego graniastoslupa prawidlowego szesciokatnego w danym miejscu wektora.                           
 */
 
  Vector3D & Hexagonal_prism::operator[](int index) {
@@ -54,9 +84,16 @@ const Vector3D & Hexagonal_prism::operator [] (int index) const {
     return const_cast <Vector3D &> (const_cast <const Hexagonal_prism *> (this)->operator[](index));
 }
 
+/*! 
+    Zadany dodatkowy kat obrotu raniastoslupa prawidlowego szesciokatnego zostanie zsumowany z aktualnym katem obrotu graniastoslupa.
+
+    \param [in] additional_angle - dodtkowy kat, o ktory raniastoslup prawidlowy szesciokatny zostanie obrocony.
+*/
 
 void Hexagonal_prism::update_angle(double const & additional_angle){
     Roration_angle_Zaxis += additional_angle;
     if(Roration_angle_Zaxis >=360)
         Roration_angle_Zaxis -=360;
  }
+
+ 

@@ -1,5 +1,23 @@
 #include "Scene.hh"
 
+/*!
+    \file
+        \brief Definicje metod klasy Drone.
+
+    Zawiera definicje metod klasy Drone.
+*/
+
+/*!
+    Konstruktor z parametrem obiektu typu Scene. 
+    Tworzy scene z dwoma dronami w predefiniowanych miejscach. 
+    Dolacza pliki zawierajace dane o wierzcholkach globalnych elementow dronow do Gnuplot oraz. 
+    Ustala zakres rysowania w Gnuplot i grubosc rysowania linii.
+
+    \param [in] Link - lacze do Gnuplota. 
+
+    \return Scene zawierajaca dwa drony.        
+*/
+
 Scene::Scene(PzG::LaczeDoGNUPlota & Link){
     nbr_of_active_drone = 1;
     double val_ctr1[3]={100,100,3}, val_ctr2[3]={50,50,3};
@@ -47,6 +65,13 @@ Scene::Scene(PzG::LaczeDoGNUPlota & Link){
     } 
 }
 
+/*!
+    Metoda pozwala ustawic, ktory z dron na scenie jest dronem aktywnym. 
+    Metoda zmienia kolory dronow w zaleznosci od tego, ktory dron zostal wybrany jako aktywny.
+
+    \param [in] active_drone - numer drona do aktywacji.
+*/
+
 void Scene::choose_drone(unsigned int active_drone){
     if(active_drone > Drones.size() || active_drone == 0)
       throw std::invalid_argument(":/ Podano bledny numer drona ");
@@ -67,10 +92,17 @@ void Scene::choose_drone(unsigned int active_drone){
     }
 }
 
+/*!
+    \return Instancje aktywnego drona z std::vector jako stala. 
+*/
+
 Drone const & Scene::get_active_drone(){
     return Drones.at(nbr_of_active_drone-1);
 }
 
+/*!
+    \return Instancje aktywnego drona z std::vector dronow. 
+*/
 Drone & Scene::use_active_drone(){
     return Drones.at(nbr_of_active_drone-1);
 }

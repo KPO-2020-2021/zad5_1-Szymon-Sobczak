@@ -1,10 +1,32 @@
 #include "Drone.hh"
 
+/*!
+    \file
+        \brief Definicje metod klasy Drone.
+
+    Zawiera definicje metod klasy Drone.
+*/
+
+/*!
+    Konstruktor z parametrem obiektu typu Drone. 
+    Tworzy nieobroconego drona w podanym punkcie globalnym sceny.
+    Nadaje dronowi domyslne ID.  
+
+    \param [in] location - wektor okreslajacy poczatkowe polozenie srodka kadluba drona w ukladzie globalnym sceny. 
+
+    \return Drona o srodku w ukladzie globalnym w punkcie, nieobroconego.        
+*/
+
 Drone::Drone(Vector3D const & location){
     drone_location = location;
     Drone_ID = 0;
     Orientation_angle = 0;
 }
+
+/*!
+    Metoda zapisuje do pliku, o wygenerowanej automatycznie nazwie, dane o polozeniu wierzcholkow globalnych kadluba- prostopadloscianu, po uprzednim wyliczeniu ich. 
+    Zapis odbywa sie w sposob umozliwajacy wyswietlenie wszystkich scian kadluba w Gnuplot.   
+*/
 
 void Drone::Calculate_and_save_to_file_fuselage(){
     fuselage.Transform_to_global_coords(drone_location);
@@ -59,6 +81,11 @@ void Drone::Calculate_and_save_to_file_fuselage(){
 
     FileStrm.close();
 }
+
+/*!
+    Metoda zapisuje do pliku, o wygenerowanej automatycznie nazwie, dane o polozeniu wierzcholkow globalnych kamery przedniej- graniostoslupa, po uprzednim wyliczeniu ich. 
+    Zapis odbywa sie w sposob umozliwajacy wyswietlenie wszystkich scian graniostoslupa w Gnuplot.   
+*/
 
 void Drone::Calculate_and_save_to_file_front_camera(Vector3D const & Trasnlation){
     double camera_scale_scale[3]={3,8,2};
@@ -132,6 +159,12 @@ void Drone::Calculate_and_save_to_file_front_camera(Vector3D const & Trasnlation
     FileStrm.close();
 }
 
+
+/*!
+    Metoda zapisuje do pliku, o wygenerowanej automatycznie nazwie, dane o polozeniu wierzcholkow globalnych rotora- graniostoslupa froemnego szesciokatnego, po uprzednim wyliczeniu ich. 
+    Zapis odbywa sie w sposob umozliwajacy wyswietlenie wszystkich scian rotora w Gnuplot.   
+*/
+
 void Drone::Calculate_and_save_to_file_rotor(unsigned int index, Vector3D const & Trasnlation){
     
     rotors[index].Transform_to_global_coords(Trasnlation, drone_location, fuselage.get_angle());
@@ -201,6 +234,11 @@ void Drone::Calculate_and_save_to_file_rotor(unsigned int index, Vector3D const 
     FileStrm.close();
 }
 
+/*!
+    Metoda publiczna pozwalajaca w polaczony sposob zapisac wszystkie elementy drona do plikow. 
+    Metoda wyznacza wektory przesuniecia rotorow i kamery w ukladzie prostopadloscianu.
+*/
+
 void Drone::Calculate_and_save_to_file_drone(){
     double val_rot1[3]={5,4,4},val_rot2[3]={-5,4,4},val_rot3[3]={5,-4,4},val_rot4[3]={-5,-4,4},val_cam[3]={5,0,0};
     Vector3D vec_rot1(val_rot1), vec_rot2(val_rot2), vec_rot3(val_rot3), vec_rot4(val_rot4),vec_cam(val_cam);
@@ -214,6 +252,14 @@ void Drone::Calculate_and_save_to_file_drone(){
     Calculate_and_save_to_file_rotor(2,vec_rot3);
     Calculate_and_save_to_file_rotor(3,vec_rot4);
 }
+
+/*!
+    Metoda sluzaca do poruszania sie dornem w pionie, w gore i w dol.
+    Metoda realizuje przelot w formie animacji, nasladujacej prawdziwa dynamike rotorow.
+
+    \param [in] altitude - dlugosc na jaka ma sie wzniesc / z jakiej ma sie opuscic dron.
+    \param [in] Link - lacze do Gnuplota.
+*/
 
 void Drone::go_verical(double const & altitude, PzG::LaczeDoGNUPlota & Link){
     for (int i = 0; i < FRAMES; ++i){
@@ -236,6 +282,15 @@ void Drone::go_verical(double const & altitude, PzG::LaczeDoGNUPlota & Link){
     }
     Link.Rysuj();
 }
+
+
+/*!
+    Metoda sluzaca do obracania w osi Z dornem o podany kat.
+    Metoda realizuje obrot w formie animacji, nasladujacej prawdziwa dynamike rotorow.
+
+    \param [in] user_angle - kat o jaki ma sie obrocic dron.
+    \param [in] Link - lacze do Gnuplota.
+*/
 
 void Drone::rotate_drone(double const & user_angle, PzG::LaczeDoGNUPlota & Link){
     for (int i = 0; i < FRAMES; ++i){
@@ -264,6 +319,15 @@ void Drone::rotate_drone(double const & user_angle, PzG::LaczeDoGNUPlota & Link)
     } 
 }
 
+/*!
+    Metoda sluzaca do poruszania sie dornem w poziomie.
+    Metoda realizuje przelot w formie animacji, nasladujacej prawdziwa dynamike rotorow.
+
+    \param [in] distance - odleglosc na jaka ma polecec dron.
+    \param [in] user_angle - Kat o jaki ma obrocic sie dron.
+    \param [in] Link - lacze do Gnuplota.
+*/
+
 void Drone::go_horizontal(double const & distance, double const & user_angle, PzG::LaczeDoGNUPlota & Link){
     double unit_values[3]={1,0,0};
     Vector3D unit_vector(unit_values);
@@ -289,14 +353,13 @@ void Drone::go_horizontal(double const & distance, double const & user_angle, Pz
     Link.Rysuj();
 }
 
-std::ostream & operator << (std::ostream & Out, const Cuboid & Rc){
-    for (int i = 0; i < CORNERS; i++){
-        Out << Rc[i] << std::endl;
-        if(i%2==1)
-            Out << std::endl;
-    }
-    return Out;
-}
+/*!
+    Metoda sluzaca do wyznaczania linii reprezentujacej zaplanowany przelot drona.
+
+    \param [in] distance - odleglosc na jaka ma polecec dron.
+    \param [in] angle - Kat o jaki ma obrocic sie dron.
+    \param [in] Link - lacze do Gnuplota.
+*/
 
 void Drone::plan_path(double const & angle, double const & distance, PzG::LaczeDoGNUPlota & Link){
     std::ofstream  FileStrm;
@@ -332,6 +395,12 @@ void Drone::plan_path(double const & angle, double const & distance, PzG::LaczeD
 
     FileStrm.close();
 } 
+
+/*!
+    Metoda sluzaca do wyznaczania linii reprezentujacej przelot drona podczas predefiniowanego zwiadu.
+
+    \param [in] Link - lacze do Gnuplota.
+*/
 
 void Drone::plan_reacon(PzG::LaczeDoGNUPlota & Link){
     std::ofstream  FileStrm;
@@ -380,14 +449,29 @@ void Drone::plan_reacon(PzG::LaczeDoGNUPlota & Link){
     FileStrm.close();
 } 
 
+/*!
+    Metoda zmienia numer ID, potrzebny przy zapisie elementow drona do pliku.
+
+    \param [in] new_ID - nowe ID drona.
+*/
+
 void Drone::set_ID(unsigned int const & new_ID){
     Drone_ID = new_ID;
 }
+
+/*!
+    \return Vector3D aktualnego polozenia srodka kadluba drona w ukladzie globalnym sceny.
+*/
 
 Vector3D const Drone::get_drone_location() const{
     return drone_location;
 } 
 
+/*! 
+    Zadany dodatkowy kat obrotu drona zostanie zsumowany z aktualnym katem obrotu drona.
+
+    \param [in] additional_angle - dodtkowy kat, o ktory dron zostanie obrocony.
+*/
 void Drone::update_angle(double const & additional_angle){
      Orientation_angle += additional_angle;
 }

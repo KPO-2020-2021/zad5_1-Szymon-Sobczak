@@ -43,14 +43,14 @@ class Cuboid: public Geometrical_solid{
         /*! \brief Tablica wektorow3D reprezentujacych rozklad wierzcholkow prostopadloscianu w ukladzie globalnym */
         Vector3D Global_corners[8]; 
 
-        /*! Wartosc double reprezentujaca kat obrotu prostopadloscianu */
+        /*! \brief Wartosc double reprezentujaca kat obrotu prostopadloscianu w osi Z */
         double Roration_angle_Zaxis;
 
     public:
-        /*! \brief Bezparametryczny konstrukotr klasy*/
+        /*! \brief Bezparametryczny konstrukotr klasy */
         Cuboid();
         
-        /*! \brief Metoda pozawlajaca na transforamacje prsotopadloscianu z ukladu lokalnego do globalnego sceny*/
+        /*! \brief Metoda pozawlajaca na transforamacje prostopadloscianu z ukladu lokalnego do globalnego sceny */
         void Transform_to_global_coords(Vector3D const & vec);
 
         /*! \brief Metoda pozwalaja na aktualizowanie kata obrotu prostopadloscianu */

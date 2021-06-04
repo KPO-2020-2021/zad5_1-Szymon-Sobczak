@@ -25,15 +25,14 @@ users, this can be left out. */
 /*! \brief Glowna funkcja programu.*/
 
 int main(){
-   char Option;
+   char Option; /* Inicjalizacja zmiennych tymczasowych */
    double user_angle=0,distance = 0;
    unsigned int nbr_of_act_drone=1;
-   PzG::LaczeDoGNUPlota Link;
-   Scene Scenery(Link);
-
-   Vector3D test;
+   PzG::LaczeDoGNUPlota Link; /* Zmienna potrzebna do wizualizacji rysunku sceny*/
+   Scene Scenery(Link); /* Inicjalizacja sceny */
 
    try{
+      /* Zapis i wyswietlenie stanu poczatkowego dronow */
       Scenery.use_active_drone().Calculate_and_save_to_file_drone();
       Scenery.choose_drone(2);
 
@@ -56,7 +55,7 @@ int main(){
          std::cout << "Twoj wybor? (m - menu) > ";
          std::cin >> Option;
          switch(Option){  
-            case 'a':
+            case 'a': /* Opcja pozwalajaca na zmiane aktywnego drona */
                std::cout << "Obecnie aktywny dron: "<< nbr_of_act_drone << std::endl;
                std::cout << "Wybor aktywnego drona: "<< std::endl;
                
@@ -89,7 +88,7 @@ int main(){
                Link.Rysuj();
             break;
             
-            case 'p':
+            case 'p': /* Opcja pozwalajaca na przemieszenie aktywnego drona w okreslonym kierunku o okreslona dlugosc */
                while (true){
                   try{
                         std::cout << "Podaj kat obrotu w stopniach > ";
@@ -109,11 +108,14 @@ int main(){
                         std::cin.ignore(10000,'\n');   
                   }
                }
+
+               /* Wyrysowanie sciezki przelotu */
                std::cout << "Rysowanie zaplanowanej sciezki przelotu ... " << std::endl;
                Scenery.use_active_drone().plan_path(user_angle,distance,Link);
                Link.DodajNazwePliku("../datasets/path.dat");
                usleep(100000);
                
+               /* Wykonanie sekwencji ruchow drona */
                std::cout << "Wznoszenie ... " << std::endl;    
                Scenery.use_active_drone().go_verical(ALTITUDE,Link);
                usleep(100000);
@@ -133,7 +135,7 @@ int main(){
                Link.Rysuj();
             break;
             
-            case 'm':
+            case 'm': /* Opcja wyswietlajaca dostepne w menu opcje */  
                std::cout << "Menu wyboru opcji:" << std::endl
                << "\ta - wybierz aktywnego drona" << std::endl
                << "\tp - zadaj parametry przelotu" << std::endl
@@ -146,19 +148,22 @@ int main(){
 
             break;
                
-            case 'k':
+            case 'k': /* Opcja konczaca program */
                std::cout << "Konczenie pracy programu ..." << std::endl;
             break;
 
-            case 'z':
+            case 'z': /* Opcjaq pozwalajaca na wykonanie zwiadu, predefiniowanego ruchu po osmiokacie */
+               
                std::cout << "Wykonywanie zwiadu ..." << std::endl;
 
+               /* Wyrysowanie sciezki zwiadu */
                std::cout << "Rysowanie zaplanowanej sciezki przelotu ... " << std::endl;
                Scenery.use_active_drone().plan_reacon(Link);
                Link.DodajNazwePliku("../datasets/path_reacon.dat");
                Link.Rysuj();
                usleep(100000);
 
+                /* Wykonanie sekwencji ruchow drona podczas zwiadu */
                std::cout << "Wznoszenie ... " << std::endl;    
                Scenery.use_active_drone().go_verical(ALTITUDE,Link);
                usleep(100000);
@@ -200,8 +205,10 @@ int main(){
 
 
          }
-      
+         /* Wypisanie licznika wszystkich instancji Wektora3D w porgramie, ktore powstaly */
          std::cout << "Laczna ilosc obiektow Wektor3D: " << Vector3D::get_counter_all_vectors() << std::endl;  
+
+         /* Wypisanie licznika akutalnie istniejacych instancji Wektora3D w porgramie */
          std::cout << "Aktualna ilosc obiektow Wektor3D: " << Vector3D::get_counter_actual_vectors() << std::endl;   
       }
    }
