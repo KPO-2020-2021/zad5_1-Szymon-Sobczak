@@ -1,26 +1,29 @@
 /*!
-    \mainpage Rotacja3D - Zadanie 4.
+    \mainpage Dron Dragonfly Faza 1. - Zadanie 5.1.
     
     \author Szymon Sobczak nr 259275.
-    \date 24.05.2021
+    \date 06.06.2021
     \version 1.0
 
-    Aplikacja realizuje rotację prostopadłościanu wokół osi w ukladzie lokalnym oraz translacje o wektor.
-    Wyniki przeksztalcen prezentowane sa w 3D w programie Gnuplot. 
+    Aplikacja realizuje schematyczna wizualizacje w Gnuplot poruszania sie wymodelowanym dronem po powierzchni Tytana, ksiezyca Saturna. 
+    Jest to realizacja pierwszej fazy projetku. 
     
     \section etykieta-cel-cw Cel ćwiczenia
     Wykształcenie umiejętnosci modelowania kluczowych dla danego problemu pojęć.\n
     Generowanienie dokumentacji z wykorzystaniem systemu doxygen. 
 
     \section etykieta-najw-elem Najwazniejsze elementy programu.
-        - Obrot bryly o zadane katy wzgledem wybranych osi z zadana iloscia powtorzen wraz ze sprawdzeniem dlugosci przeciwleglych bokow.
-        - Potwatrzanie poprzedniego obrotu.
-        - Wyswietlanie macierzy rotacji.
-        - Przesuniecie bryly o zadany wektor.
-        - Wyswietlanie wspolrzednych wierzcholkow.
-        - Wyswietlanie menu.
+        - Modelowanie drona skladajacego sie z wielu wzajemnie zaleznych elementow i wizualizowanie go w programie Gnuplot.
+        - Wykonywanie ruchow drona nad plaszczyzna reprezentujaca powierzchnie ksiezyca. 
+        - Poruszanie dronem po zaplanowanej sciezce i narysowanej. 
+        - Wykonywanie predefiniowanego zestawu ruchow przez drona do wykonania tak zwanego "zwiadu".
+        - Animowanie ruchu drona. 
+        - Umiejetnosc wykorzystania pol statycznych oraz konstruktorow kopiujacych do swotrzenia licznika wektorow3D.
 
     \section etykieta-dodatkowe-elem Dodatkowe elementy programu.
-        - Dodawnie wielu prostopadloscianow do sceny. 
-        - Rysowanie pelnych prostopadloscianow.
+        - Dodanie elementu, ktory pozwala na rozroznienie przodu drona od tylu. 
+        - Zmiana kolorow aktywnego drona.
+        - Animacja ruchu rotorow, w sposob nasladujacy rzeczywista zasade ich dzialania.
+
+    \section etykieta-diagram Diagram UML projektu.
 */

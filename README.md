@@ -13,9 +13,9 @@
  * Repozytorum posiada wcześniej wygenerowane najaktualniejsze pliki dokumentacji w katalogu `dox/`. Aby uruchomić stronę główną dokumetnacji należy uruchomić plik `./dox/html/index.html`
 
 ## Informacje dodatkowe
- * Możliwe jest dodawanie wielu prostopadłościanów do sceny. Istnieje możliwość przemieszczania każdego z nich oddzielnie po stworzeniu nowych prostopadłościanów na scenie, by to zrobić należy zmienić aktywny prostopadłościan opcją "a". 
- * Wizualizowane prostopadłościany w Gnuplot są pełnymi prostopadłościanami - ze wszystkimi ścianami.
- * Test modyfikacji, wyświetlenie macierzy4x4 - macierzy połączonego obrotu i translacji, przeprowadzone w ramach autotestu. (PLIK. test_matrix4x4.cpp).
+ * Drony posiadaja dodatkowy element, aby dalo sie rozroznic przod i tyl jednostki. 
+ * Kolor drona zmienia sie, wskazujac, ktory dron jest aktualnie aktywny. 
+ * Rotory obracaja sie z rozna predkoscia, zaleznie od potrzeby, nasladujac zachowanie rotorow prawdziwego drona. 
 
 ## Building
 Build by making a build directory (i.e. `build/`), run `cmake` in that dir, and then use `make` to build the desired target.

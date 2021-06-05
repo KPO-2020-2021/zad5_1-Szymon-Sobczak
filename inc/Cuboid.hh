@@ -64,6 +64,12 @@ class Cuboid: public Geometrical_solid{
         
         /*! \brief Przeciazenie operatora indeksujacego */
         Vector3D & operator [] (int index);
+
+        /*! \brief Przeciazenie operatora funkcyjnego */
+        const Vector3D & operator () (int index) const;         
+        
+        /*! \brief Przeciazenie operatora funkcyjnego */
+        Vector3D & operator () (int index);
 };
 
 /*! \brief Przeciazenie operatora << sluzace wyswietlaniu wartosci prostopadloscianu */ 

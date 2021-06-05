@@ -142,10 +142,6 @@ int main(){
                << "\tm - wyswietl menu" << std::endl 
                << "\tz - wykonaj zwiad" << std::endl << std::endl
                << "\tk - koniec dzialania programu" << std::endl << std::endl;
-               
-            std::cout << "Laczna ilosc obiektow Wektor3D: " << Vector3D::get_counter_all_vectors() << std::endl;  
-            std::cout << "Aktualna ilosc obiektow Wektor3D: " << Vector3D::get_counter_actual_vectors() << std::endl;  
-
             break;
                
             case 'k': /* Opcja konczaca program */
@@ -202,14 +198,13 @@ int main(){
 
             default: /* dzialanie, gdy podana opcja nie bedzie uprzednio zdefiniowana */
                std::cout << ":/ Opcja niezdefiniowana" << std::endl;
-
-
          }
+         
          /* Wypisanie licznika wszystkich instancji Wektora3D w porgramie, ktore powstaly */
          std::cout << "Laczna ilosc obiektow Wektor3D: " << Vector3D::get_counter_all_vectors() << std::endl;  
 
          /* Wypisanie licznika akutalnie istniejacych instancji Wektora3D w porgramie */
-         std::cout << "Aktualna ilosc obiektow Wektor3D: " << Vector3D::get_counter_actual_vectors() << std::endl;   
+         std::cout << "Aktualna ilosc obiektow Wektor3D: " << Vector3D::get_counter_actual_vectors() << std::endl << std::endl;   
       }
    }
    catch (std::runtime_error & e){ /* W wyniku wyrzucenia bledu program poinformuje o tym i zakonczy swoje dzialanie */

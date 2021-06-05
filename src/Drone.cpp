@@ -32,7 +32,7 @@ void Drone::Calculate_and_save_to_file_fuselage(){
     fuselage.Transform_to_global_coords(drone_location);
 
     std::ofstream  FileStrm;
-    Vector3D P1,P2, temp_vec[]={fuselage[0],fuselage[7],fuselage[2],fuselage[5]};
+    Vector3D P1,P2;
     
     std::string name_of_file = fuselage.Get_Name_of_file_global() + "No_" + std::to_string(Drone_ID) + "_fuselage.dat";
     
@@ -41,8 +41,8 @@ void Drone::Calculate_and_save_to_file_fuselage(){
       throw std::runtime_error(":(  Operacja otwarcia pliku do zapisu nie powiodla sie.");
     }
     
-    P1 = (temp_vec[0] + temp_vec[1])/2;
-    P2 = (temp_vec[2] + temp_vec[3])/2;
+    P1 = (fuselage[0] + fuselage[7])/2;
+    P2 = (fuselage[2] + fuselage[5])/2;
 
     FileStrm << P1 << std::endl
              << fuselage[6] << std::endl
@@ -283,7 +283,6 @@ void Drone::go_verical(double const & altitude, PzG::LaczeDoGNUPlota & Link){
     Link.Rysuj();
 }
 
-
 /*!
     Metoda sluzaca do obracania w osi Z dornem o podany kat.
     Metoda realizuje obrot w formie animacji, nasladujacej prawdziwa dynamike rotorow.
@@ -472,6 +471,7 @@ Vector3D const Drone::get_drone_location() const{
 
     \param [in] additional_angle - dodtkowy kat, o ktory dron zostanie obrocony.
 */
+
 void Drone::update_angle(double const & additional_angle){
      Orientation_angle += additional_angle;
 }

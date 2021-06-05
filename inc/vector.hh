@@ -40,19 +40,17 @@ class Vector{
         /*! \brief Bezparametryczny konstruktor klasy. */
         Vector<Size>();  
 
-        Vector<Size>(const Vector<Size> & Ob){
-            *this = Ob;
-            Ob.counter_all_vectors++;
-            Ob.counter_actual_vectors++;
-        }
-
-        Vector<Size> & operator = (const Vector<Size> & Ob);
+        /*! \brief Konstruktor kopiujacy klasy. */
+        Vector<Size>(const Vector<Size> & Ob);
 
         /*! \brief Konstruktor klasy z parametrem. */
         Vector<Size>(double [Size]); 
 
         /*! \brief Destruktor klasy Vector<Size>. */
         ~Vector<Size>();
+
+        /*! \brief Przeciazenie operatora przypisania */
+        Vector<Size> & operator = (const Vector<Size> & Ob);
 
         /*! \brief Metoda statyczna pozwalajaca pobrac liczbe aktualnie istniejacych instancji obietkow Vector<Size>. */
         static int get_counter_actual_vectors();        
@@ -81,13 +79,6 @@ class Vector{
         /*! \brief Przeciazenia operatora indeksujacego. */
         double & operator [] (unsigned int index);
 };
-
-template <unsigned int Size>
-Vector<Size> & Vector<Size>::operator = (const Vector<Size> & Ob){
-    for(unsigned int i = 0; i < Size; ++i)
-        size[i] = Ob.size[i];
-    return *this;
-}
 
 /*! \brief Inicjalizacja pola statycznego counter_all_vecors*/
 template <unsigned int Size>
@@ -127,12 +118,27 @@ Vector<Size>::Vector(){
 }
 
 /*!
+    Konstruktor kopiujacy.   
+
+    \param [in] Ob - wektor do skopiowania. 
+
+    \return Kopie wektora przekazanego poprzez wskaznik.                                                         
+*/
+
+template <unsigned int Size>
+Vector<Size>::Vector(const Vector<Size> & Ob){
+    *this = Ob;
+    Ob.counter_all_vectors++;
+    Ob.counter_actual_vectors++;
+}
+
+/*!
     Konstruktor wieloparametryczny klasy Vector tworzacy wektor o zadanej dlugosci wypelniony warosciami pochodzacymi z parametru - tablicy wartosci typu double.                                                 
     Inkrementuje liczbe wszystkich i aktualnie znajdujacych sie w programie obiektow typu Vector<Size>.
     \param [in] tmp - Jednowymiarowa tablica typu double.                             
                                                              
     \return  Tablice wypelniona wartosciami podanymi w argumencie.                 
- */
+*/
 
 template <unsigned int Size>
 Vector<Size>::Vector(double tmp[Size]){
@@ -153,6 +159,7 @@ Vector<Size>::~Vector(){
 }
 
 
+
 /*!
     \return Liczbe (typu int) aktualnie znajdujacych sie w programie obiektow klasy Vector<Size>.
 */
@@ -170,6 +177,20 @@ template <unsigned int Size>
 int Vector<Size>::get_counter_all_vectors(){
      return counter_all_vectors;
 }
+
+/*!
+    \param [in] Ob - wektor ktory zostanie przypsiany.
+
+    \return wektor o wartosciach identycznych do tego, ktory zostal przekazany jako parametr. 
+*/
+
+template <unsigned int Size>
+Vector<Size> & Vector<Size>::operator = (const Vector<Size> & Ob){
+    for(unsigned int i = 0; i < Size; ++i)
+        size[i] = Ob.size[i];
+    return *this;
+}
+
 
 /*!
     Realizuje dodawanie dwoch wektorow.                                       
@@ -198,7 +219,7 @@ Vector<Size>  Vector<Size>::operator + (const Vector<Size> &v){
     \param [in] v - drugi skladnik odejmowania.                                       
                                                                
     \return Roznice dwoch skladnikow przekazanych jako wskaznik na parametr.                                                          
- */
+*/
 
 template <unsigned int Size>
 Vector<Size> Vector<Size>::operator - (const Vector<Size> &v){
@@ -216,7 +237,7 @@ Vector<Size> Vector<Size>::operator - (const Vector<Size> &v){
     \param [in] v - drugi skladnik mnozenia (liczba typu double).                     
                                                                    
     \return Iloczyn dwoch skladnikow przekazanych jako wskaznik na parametr.                                                          
- */
+*/
 
 template <unsigned int Size>
 Vector<Size> Vector<Size>::operator * (const double &tmp){
@@ -239,7 +260,6 @@ Vector<Size> Vector<Size>::operator * (const double &tmp){
 template <unsigned int Size>
 Vector<Size> Vector<Size>::operator * (const Vector<Size> &v){
     Vector result;
-    
     for (unsigned int i = 0; i < Size; ++i){
         result[i] = size[i] * v[i];
     }

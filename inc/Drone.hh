@@ -94,7 +94,7 @@ class Drone{
         void plan_reacon(PzG::LaczeDoGNUPlota & Link);
 
         /*! \brief Metoda realizujaca przelot drona w pionie. */
-        void go_verical(double const &  altitude, PzG::LaczeDoGNUPlota & Link);
+        void go_verical(double const & altitude, PzG::LaczeDoGNUPlota & Link);
 
         /*! \brief Metoda realizujaca obrot drona w osi Z. */
         void rotate_drone(double const & user_angle, PzG::LaczeDoGNUPlota & Link);

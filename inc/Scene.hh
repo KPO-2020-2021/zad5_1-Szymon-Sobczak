@@ -38,16 +38,16 @@ class Scene{
         std::vector <Drone> Drones;
 
         /*! \brief Pole typu PzG::InfoPlikuDoRysowania reprezentujace zbior ustawien rysowania drona nr 1 w Gnuplot */
-        PzG::InfoPlikuDoRysowania *tab_of_properties_d1[5];
+        PzG::InfoPlikuDoRysowania *Tab_of_properties_d1[6];
 
         /*! \brief Pole typu PzG::InfoPlikuDoRysowania reprezentujace zbior ustawien rysowania drona nr 2 w Gnuplot */
-        PzG::InfoPlikuDoRysowania *tab_of_properties_d2[5];
+        PzG::InfoPlikuDoRysowania *Tab_of_properties_d2[6];
 
         /*! \brief Pole typu PzG::LaczeDoGNUPlota lacze do Gnuplot */
         PzG::LaczeDoGNUPlota Link;
 
         /*! \brief Pole typu unsigned int, opisujace numer obecnie aktywnego drona */
-        unsigned int nbr_of_active_drone;
+        unsigned int Nbr_of_active_drone;
 
     public:
         /*! \brief Konstrukotr klasy z parametrem */

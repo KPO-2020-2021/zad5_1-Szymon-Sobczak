@@ -79,6 +79,31 @@ const Vector3D & Cuboid::operator [] (int index) const {
     return const_cast <Vector3D &> (const_cast <const Cuboid *> (this)->operator[](index));
 }
 
+/*!                                                                                                         
+    \param[in] index - index wierzcholka lokalnego prostopadloscianu.                                             
+                                                                   
+    \return Wartosc wierzcholka lokalnego prostopadloscianu w danym miejscu wektora jako stala.                
+*/
+
+const Vector3D & Cuboid::operator () (int index) const{
+    if (index < 0 || index >= CORNERS) {
+        throw std::runtime_error("Bledna wartosc indeksu wierzcholka prostopadloscianu");
+    } 
+    return Local_corners[index];
+}
+
+/*!                                                                                                 
+    \param[in]  index - index wierzcholka lokalnego prostopadloscianu.                                             
+                                                                  
+    \return Wartosc wierzcholka lokalnego prostopadloscianu w danym miejscu wektora.                           
+*/
+
+ Vector3D & Cuboid::operator () (int index) {
+    if (index < 0 || index >= CORNERS) {
+        throw std::runtime_error("Bledna wartosc indeksu wierzcholka prostopadloscianu");
+    } 
+    return const_cast <Vector3D &> (const_cast <const Cuboid *> (this)->operator()(index));
+}
 
 /*! 
     Zadany dodatkowy kat obrotu prostopadloscianu zostanie zsumowany z aktualnym katem obrotu prostopadloscianu.

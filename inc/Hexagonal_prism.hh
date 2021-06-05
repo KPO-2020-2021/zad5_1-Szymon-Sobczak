@@ -50,16 +50,21 @@ class Hexagonal_prism: public Geometrical_solid{
         /*! \brief Bezparametryczny konstrukotr klasy. */
         Hexagonal_prism();
         
-        /*! \brief Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego. */
-        void update_angle(double const & additional_angle);
-
         /*! \brief Metoda pozawlajaca na transforamacje graniastoslupa prawidlowego szesciokatnego z ukladu lokalnego do globalnego sceny, z przejsciem przez uklad prostopadloscianu. */
         void Transform_to_global_coords(Vector3D const & vec, Vector3D const & position_of_drone, double const & drone_angle);
+
+        /*! \brief Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego. */
+        void update_angle(double const & additional_angle);
 
         /*! \brief Przeciazenie operatora indeksujacego. */
         const Vector3D & operator [] (int index) const;         
         
         /*! \brief Przeciazenie operatora indeksujacego. */
         Vector3D & operator [] (int index);
+
+        /*! \brief Przeciazenie operatora funkcyjnego */
+        const Vector3D & operator () (int index) const;         
         
+        /*! \brief Przeciazenie operatora funkcyjnego */
+        Vector3D & operator () (int index);
 };

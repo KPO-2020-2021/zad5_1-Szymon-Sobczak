@@ -64,7 +64,7 @@ void Hexagonal_prism::Transform_to_global_coords(Vector3D const & vec, Vector3D 
     \return Wartosc wierzcholka globalnego graniastoslupa prawidlowego szesciokatnego w danym miejscu wektora jako stala.                
 */
 
-const Vector3D & Hexagonal_prism::operator [] (int index) const {
+const Vector3D & Hexagonal_prism::operator [] (int index) const{
     if (index < 0 || index >= 12) {
         throw std::runtime_error("Bledna wartosc indeksu wierzcholka graniastoslupa");
     } 
@@ -77,11 +77,38 @@ const Vector3D & Hexagonal_prism::operator [] (int index) const {
     \return Wartosc wierzcholka globalnego graniastoslupa prawidlowego szesciokatnego w danym miejscu wektora.                           
 */
 
- Vector3D & Hexagonal_prism::operator[](int index) {
-    if (index < 0 || index >= 12) {
+Vector3D & Hexagonal_prism::operator [] (int index){
+    if (index < 0 || index >= 12){
         throw std::runtime_error("Bledna wartosc indeksu wierzcholka graniastoslupa");
     } 
     return const_cast <Vector3D &> (const_cast <const Hexagonal_prism *> (this)->operator[](index));
+}
+
+
+/*!                                                                                                         
+    \param[in] index - index wierzcholka lokalnego graniastoslupa prawidlowego szesciokatnego.                                             
+                                                                   
+    \return Wartosc wierzcholka lokalnego graniastoslupa prawidlowego szesciokatnego w danym miejscu wektora jako stala.                
+*/
+
+const Vector3D & Hexagonal_prism::operator () (int index) const{
+    if (index < 0 || index >= 12) {
+        throw std::runtime_error("Bledna wartosc indeksu wierzcholka graniastoslupa");
+    } 
+    return Local_corners[index];
+}
+
+/*!                                                                                                 
+    \param[in]  index - index wierzcholka lokalnego graniastoslupa prawidlowego szesciokatnego.                                             
+                                                                  
+    \return Wartosc wierzcholka lokalnego graniastoslupa prawidlowego szesciokatnego w danym miejscu wektora.                           
+*/
+
+Vector3D & Hexagonal_prism::operator () (int index){
+    if (index < 0 || index >= 12) {
+        throw std::runtime_error("Bledna wartosc indeksu wierzcholka graniastoslupa");
+    } 
+    return const_cast <Vector3D &> (const_cast <const Hexagonal_prism *> (this)->operator()(index));
 }
 
 /*! 
