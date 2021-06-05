@@ -85,7 +85,7 @@ class Drone{
         Vector3D const get_drone_location() const;        
 
         /*! \brief Metoda pozwalajaca zaktualizowac kat obrotu drona o wybrany kat. */
-        void update_angle(double const &  additional_angle);
+        void update_angle(double const & additional_angle);
         
         /*! \brief Metoda wyznaczajaca, zapisujaca oraz rysujaca sciezke pojedynczego przelotu. */
         void plan_path(double const & angle, double const & distance, PzG::LaczeDoGNUPlota & Link);
@@ -97,7 +97,7 @@ class Drone{
         void go_verical(double const &  altitude, PzG::LaczeDoGNUPlota & Link);
 
         /*! \brief Metoda realizujaca obrot drona w osi Z. */
-        void rotate_drone(double const &  user_angle, PzG::LaczeDoGNUPlota & Link);
+        void rotate_drone(double const & user_angle, PzG::LaczeDoGNUPlota & Link);
 
         /*! \brief Metoda realizujaca przelot drona w poziomie. */
         void go_horizontal(double const & distance, double const & user_angle, PzG::LaczeDoGNUPlota & Link);

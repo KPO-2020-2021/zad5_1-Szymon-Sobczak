@@ -32,13 +32,21 @@ class Vector{
         double size[Size];     
 
         /*! \brief Licznik ilosci aktualnie istniejacych instancji obietkow Vector<Size> */
-        static int counter_actual_vectors;
+        static unsigned long long counter_actual_vectors;
 
         /*! \brief Licznik ilosci wszystkich istniejacych instancji obietkow Vector<Size> */
-        static int counter_all_vectors;
+        static unsigned long long counter_all_vectors;
     public:
         /*! \brief Bezparametryczny konstruktor klasy. */
         Vector<Size>();  
+
+        Vector<Size>(const Vector<Size> & Ob){
+            *this = Ob;
+            Ob.counter_all_vectors++;
+            Ob.counter_actual_vectors++;
+        }
+
+        Vector<Size> & operator = (const Vector<Size> & Ob);
 
         /*! \brief Konstruktor klasy z parametrem. */
         Vector<Size>(double [Size]); 
@@ -72,17 +80,22 @@ class Vector{
         
         /*! \brief Przeciazenia operatora indeksujacego. */
         double & operator [] (unsigned int index);
-
-
 };
+
+template <unsigned int Size>
+Vector<Size> & Vector<Size>::operator = (const Vector<Size> & Ob){
+    for(unsigned int i = 0; i < Size; ++i)
+        size[i] = Ob.size[i];
+    return *this;
+}
 
 /*! \brief Inicjalizacja pola statycznego counter_all_vecors*/
 template <unsigned int Size>
-int Vector<Size>::counter_all_vectors = 0;
+unsigned long long Vector<Size>::counter_all_vectors = 0;
 
 /*! \brief Inicjalizacja pola statycznego counter_actual_vectors*/
 template <unsigned int Size>
-int Vector<Size>::counter_actual_vectors = 0;
+unsigned long long Vector<Size>::counter_actual_vectors = 0;
 
 /*! \brief Funkcja pomocnicza, pozwala zmierzyc odlegosc pomiedzy dwoma wektorami, tworzacymi nowy wektor */ 
 template <unsigned int Size>
@@ -136,7 +149,6 @@ Vector<Size>::Vector(double tmp[Size]){
 
 template <unsigned int Size>
 Vector<Size>::~Vector(){
-    std::cout << counter_actual_vectors << std::endl;
     --counter_actual_vectors;
 }
 
