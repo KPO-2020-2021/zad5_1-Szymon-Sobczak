@@ -73,8 +73,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_drone_8cpp.html",
-"class_vector.html#a1bf83e322fb6eb32cfecedb5aa86a2e6"
+"_cuboid_8cpp.html",
+"class_vector.html#ae2bd2cdff2dd7e5baea847c2f9536ab0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

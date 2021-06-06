@@ -105,7 +105,16 @@ var menudata={children:[
 {text:"Pliki",url:"files.html",children:[
 {text:"Lista plików",url:"files.html"},
 {text:"Składowe plików",url:"globals.html",children:[
-{text:"Wszystko",url:"globals.html"},
+{text:"Wszystko",url:"globals.html",children:[
+{text:"a",url:"globals.html#index_a"},
+{text:"c",url:"globals.html#index_c"},
+{text:"d",url:"globals.html#index_d"},
+{text:"f",url:"globals.html#index_f"},
+{text:"m",url:"globals.html#index_m"},
+{text:"o",url:"globals.html#index_o"},
+{text:"r",url:"globals.html#index_r"},
+{text:"s",url:"globals.html#index_s"},
+{text:"v",url:"globals.html#index_v"}]},
 {text:"Funkcje",url:"globals_func.html"},
 {text:"Zmienne",url:"globals_vars.html"},
 {text:"Definicje typów",url:"globals_type.html"},

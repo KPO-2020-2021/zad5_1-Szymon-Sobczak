@@ -86,6 +86,9 @@ class Drone{
 
         /*! \brief Metoda pozwalajaca zaktualizowac kat obrotu drona o wybrany kat. */
         void update_angle(double const & additional_angle);
+
+        /*! \brief Metoda pozwaljaca pobrac aktualny kat obrotu drona */
+        double get_angle() const;
         
         /*! \brief Metoda wyznaczajaca, zapisujaca oraz rysujaca sciezke pojedynczego przelotu. */
         void plan_path(double const & angle, double const & distance, PzG::LaczeDoGNUPlota & Link);

@@ -27,8 +27,8 @@
 <area shape="rect" id="node11" href="$class_cuboid.html#a940aebd7222c87874c7e780f0d9376d5" title="Metoda pozawlajaca na transforamacje prostopadloscianu z ukladu lokalnego do globalnego sceny." alt="" coords="1142,5,1302,47"/>
 <area shape="rect" id="node15" href="$namespace_pz_g.html#ae1aad0c681853d7e47da4cdfccefc102" title="Funkcja pomocnicza, sprawdza czy plik o podanej nazwie jest na dysku." alt="" coords="386,631,513,658"/>
 <area shape="rect" id="node21" href="$class_drone.html#ae55ed7a073e64ce02fdc61566534d6a0" title="Metoda realizujaca obrot drona w osi Z." alt="" coords="373,269,525,295"/>
-<area shape="rect" id="node29" href="$class_hexagonal__prism.html#a9e24f10d2bb12eb2e941f318b681e77c" title="Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego." alt="" coords="597,203,787,244"/>
-<area shape="rect" id="node30" href="$class_cuboid.html#aa7e28082277e96871e189ff01e12b825" title="Metoda pozwalaja na aktualizowanie kata obrotu prostopadloscianu." alt="" coords="606,269,778,295"/>
+<area shape="rect" id="node30" href="$class_hexagonal__prism.html#a6ea7417039a3d731cbc572d52ffb554c" title="Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego." alt="" coords="597,203,787,244"/>
+<area shape="rect" id="node29" href="$class_cuboid.html#aa7e28082277e96871e189ff01e12b825" title="Metoda pozwalaja na aktualizowanie kata obrotu prostopadloscianu." alt="" coords="606,269,778,295"/>
 <area shape="rect" id="node23" href="$namespace_pz_g.html#aa010184f31b26bb561b42f22438b821e" title="Funkcja pomocnicza, dopisuje do polecenia wpisy związane z rysowaniem z pliku." alt="" coords="841,395,1063,422"/>
 <area shape="rect" id="node24" href="$namespace_pz_g.html#a7227cb39c785b1c746b6bb5515c0b781" title="Dodaje do listy rysowanych punktów, punkty o różnych rozmiarach." alt="" coords="835,556,1069,597"/>
 <area shape="rect" id="node25" href="$namespace_pz_g.html#a169c311f0e0b6ffadcd44e91e749f72d" title="Wczytuje z pliku listę punktów." alt="" coords="1125,556,1319,597"/>

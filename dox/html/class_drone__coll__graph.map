@@ -1,8 +1,8 @@
 <map id="Drone" name="Drone">
-<area shape="rect" id="node1" title="Klasa modelujaca w programie pojecie drona. Dron jest reprezentowany przez prostopadloscian&#45; kadlub,..." alt="" coords="102,409,163,436"/>
-<area shape="rect" id="node2" href="$class_vector.html" title=" " alt="" coords="115,95,216,121"/>
-<area shape="rect" id="node4" href="$class_cuboid.html" title="Klasa modelujaca w programie pojecie prostopadloscianu, ktorego wierzcholki i centrum sa wyrazone za ..." alt="" coords="99,305,166,332"/>
-<area shape="rect" id="node5" href="$class_geometrical__solid.html" title="Klasa modelujaca w programie pojecie bryły geometrycznej." alt="" coords="241,200,381,227"/>
-<area shape="rect" id="node6" href="$class_hexagonal__prism.html" title="Klasa modelujaca w programie pojecie graniastoslupa prawidlowego szesciokatnego, ktorego wierzcholki ..." alt="" coords="243,305,379,332"/>
-<area shape="rect" id="node3" href="$class_vector.html" title="Szablon klasy modelujacej w programie pojecie wektora." alt="" coords="106,5,226,32"/>
+<area shape="rect" id="node1" title="Klasa modelujaca w programie pojecie drona. Dron jest reprezentowany przez prostopadloscian&#45; kadlub,..." alt="" coords="102,395,164,421"/>
+<area shape="rect" id="node2" href="$class_vector.html" title=" " alt="" coords="117,95,218,121"/>
+<area shape="rect" id="node4" href="$class_cuboid.html" title="Klasa modelujaca w programie pojecie prostopadloscianu, ktorego wierzcholki i centrum sa wyrazone za ..." alt="" coords="100,291,166,317"/>
+<area shape="rect" id="node5" href="$class_geometrical__solid.html" title="Klasa modelujaca w programie pojecie bryły geometrycznej." alt="" coords="246,193,386,219"/>
+<area shape="rect" id="node6" href="$class_hexagonal__prism.html" title="Klasa modelujaca w programie pojecie graniastoslupa prawidlowego szesciokatnego, ktorego wierzcholki ..." alt="" coords="248,291,384,317"/>
+<area shape="rect" id="node3" href="$class_vector.html" title="Szablon klasy modelujacej w programie pojecie wektora." alt="" coords="108,5,228,32"/>
 </map>

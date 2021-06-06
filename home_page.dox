@@ -26,4 +26,6 @@
         - Animacja ruchu rotorow, w sposob nasladujacy rzeczywista zasade ich dzialania.
 
     \section etykieta-diagram Diagram UML projektu.
+    
+    \image html UML_dragonfly.png 
 */

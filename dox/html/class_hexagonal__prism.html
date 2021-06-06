@@ -122,12 +122,15 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:a0a4a4742c43235703c3968db146b2f9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hexagonal__prism.html#a0a4a4742c43235703c3968db146b2f9d">Hexagonal_prism</a> ()</td></tr>
 <tr class="memdesc:a0a4a4742c43235703c3968db146b2f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bezparametryczny konstrukotr klasy.  <a href="class_hexagonal__prism.html#a0a4a4742c43235703c3968db146b2f9d">Więcej...</a><br /></td></tr>
 <tr class="separator:a0a4a4742c43235703c3968db146b2f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e24f10d2bb12eb2e941f318b681e77c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hexagonal__prism.html#a9e24f10d2bb12eb2e941f318b681e77c">update_angle</a> (double const &amp;additional_angle)</td></tr>
-<tr class="memdesc:a9e24f10d2bb12eb2e941f318b681e77c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego.  <a href="class_hexagonal__prism.html#a9e24f10d2bb12eb2e941f318b681e77c">Więcej...</a><br /></td></tr>
-<tr class="separator:a9e24f10d2bb12eb2e941f318b681e77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a816173bc7296b7b9ae88da8cf3a56872"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hexagonal__prism.html#a816173bc7296b7b9ae88da8cf3a56872">Transform_to_global_coords</a> (<a class="el" href="vector3_d_8hh.html#a01090a0f6a3d1e7e9606819bd0fafda0">Vector3D</a> const &amp;vec, <a class="el" href="vector3_d_8hh.html#a01090a0f6a3d1e7e9606819bd0fafda0">Vector3D</a> const &amp;position_of_drone, double const &amp;drone_angle)</td></tr>
 <tr class="memdesc:a816173bc7296b7b9ae88da8cf3a56872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda pozawlajaca na transforamacje graniastoslupa prawidlowego szesciokatnego z ukladu lokalnego do globalnego sceny, z przejsciem przez uklad prostopadloscianu.  <a href="class_hexagonal__prism.html#a816173bc7296b7b9ae88da8cf3a56872">Więcej...</a><br /></td></tr>
 <tr class="separator:a816173bc7296b7b9ae88da8cf3a56872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea7417039a3d731cbc572d52ffb554c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hexagonal__prism.html#a6ea7417039a3d731cbc572d52ffb554c">update_angleZ</a> (double const &amp;additional_angle)</td></tr>
+<tr class="memdesc:a6ea7417039a3d731cbc572d52ffb554c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego.  <a href="class_hexagonal__prism.html#a6ea7417039a3d731cbc572d52ffb554c">Więcej...</a><br /></td></tr>
+<tr class="separator:a6ea7417039a3d731cbc572d52ffb554c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47854dce5983702b2112d7d20de99406"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hexagonal__prism.html#a47854dce5983702b2112d7d20de99406">get_angle</a> () const</td></tr>
+<tr class="memdesc:a47854dce5983702b2112d7d20de99406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda pozwaljaca pobrac aktualny kat obrotu graniastoslupa prawidlowego szesciokatnego.  <a href="class_hexagonal__prism.html#a47854dce5983702b2112d7d20de99406">Więcej...</a><br /></td></tr>
+<tr class="separator:a47854dce5983702b2112d7d20de99406"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8158720e7a0eabd5777632d4e9e9f82"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="vector3_d_8hh.html#a01090a0f6a3d1e7e9606819bd0fafda0">Vector3D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hexagonal__prism.html#aa8158720e7a0eabd5777632d4e9e9f82">operator[]</a> (int index) const</td></tr>
 <tr class="memdesc:aa8158720e7a0eabd5777632d4e9e9f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przeciazenie operatora indeksujacego.  <a href="class_hexagonal__prism.html#aa8158720e7a0eabd5777632d4e9e9f82">Więcej...</a><br /></td></tr>
 <tr class="separator:aa8158720e7a0eabd5777632d4e9e9f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,7 +214,7 @@ Atrybuty prywatne</h2></td></tr>
 <dl class="section return"><dt>Zwraca</dt><dd>graniastoslupup o srodku w ukladzie loklanym w punkcie (0, 0, 0), o wszystkich bokach dlugosci 1. <br  />
  </dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00019">19</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00029">29</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
 <div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
@@ -225,6 +228,29 @@ Oto graf wywołań dla tej funkcji:</div>
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a47854dce5983702b2112d7d20de99406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47854dce5983702b2112d7d20de99406">&#9670;&nbsp;</a></span>get_angle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Hexagonal_prism::get_angle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda pozwaljaca pobrac aktualny kat obrotu graniastoslupa prawidlowego szesciokatnego. </p>
+<p>Metoda zwraca aktualny kat obrotu graniastoslupa prawidlowego szesciokatnego.</p>
+<dl class="section return"><dt>Zwraca</dt><dd>Kat obrou graniastoslupa prawidlowego szesciokatnego, jako wartosc typu double. </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00142">142</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a62a192a0a7629cb62d0906348f0ed5ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62a192a0a7629cb62d0906348f0ed5ed">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
 
@@ -252,7 +278,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <dl class="section return"><dt>Zwraca</dt><dd>Wartosc wierzcholka lokalnego graniastoslupa prawidlowego szesciokatnego w danym miejscu wektora. <br  />
  </dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00107">107</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00117">117</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
 
 </div>
 </div>
@@ -283,7 +309,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <dl class="section return"><dt>Zwraca</dt><dd>Wartosc wierzcholka lokalnego graniastoslupa prawidlowego szesciokatnego w danym miejscu wektora jako stala. <br  />
  </dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00094">94</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00104">104</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
 
 </div>
 </div>
@@ -314,7 +340,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <dl class="section return"><dt>Zwraca</dt><dd>Wartosc wierzcholka globalnego graniastoslupa prawidlowego szesciokatnego w danym miejscu wektora. <br  />
  </dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00080">80</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00090">90</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
 
 </div>
 </div>
@@ -345,7 +371,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <dl class="section return"><dt>Zwraca</dt><dd>Wartosc wierzcholka globalnego graniastoslupa prawidlowego szesciokatnego w danym miejscu wektora jako stala. <br  />
  </dd></dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00067">67</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00077">77</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
 
 </div>
 </div>
@@ -392,7 +418,7 @@ Oto graf wywołań dla tej funkcji:</div>
   </dd>
 </dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00054">54</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00064">64</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
 <div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
@@ -421,14 +447,14 @@ Oto graf wywoływań tej funkcji:</div>
 
 </div>
 </div>
-<a id="a9e24f10d2bb12eb2e941f318b681e77c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e24f10d2bb12eb2e941f318b681e77c">&#9670;&nbsp;</a></span>update_angle()</h2>
+<a id="a6ea7417039a3d731cbc572d52ffb554c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea7417039a3d731cbc572d52ffb554c">&#9670;&nbsp;</a></span>update_angleZ()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Hexagonal_prism::update_angle </td>
+          <td class="memname">void Hexagonal_prism::update_angleZ </td>
           <td>(</td>
           <td class="paramtype">double const &amp;&#160;</td>
           <td class="paramname"><em>additional_angle</em></td><td>)</td>
@@ -438,7 +464,7 @@ Oto graf wywoływań tej funkcji:</div>
 </div><div class="memdoc">
 
 <p>Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego. </p>
-<p>Zadany dodatkowy kat obrotu raniastoslupa prawidlowego szesciokatnego zostanie zsumowany z aktualnym katem obrotu graniastoslupa.</p>
+<p>Zadany dodatkowy kat obrotu graniastoslupa prawidlowego szesciokatnego zostanie zsumowany z aktualnym katem obrotu graniastoslupa.</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">additional_angle</td><td>- dodtkowy kat, o ktory raniastoslup prawidlowy szesciokatny zostanie obrocony. </td></tr>
@@ -446,12 +472,12 @@ Oto graf wywoływań tej funkcji:</div>
   </dd>
 </dl>
 
-<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00120">120</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
+<p class="definition">Definicja w linii <a class="el" href="_hexagonal__prism_8cpp_source.html#l00130">130</a> pliku <a class="el" href="_hexagonal__prism_8cpp_source.html">Hexagonal_prism.cpp</a>.</p>
 <div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_hexagonal__prism_a9e24f10d2bb12eb2e941f318b681e77c_icgraph.png" border="0" usemap="#aclass_hexagonal__prism_a9e24f10d2bb12eb2e941f318b681e77c_icgraph" alt=""/></div>
-<map name="aclass_hexagonal__prism_a9e24f10d2bb12eb2e941f318b681e77c_icgraph" id="aclass_hexagonal__prism_a9e24f10d2bb12eb2e941f318b681e77c_icgraph">
+<div class="center"><img src="class_hexagonal__prism_a6ea7417039a3d731cbc572d52ffb554c_icgraph.png" border="0" usemap="#aclass_hexagonal__prism_a6ea7417039a3d731cbc572d52ffb554c_icgraph" alt=""/></div>
+<map name="aclass_hexagonal__prism_a6ea7417039a3d731cbc572d52ffb554c_icgraph" id="aclass_hexagonal__prism_a6ea7417039a3d731cbc572d52ffb554c_icgraph">
 <area shape="rect" title="Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego." alt="" coords="513,15,703,56"/>
 <area shape="rect" href="class_drone.html#a5234bff0299f09ee04975cf95ad3703d" title="Metoda realizujaca przelot drona w poziomie." alt="" coords="108,22,265,49"/>
 <area shape="rect" href="class_drone.html#ad59d8053449d0d45036b4c927dc5e079" title="Metoda realizujaca przelot drona w pionie." alt="" coords="119,73,255,100"/>

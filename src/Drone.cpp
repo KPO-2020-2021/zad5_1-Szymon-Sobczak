@@ -475,3 +475,13 @@ Vector3D const Drone::get_drone_location() const{
 void Drone::update_angle(double const & additional_angle){
      Orientation_angle += additional_angle;
 }
+
+/*! 
+    Metoda zwraca aktualny kat obrotu drona.
+
+    \return Kat obrou drona, jako wartosc typu double.
+*/
+
+double Drone::get_angle() const{
+    return Orientation_angle;
+}

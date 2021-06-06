@@ -1,7 +1,7 @@
 var class_matrix =
 [
     [ "Matrix", "class_matrix.html#a80c1366959dd6b71f6da4b1a04178b24", null ],
-    [ "Matrix", "class_matrix.html#a0939572cf8a31191c69ae1e07b433498", null ],
+    [ "Matrix", "class_matrix.html#ae600de101da25f1071409e1afe02834b", null ],
     [ "operator()", "class_matrix.html#aca43ed83a5f9f47c8add81c6af8ee0bb", null ],
     [ "operator()", "class_matrix.html#abe2f0ad46e4bedd7f1ddce9e2164baf3", null ],
     [ "operator*", "class_matrix.html#aba819ab5207984503183519966ee8973", null ],

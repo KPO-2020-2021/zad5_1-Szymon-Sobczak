@@ -5,6 +5,7 @@ var class_drone =
     [ "Calculate_and_save_to_file_front_camera", "class_drone.html#ad004be2850d0e4f39b69bacfc8c5dbd4", null ],
     [ "Calculate_and_save_to_file_fuselage", "class_drone.html#a720acea4a98e74872e80c88a2f24faa6", null ],
     [ "Calculate_and_save_to_file_rotor", "class_drone.html#a272c0597d236f80545bff08a4d29b330", null ],
+    [ "get_angle", "class_drone.html#ab580c1ec518ba0ac7fc5227fddcfb2a9", null ],
     [ "get_drone_location", "class_drone.html#aa79cafa21736bcc0479cb43150915c5f", null ],
     [ "go_horizontal", "class_drone.html#a5234bff0299f09ee04975cf95ad3703d", null ],
     [ "go_verical", "class_drone.html#ad59d8053449d0d45036b4c927dc5e079", null ],

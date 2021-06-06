@@ -102,12 +102,12 @@ Diagram współpracy dla Drone:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_drone__coll__graph.png" border="0" usemap="#a_drone_coll__map" alt="Collaboration graph"/></div>
 <map name="a_drone_coll__map" id="a_drone_coll__map">
-<area shape="rect" title="Klasa modelujaca w programie pojecie drona. Dron jest reprezentowany przez prostopadloscian&#45; kadlub,..." alt="" coords="102,409,163,436"/>
-<area shape="rect" href="class_vector.html" title=" " alt="" coords="115,95,216,121"/>
-<area shape="rect" href="class_cuboid.html" title="Klasa modelujaca w programie pojecie prostopadloscianu, ktorego wierzcholki i centrum sa wyrazone za ..." alt="" coords="99,305,166,332"/>
-<area shape="rect" href="class_geometrical__solid.html" title="Klasa modelujaca w programie pojecie bryły geometrycznej." alt="" coords="241,200,381,227"/>
-<area shape="rect" href="class_hexagonal__prism.html" title="Klasa modelujaca w programie pojecie graniastoslupa prawidlowego szesciokatnego, ktorego wierzcholki ..." alt="" coords="243,305,379,332"/>
-<area shape="rect" href="class_vector.html" title="Szablon klasy modelujacej w programie pojecie wektora." alt="" coords="106,5,226,32"/>
+<area shape="rect" title="Klasa modelujaca w programie pojecie drona. Dron jest reprezentowany przez prostopadloscian&#45; kadlub,..." alt="" coords="102,395,164,421"/>
+<area shape="rect" href="class_vector.html" title=" " alt="" coords="117,95,218,121"/>
+<area shape="rect" href="class_cuboid.html" title="Klasa modelujaca w programie pojecie prostopadloscianu, ktorego wierzcholki i centrum sa wyrazone za ..." alt="" coords="100,291,166,317"/>
+<area shape="rect" href="class_geometrical__solid.html" title="Klasa modelujaca w programie pojecie bryły geometrycznej." alt="" coords="246,193,386,219"/>
+<area shape="rect" href="class_hexagonal__prism.html" title="Klasa modelujaca w programie pojecie graniastoslupa prawidlowego szesciokatnego, ktorego wierzcholki ..." alt="" coords="248,291,384,317"/>
+<area shape="rect" href="class_vector.html" title="Szablon klasy modelujacej w programie pojecie wektora." alt="" coords="108,5,228,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
@@ -125,6 +125,9 @@ Metody publiczne</h2></td></tr>
 <tr class="memitem:a3c99b69b08004b87e3555839b0b319dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drone.html#a3c99b69b08004b87e3555839b0b319dd">update_angle</a> (double const &amp;additional_angle)</td></tr>
 <tr class="memdesc:a3c99b69b08004b87e3555839b0b319dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda pozwalajaca zaktualizowac kat obrotu drona o wybrany kat.  <a href="class_drone.html#a3c99b69b08004b87e3555839b0b319dd">Więcej...</a><br /></td></tr>
 <tr class="separator:a3c99b69b08004b87e3555839b0b319dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab580c1ec518ba0ac7fc5227fddcfb2a9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drone.html#ab580c1ec518ba0ac7fc5227fddcfb2a9">get_angle</a> () const</td></tr>
+<tr class="memdesc:ab580c1ec518ba0ac7fc5227fddcfb2a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda pozwaljaca pobrac aktualny kat obrotu drona.  <a href="class_drone.html#ab580c1ec518ba0ac7fc5227fddcfb2a9">Więcej...</a><br /></td></tr>
+<tr class="separator:ab580c1ec518ba0ac7fc5227fddcfb2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7c2b727392f63b2783ebb9bbbf72085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drone.html#ab7c2b727392f63b2783ebb9bbbf72085">plan_path</a> (double const &amp;angle, double const &amp;distance, <a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Link)</td></tr>
 <tr class="memdesc:ab7c2b727392f63b2783ebb9bbbf72085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda wyznaczajaca, zapisujaca oraz rysujaca sciezke pojedynczego przelotu.  <a href="class_drone.html#ab7c2b727392f63b2783ebb9bbbf72085">Więcej...</a><br /></td></tr>
 <tr class="separator:ab7c2b727392f63b2783ebb9bbbf72085"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -473,6 +476,29 @@ Oto graf wywoływań tej funkcji:</div>
 
 </div>
 </div>
+<a id="ab580c1ec518ba0ac7fc5227fddcfb2a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab580c1ec518ba0ac7fc5227fddcfb2a9">&#9670;&nbsp;</a></span>get_angle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Drone::get_angle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Metoda pozwaljaca pobrac aktualny kat obrotu drona. </p>
+<p>Metoda zwraca aktualny kat obrotu drona.</p>
+<dl class="section return"><dt>Zwraca</dt><dd>Kat obrou drona, jako wartosc typu double. </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="_drone_8cpp_source.html#l00485">485</a> pliku <a class="el" href="_drone_8cpp_source.html">Drone.cpp</a>.</p>
+
+</div>
+</div>
 <a id="aa79cafa21736bcc0479cb43150915c5f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa79cafa21736bcc0479cb43150915c5f">&#9670;&nbsp;</a></span>get_drone_location()</h2>
 
@@ -558,7 +584,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <area shape="rect" href="matrix3x3_8hh.html#a09eb2fbe2cced0556e119e17cd95a8dd" title="Funkcja wypelniajaca Matrix3x3 wartosciaciami macierzy obrotu 3D w osi OZ, dla zadanego kata." alt="" coords="1221,125,1338,151"/>
 <area shape="rect" href="class_drone.html#ae55ed7a073e64ce02fdc61566534d6a0" title="Metoda realizujaca obrot drona w osi Z." alt="" coords="211,255,363,282"/>
 <area shape="rect" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335" title="Generuje polecenie rysowania i przesyła je do gnuplota." alt="" coords="419,304,592,345"/>
-<area shape="rect" href="class_hexagonal__prism.html#a9e24f10d2bb12eb2e941f318b681e77c" title="Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego." alt="" coords="411,369,600,411"/>
+<area shape="rect" href="class_hexagonal__prism.html#a6ea7417039a3d731cbc572d52ffb554c" title="Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego." alt="" coords="411,369,600,411"/>
 <area shape="rect" href="class_drone.html#ad004be2850d0e4f39b69bacfc8c5dbd4" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych kamery przedniej do pli..." alt="" coords="665,117,866,159"/>
 <area shape="rect" href="class_drone.html#a720acea4a98e74872e80c88a2f24faa6" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych kadluba do pliku." alt="" coords="680,248,851,289"/>
 <area shape="rect" href="class_drone.html#a272c0597d236f80545bff08a4d29b330" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych wybranego rotora do pli..." alt="" coords="685,183,846,224"/>
@@ -634,7 +660,7 @@ Oto graf wywołań dla tej funkcji:</div>
 <area shape="rect" title="Metoda realizujaca przelot drona w pionie." alt="" coords="5,279,141,306"/>
 <area shape="rect" href="class_drone.html#aa10733e2e71e7316ee19f1a09c67331e" title="Metoda realizujaca zapis calego drona do pliku." alt="" coords="203,177,365,219"/>
 <area shape="rect" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335" title="Generuje polecenie rysowania i przesyła je do gnuplota." alt="" coords="197,272,371,313"/>
-<area shape="rect" href="class_hexagonal__prism.html#a9e24f10d2bb12eb2e941f318b681e77c" title="Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego." alt="" coords="189,337,379,379"/>
+<area shape="rect" href="class_hexagonal__prism.html#a6ea7417039a3d731cbc572d52ffb554c" title="Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego." alt="" coords="189,337,379,379"/>
 <area shape="rect" href="class_drone.html#ad004be2850d0e4f39b69bacfc8c5dbd4" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych kamery przedniej do pli..." alt="" coords="443,192,645,233"/>
 <area shape="rect" href="class_drone.html#a720acea4a98e74872e80c88a2f24faa6" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych kadluba do pliku." alt="" coords="459,61,629,103"/>
 <area shape="rect" href="class_drone.html#a272c0597d236f80545bff08a4d29b330" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych wybranego rotora do pli..." alt="" coords="463,127,625,168"/>
@@ -833,11 +859,11 @@ Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_drone_ae55ed7a073e64ce02fdc61566534d6a0_cgraph.png" border="0" usemap="#aclass_drone_ae55ed7a073e64ce02fdc61566534d6a0_cgraph" alt=""/></div>
 <map name="aclass_drone_ae55ed7a073e64ce02fdc61566534d6a0_cgraph" id="aclass_drone_ae55ed7a073e64ce02fdc61566534d6a0_cgraph">
-<area shape="rect" title="Metoda realizujaca obrot drona w osi Z." alt="" coords="5,313,157,339"/>
+<area shape="rect" title="Metoda realizujaca obrot drona w osi Z." alt="" coords="5,309,157,335"/>
 <area shape="rect" href="class_drone.html#aa10733e2e71e7316ee19f1a09c67331e" title="Metoda realizujaca zapis calego drona do pliku." alt="" coords="219,177,381,219"/>
 <area shape="rect" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335" title="Generuje polecenie rysowania i przesyła je do gnuplota." alt="" coords="213,272,387,313"/>
-<area shape="rect" href="class_hexagonal__prism.html#a9e24f10d2bb12eb2e941f318b681e77c" title="Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego." alt="" coords="205,337,395,379"/>
-<area shape="rect" href="class_cuboid.html#aa7e28082277e96871e189ff01e12b825" title="Metoda pozwalaja na aktualizowanie kata obrotu prostopadloscianu." alt="" coords="214,403,386,430"/>
+<area shape="rect" href="class_cuboid.html#aa7e28082277e96871e189ff01e12b825" title="Metoda pozwalaja na aktualizowanie kata obrotu prostopadloscianu." alt="" coords="214,338,386,365"/>
+<area shape="rect" href="class_hexagonal__prism.html#a6ea7417039a3d731cbc572d52ffb554c" title="Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego." alt="" coords="205,389,395,431"/>
 <area shape="rect" href="class_drone.html#ad004be2850d0e4f39b69bacfc8c5dbd4" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych kamery przedniej do pli..." alt="" coords="459,192,661,233"/>
 <area shape="rect" href="class_drone.html#a720acea4a98e74872e80c88a2f24faa6" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych kadluba do pliku." alt="" coords="475,61,645,103"/>
 <area shape="rect" href="class_drone.html#a272c0597d236f80545bff08a4d29b330" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych wybranego rotora do pli..." alt="" coords="479,127,641,168"/>

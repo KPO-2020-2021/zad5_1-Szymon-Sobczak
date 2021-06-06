@@ -3,6 +3,7 @@
 /*!
     \file  
         \brief definicje stalych wystepujacych w programie.
+    .
 */
 
 /*! \brief Ilosc wiecholkow przetwarzanej figury. */                         
