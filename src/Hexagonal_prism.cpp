@@ -1,5 +1,15 @@
 #include "Hexagonal_prism.hh"
 
+
+std::ostream & operator << (std::ostream & Out, const Hexagonal_prism & Rc){
+    for (int i = 0; i < 12; i++){
+        Out << Rc[i] << std::endl;
+        if(i%2==1)
+            Out << std::endl;
+    }
+    return Out;
+}
+
 /*!
     \file
         \brief Definicje metod klasy Cuboid
@@ -17,7 +27,7 @@
 */
 
 Hexagonal_prism::Hexagonal_prism(){
-    double values[3] = {8,8,2};
+    double values[3] = {ROTOR_SCALE};
     Vector3D rotor_scale(values);
     update_scale(rotor_scale);
 
@@ -112,15 +122,23 @@ Vector3D & Hexagonal_prism::operator () (int index){
 }
 
 /*! 
-    Zadany dodatkowy kat obrotu raniastoslupa prawidlowego szesciokatnego zostanie zsumowany z aktualnym katem obrotu graniastoslupa.
+    Zadany dodatkowy kat obrotu graniastoslupa prawidlowego szesciokatnego zostanie zsumowany z aktualnym katem obrotu graniastoslupa.
 
     \param [in] additional_angle - dodtkowy kat, o ktory raniastoslup prawidlowy szesciokatny zostanie obrocony.
 */
 
-void Hexagonal_prism::update_angle(double const & additional_angle){
+void Hexagonal_prism::update_angleZ(double const & additional_angle){
     Roration_angle_Zaxis += additional_angle;
     if(Roration_angle_Zaxis >=360)
         Roration_angle_Zaxis -=360;
  }
 
- 
+ /*! 
+    Metoda zwraca aktualny kat obrotu graniastoslupa prawidlowego szesciokatnego.
+
+    \return Kat obrou graniastoslupa prawidlowego szesciokatnego, jako wartosc typu double.
+*/
+
+double Hexagonal_prism::get_angle() const{
+    return Roration_angle_Zaxis;
+}

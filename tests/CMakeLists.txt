@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.12)
 set(TESTFILES        # All .cpp files in tests/
     main.cpp
     test_vector3D.cpp
+    test_vector3D_counters
     test_matrix3x3.cpp
     test_Cuboid.cpp
     test_Drone.cpp

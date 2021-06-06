@@ -386,6 +386,33 @@ test_vector3D.cpp.s:
 	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.s
 .PHONY : test_vector3D.cpp.s
 
+test_vector3D_counters.o: test_vector3D_counters.cpp.o
+
+.PHONY : test_vector3D_counters.o
+
+# target to build an object file
+test_vector3D_counters.cpp.o:
+	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.o
+.PHONY : test_vector3D_counters.cpp.o
+
+test_vector3D_counters.i: test_vector3D_counters.cpp.i
+
+.PHONY : test_vector3D_counters.i
+
+# target to preprocess a source file
+test_vector3D_counters.cpp.i:
+	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.i
+.PHONY : test_vector3D_counters.cpp.i
+
+test_vector3D_counters.s: test_vector3D_counters.cpp.s
+
+.PHONY : test_vector3D_counters.s
+
+# target to generate assembly for a file
+test_vector3D_counters.cpp.s:
+	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/unit_tests.dir/build.make tests/CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.s
+.PHONY : test_vector3D_counters.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -421,6 +448,9 @@ help:
 	@echo "... test_vector3D.o"
 	@echo "... test_vector3D.i"
 	@echo "... test_vector3D.s"
+	@echo "... test_vector3D_counters.o"
+	@echo "... test_vector3D_counters.i"
+	@echo "... test_vector3D_counters.s"
 .PHONY : help
 
 

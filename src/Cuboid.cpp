@@ -27,7 +27,7 @@ std::ostream & operator << (std::ostream & Out, const Cuboid & Rc){
 */
 
 Cuboid::Cuboid(){
-    double values[3] = {10,8,6};
+    double values[3] = {FUSELAGE_SCALE};
     Vector3D fusledge_scale(values);
     
     update_scale(fusledge_scale);

@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/unit_tests.dir/test_Scene.cpp.o"
   "CMakeFiles/unit_tests.dir/test_matrix3x3.cpp.o"
   "CMakeFiles/unit_tests.dir/test_vector3D.cpp.o"
+  "CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

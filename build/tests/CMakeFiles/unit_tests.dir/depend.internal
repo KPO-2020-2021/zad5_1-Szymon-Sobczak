@@ -72,3 +72,9 @@ tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.o
  ../inc/vector3D.hh
  /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
  /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_vector3D.cpp
+tests/CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.o
+ ../inc/size.hh
+ ../inc/vector.hh
+ ../inc/vector3D.hh
+ /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
+ /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_vector3D_counters.cpp

@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
-../inc/Cuboid.hh
+../inc/Geometrical_solid.hh
+iostream
+-
+fstream
+-
+cmath
+-
+iomanip
+-
+vector3D.hh
+../inc/vector3D.hh
+
+../inc/Hexagonal_prism.hh
 iostream
 -
 fstream
@@ -21,18 +33,6 @@ matrix3x3.hh
 ../inc/matrix3x3.hh
 Geometrical_solid.hh
 ../inc/Geometrical_solid.hh
-
-../inc/Geometrical_solid.hh
-iostream
--
-fstream
--
-cmath
--
-iomanip
--
-vector3D.hh
-../inc/vector3D.hh
 
 ../inc/matrix.hh
 size.hh
@@ -70,7 +70,7 @@ cmath
 vector.hh
 ../inc/vector.hh
 
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Cuboid.cpp
-Cuboid.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Cuboid.hh
+/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Hexagonal_prism.cpp
+Hexagonal_prism.hh
+/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/src/Hexagonal_prism.hh
 

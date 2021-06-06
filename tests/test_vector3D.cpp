@@ -1,5 +1,4 @@
 #include "../tests/doctest/doctest.h"
-#include "vector.hh"
 #include "vector3D.hh"
 
 TEST_CASE("Test odczytywania wartosci wektora3D z uzyciem operatora indeksowania."){
@@ -11,7 +10,7 @@ TEST_CASE("Test odczytywania wartosci wektora3D z uzyciem operatora indeksowania
     CHECK((a == 1 && b == 2 && c == 3));
 }
  
-TEST_CASE("Test wpraowadzania wartosci do wektora3D z uzyciem operatora indeksowania."){ 
+TEST_CASE("Test wprowadzania wartosci do wektora3D z uzyciem operatora indeksowania."){ 
     Vector3D Vec;
     double a=7,b=15,c=20;
     Vec[0]=a;

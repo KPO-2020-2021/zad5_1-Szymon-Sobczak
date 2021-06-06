@@ -88,7 +88,7 @@ void Drone::Calculate_and_save_to_file_fuselage(){
 */
 
 void Drone::Calculate_and_save_to_file_front_camera(Vector3D const & Trasnlation){
-    double camera_scale_scale[3]={3,8,2};
+    double camera_scale_scale[3]={CAM_SCALE};
     Vector3D camera_scale(camera_scale_scale);
     front_camera.update_scale(camera_scale);
 
@@ -264,16 +264,16 @@ void Drone::Calculate_and_save_to_file_drone(){
 void Drone::go_verical(double const & altitude, PzG::LaczeDoGNUPlota & Link){
     for (int i = 0; i < FRAMES; ++i){
         if (altitude >= 0){
-        rotors[0].update_angle(-10);
-        rotors[1].update_angle(10);
-        rotors[2].update_angle(10);
-        rotors[3].update_angle(-10);
+        rotors[0].update_angleZ(-10);
+        rotors[1].update_angleZ(10);
+        rotors[2].update_angleZ(10);
+        rotors[3].update_angleZ(-10);
         }
         else{
-            rotors[0].update_angle(-3);
-            rotors[1].update_angle(3);
-            rotors[2].update_angle(3);
-            rotors[3].update_angle(-3);
+            rotors[0].update_angleZ(-3);
+            rotors[1].update_angleZ(3);
+            rotors[2].update_angleZ(3);
+            rotors[3].update_angleZ(-3);
         }
         drone_location[2]+=altitude/FRAMES;
         Calculate_and_save_to_file_drone();
@@ -295,22 +295,22 @@ void Drone::rotate_drone(double const & user_angle, PzG::LaczeDoGNUPlota & Link)
     for (int i = 0; i < FRAMES; ++i){
         fuselage.update_angleZ(user_angle/FRAMES); 
         if((user_angle == 0)){
-            rotors[0].update_angle(-5);
-            rotors[1].update_angle(5);
-            rotors[2].update_angle(5);
-            rotors[3].update_angle(-5);
+            rotors[0].update_angleZ(-5);
+            rotors[1].update_angleZ(5);
+            rotors[2].update_angleZ(5);
+            rotors[3].update_angleZ(-5);
         }
         else if (user_angle > 0){
-            rotors[0].update_angle(-10);
-            rotors[1].update_angle(3);
-            rotors[2].update_angle(3);
-            rotors[3].update_angle(-10);
+            rotors[0].update_angleZ(-10);
+            rotors[1].update_angleZ(3);
+            rotors[2].update_angleZ(3);
+            rotors[3].update_angleZ(-10);
         }
         else{
-            rotors[0].update_angle(-3);
-            rotors[1].update_angle(10);
-            rotors[2].update_angle(10);
-            rotors[3].update_angle(-3);
+            rotors[0].update_angleZ(-3);
+            rotors[1].update_angleZ(10);
+            rotors[2].update_angleZ(10);
+            rotors[3].update_angleZ(-3);
         }
         Calculate_and_save_to_file_drone();
         usleep(20000);
@@ -341,10 +341,10 @@ void Drone::go_horizontal(double const & distance, double const & user_angle, Pz
     
     for (int i = 0; i < FRAMES; ++i){
         drone_location = drone_location + translation_vector;
-        rotors[0].update_angle(-5);
-        rotors[1].update_angle(5);
-        rotors[2].update_angle(5);
-        rotors[3].update_angle(-5);
+        rotors[0].update_angleZ(-5);
+        rotors[1].update_angleZ(5);
+        rotors[2].update_angleZ(5);
+        rotors[3].update_angleZ(-5);
         Calculate_and_save_to_file_drone();
         Link.Rysuj();
         usleep(20000);

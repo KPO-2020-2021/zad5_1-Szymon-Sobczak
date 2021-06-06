@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Scene.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests/CMakeFiles/unit_tests.dir/test_Scene.cpp.o"
   "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_matrix3x3.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests/CMakeFiles/unit_tests.dir/test_matrix3x3.cpp.o"
   "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_vector3D.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.o"
+  "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_vector3D_counters.cpp" "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests/CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

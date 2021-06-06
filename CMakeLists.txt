@@ -51,6 +51,7 @@ set(SOURCES          # All .cpp files in src/
 set(TESTFILES        # All .cpp files in tests/
     tests/main.cpp
     tests/test_vector3D.cpp
+    tests/test_vector3D_counters.cpp
     tests/test_matrix3x3.cpp
     tests/test_Cuboid.cpp
     tests/test_Drone.cpp

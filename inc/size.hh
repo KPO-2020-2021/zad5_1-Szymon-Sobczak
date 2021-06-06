@@ -18,4 +18,14 @@ constexpr int FRAMES = 100;
 constexpr double ALTITUDE = 100;   
 
 /*! \brief Odleglosc na jaka dron odlatuje od pozycji poczatkowej. aby rozpoczac zwiad */ 
-constexpr int REACON_RADIUS = 40;  
+constexpr int REACON_RADIUS = 40; 
+
+/*! \brief Skala kadluba */ 
+#define FUSELAGE_SCALE 10, 8, 6
+
+/*! \brief Skala rotora */ 
+#define ROTOR_SCALE 8, 8, 2 
+
+/*! \brief Skala kamery */ 
+#define CAM_SCALE 3, 8, 2
+

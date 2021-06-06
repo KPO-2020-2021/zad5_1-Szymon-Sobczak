@@ -102,9 +102,22 @@ tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_vector3D.cpp.s"
 	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_vector3D.cpp" -o CMakeFiles/unit_tests.dir/test_vector3D.cpp.s
 
+tests/CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
+tests/CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.o: ../tests/test_vector3D_counters.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.o"
+	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_vector3D_counters.cpp"
+
+tests/CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.i"
+	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_vector3D_counters.cpp" > CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.i
+
+tests/CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.s"
+	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_vector3D_counters.cpp" -o CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.s
+
 tests/CMakeFiles/unit_tests.dir/test_matrix3x3.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
 tests/CMakeFiles/unit_tests.dir/test_matrix3x3.cpp.o: ../tests/test_matrix3x3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_matrix3x3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_matrix3x3.cpp.o"
 	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_matrix3x3.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_matrix3x3.cpp"
 
 tests/CMakeFiles/unit_tests.dir/test_matrix3x3.cpp.i: cmake_force
@@ -117,7 +130,7 @@ tests/CMakeFiles/unit_tests.dir/test_matrix3x3.cpp.s: cmake_force
 
 tests/CMakeFiles/unit_tests.dir/test_Cuboid.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
 tests/CMakeFiles/unit_tests.dir/test_Cuboid.cpp.o: ../tests/test_Cuboid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_Cuboid.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_Cuboid.cpp.o"
 	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_Cuboid.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Cuboid.cpp"
 
 tests/CMakeFiles/unit_tests.dir/test_Cuboid.cpp.i: cmake_force
@@ -130,7 +143,7 @@ tests/CMakeFiles/unit_tests.dir/test_Cuboid.cpp.s: cmake_force
 
 tests/CMakeFiles/unit_tests.dir/test_Drone.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
 tests/CMakeFiles/unit_tests.dir/test_Drone.cpp.o: ../tests/test_Drone.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_Drone.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_Drone.cpp.o"
 	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_Drone.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Drone.cpp"
 
 tests/CMakeFiles/unit_tests.dir/test_Drone.cpp.i: cmake_force
@@ -143,7 +156,7 @@ tests/CMakeFiles/unit_tests.dir/test_Drone.cpp.s: cmake_force
 
 tests/CMakeFiles/unit_tests.dir/test_Geometrical_solid.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
 tests/CMakeFiles/unit_tests.dir/test_Geometrical_solid.cpp.o: ../tests/test_Geometrical_solid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_Geometrical_solid.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_Geometrical_solid.cpp.o"
 	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_Geometrical_solid.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Geometrical_solid.cpp"
 
 tests/CMakeFiles/unit_tests.dir/test_Geometrical_solid.cpp.i: cmake_force
@@ -156,7 +169,7 @@ tests/CMakeFiles/unit_tests.dir/test_Geometrical_solid.cpp.s: cmake_force
 
 tests/CMakeFiles/unit_tests.dir/test_Hexagonal_prism.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
 tests/CMakeFiles/unit_tests.dir/test_Hexagonal_prism.cpp.o: ../tests/test_Hexagonal_prism.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_Hexagonal_prism.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_Hexagonal_prism.cpp.o"
 	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_Hexagonal_prism.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Hexagonal_prism.cpp"
 
 tests/CMakeFiles/unit_tests.dir/test_Hexagonal_prism.cpp.i: cmake_force
@@ -169,7 +182,7 @@ tests/CMakeFiles/unit_tests.dir/test_Hexagonal_prism.cpp.s: cmake_force
 
 tests/CMakeFiles/unit_tests.dir/test_Scene.cpp.o: tests/CMakeFiles/unit_tests.dir/flags.make
 tests/CMakeFiles/unit_tests.dir/test_Scene.cpp.o: ../tests/test_Scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_Scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object tests/CMakeFiles/unit_tests.dir/test_Scene.cpp.o"
 	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_tests.dir/test_Scene.cpp.o -c "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Scene.cpp"
 
 tests/CMakeFiles/unit_tests.dir/test_Scene.cpp.i: cmake_force
@@ -184,6 +197,7 @@ tests/CMakeFiles/unit_tests.dir/test_Scene.cpp.s: cmake_force
 unit_tests_OBJECTS = \
 "CMakeFiles/unit_tests.dir/main.cpp.o" \
 "CMakeFiles/unit_tests.dir/test_vector3D.cpp.o" \
+"CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.o" \
 "CMakeFiles/unit_tests.dir/test_matrix3x3.cpp.o" \
 "CMakeFiles/unit_tests.dir/test_Cuboid.cpp.o" \
 "CMakeFiles/unit_tests.dir/test_Drone.cpp.o" \
@@ -203,6 +217,7 @@ unit_tests_EXTERNAL_OBJECTS = \
 
 unit_tests: tests/CMakeFiles/unit_tests.dir/main.cpp.o
 unit_tests: tests/CMakeFiles/unit_tests.dir/test_vector3D.cpp.o
+unit_tests: tests/CMakeFiles/unit_tests.dir/test_vector3D_counters.cpp.o
 unit_tests: tests/CMakeFiles/unit_tests.dir/test_matrix3x3.cpp.o
 unit_tests: tests/CMakeFiles/unit_tests.dir/test_Cuboid.cpp.o
 unit_tests: tests/CMakeFiles/unit_tests.dir/test_Drone.cpp.o
@@ -218,7 +233,7 @@ unit_tests: CMakeFiles/program.dir/src/matrix3x3.cpp.o
 unit_tests: CMakeFiles/program.dir/src/Scene.cpp.o
 unit_tests: tests/CMakeFiles/unit_tests.dir/build.make
 unit_tests: tests/CMakeFiles/unit_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ../unit_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ../unit_tests"
 	cd "/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/build/tests" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/unit_tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -3,12 +3,13 @@
 
 TEST_CASE("Test konstrukora bezparametrycznego dla klasy Cuboid dziedziczacej z Geometrical_solid i przeciazenia operatora indeksujacego i funkcyjnego sluzacego odczytywaniu wartosci wierzcholkow globalnych i lokalnych z prostopadloscianu"){
     Cuboid Example;
-    
+    double val[3] = {FUSELAGE_SCALE};
+
     std::string name = ("../datasets/Glb_crd_");
 
     CHECK((Example.Get_Name_of_file_global() == name));
 
-    CHECK ((Example.get_scale()[0] == 10 && Example.get_scale()[1] == 8 && Example.get_scale()[2] == 6));
+    CHECK ((Example.get_scale()[0] == val[0] && Example.get_scale()[1] == val[1] && Example.get_scale()[2] == val[2]));
 
     CHECK(( Example(0)[0]==-0.5 && Example(0)[1]==0.5  &&  Example(0)[2]==-0.5 &&
             Example(1)[0]==-0.5 && Example(1)[1]==-0.5 &&  Example(1)[2]==-0.5 &&
@@ -27,6 +28,31 @@ TEST_CASE("Test konstrukora bezparametrycznego dla klasy Cuboid dziedziczacej z 
             Example[5][0]==0 && Example[5][1]==0 &&  Example[5][2]==0 &&
             Example[6][0]==0 && Example[6][1]==0 &&  Example[6][2]==0 &&
             Example[7][0]==0 && Example[7][1]==0 &&  Example[7][2]==0));
+}
+
+TEST_CASE("Test przypiywania wratosci wektorow3D do tablicy wektorow reprezentujacych wspolrzedne lokalne prostopadloscianu, przy uzyciu przeciazenia operatora funkcyjnego"){
+    Cuboid Example;
+    double apx1[3]={-20,-15,-10};
+    Vector3D v_Apx1(apx1);
+    
+    CHECK((Example(0)[0]==-0.5 && Example(0)[1]==0.5 && Example(0)[2]==-0.5));
+
+    Example(0) = v_Apx1;
+
+    CHECK(( Example(0)[0]==-20 && Example(0)[1]==-15 && Example(0)[2]==-10));
+}
+
+TEST_CASE("Test przypiywania wratosci wektorow3D do tablicy wektorow reprezentujacych wspolrzedne globalne prostopadloscianu, przy uzyciu przeciazenia operatora indeksujacego"){
+    Cuboid Example;
+    double apx1[3]={-20,-15,-10};
+    Vector3D v_Apx1(apx1);
+    
+    CHECK(( Example[0][0]==0 && Example[0][1]==0 && Example[0][2]==0));
+
+    Example[0] = v_Apx1;
+
+
+    CHECK(( Example[0][0]==-20 && Example[0][1]==-15 && Example[0][2]==-10));
 }
 
 TEST_CASE("Test metody pozwalajacej na zmiane skali prostopaloscianu. "){
