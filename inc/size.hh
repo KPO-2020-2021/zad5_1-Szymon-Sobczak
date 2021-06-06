@@ -3,7 +3,6 @@
 /*!
     \file  
         \brief definicje stalych wystepujacych w programie.
-    .
 */
 
 /*! \brief Ilosc wiecholkow przetwarzanej figury. */                         
@@ -29,4 +28,3 @@ constexpr int REACON_RADIUS = 40;
 
 /*! \brief Skala kamery */ 
 #define CAM_SCALE 3, 8, 2
-

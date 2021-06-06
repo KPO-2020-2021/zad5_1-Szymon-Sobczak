@@ -93,7 +93,7 @@ TEST_CASE("Test metody pozwalajacej na aktualizowanie wartosci kata obrotu grani
     CHECK((Example.get_angle() == 20));
 }
 
-TEST_CASE("Test metody pozwlajacej na transformacje graniastoslupa prawidlowego szesciokatnego z ukladu loklanego do globlanego sceny. Graniastososlup nieobrocony"){
+TEST_CASE("Test metody pozwlajacej na transformacje graniastoslupa prawidlowego szesciokatnego z ukladu loklanego do globlanego sceny poprzez uklad kadluba. Graniastososlup nieobrocony"){
     Hexagonal_prism Example;
 
     double val1[3] = {100,100,3},val2[3] = {5,4,3}; 
@@ -117,7 +117,7 @@ TEST_CASE("Test metody pozwlajacej na transformacje graniastoslupa prawidlowego 
             Example[11][0]==107 && Example[11][1]==100.536 &&  Example[11][2]==7));
 }
 
-TEST_CASE("Test metody pozwlajacej na transformacje graniastoslupa prawidlowego szesciokatnego z ukladu loklanego do globlanego sceny. Drona obroconego o 90 stopni w osi Z"){
+TEST_CASE("Test metody pozwlajacej na transformacje graniastoslupa prawidlowego szesciokatnego z ukladu loklanego do globlanego sceny poprzez uklad kadluba. Drona obroconego o 90 stopni w osi Z"){
     Hexagonal_prism Example;
 
     double val1[3] = {100,100,3},val2[3] = {5,4,3}; 

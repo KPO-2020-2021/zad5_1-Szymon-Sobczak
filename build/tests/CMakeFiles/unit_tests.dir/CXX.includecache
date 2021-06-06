@@ -72,20 +72,6 @@ matrix3x3.hh
 Geometrical_solid.hh
 ../inc/Geometrical_solid.hh
 
-../inc/Scene.hh
-iostream
--
-fstream
--
-cmath
--
-iomanip
--
-Drone.hh
-../inc/Drone.hh
-lacze_do_gnuplota.hh
-../inc/lacze_do_gnuplota.hh
-
 ../inc/lacze_do_gnuplota.hh
 string
 -
@@ -214,55 +200,9 @@ sys/time.h
 unistd.h
 -
 
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Cuboid.cpp
-../tests/doctest/doctest.h
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
-Cuboid.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/Cuboid.hh
-
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Drone.cpp
 ../tests/doctest/doctest.h
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
 Drone.hh
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/Drone.hh
-
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Geometrical_solid.cpp
-../tests/doctest/doctest.h
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
-Geometrical_solid.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/Geometrical_solid.hh
-
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Hexagonal_prism.cpp
-../tests/doctest/doctest.h
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
-Hexagonal_prism.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/Hexagonal_prism.hh
-
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Scene.cpp
-../tests/doctest/doctest.h
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
-Scene.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/Scene.hh
-
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_matrix3x3.cpp
-../tests/doctest/doctest.h
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
-matrix.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/matrix.hh
-matrix3x3.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/matrix3x3.hh
-vector3D.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/vector3D.hh
-
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_vector3D.cpp
-../tests/doctest/doctest.h
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
-vector3D.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/vector3D.hh
-
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_vector3D_counters.cpp
-../tests/doctest/doctest.h
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
-vector3D.hh
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/vector3D.hh
 
