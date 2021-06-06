@@ -101,8 +101,6 @@ TEST_CASE("Test metody pozwlajacej na transformacje graniastoslupa prawidlowego 
 
     Example.Transform_to_global_coords(translation, center, 0);
 
-    std::cout << Example << std::endl;
-
     CHECK(( Example[0][0]==109 && Example[0][1]==104 &&  Example[0][2]==5 &&
             Example[1][0]==107 && Example[1][1]==107.464 &&  Example[1][2]==5 &&
             Example[2][0]==103 && Example[2][1]==107.464 &&  Example[2][2]==5 &&
@@ -124,8 +122,6 @@ TEST_CASE("Test metody pozwlajacej na transformacje graniastoslupa prawidlowego 
     Vector3D center(val1), translation(val2);
 
     Example.Transform_to_global_coords(translation, center, 90);
-
-    std::cout << Example << std::endl;
 
     CHECK(( Example[0][0]==96 && Example[0][1]==109 &&  Example[0][2]==5 &&
             Example[1][0]==92.536 && Example[1][1]==107 &&  Example[1][2]==5 &&

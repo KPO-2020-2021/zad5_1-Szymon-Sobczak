@@ -71,7 +71,3 @@ class Cuboid: public Geometrical_solid{
         /*! \brief Przeciazenie operatora funkcyjnego */
         Vector3D & operator () (int index);
 };
-
-/*! \brief Przeciazenie operatora << sluzace wyswietlaniu wartosci prostopadloscianu */ 
-std::ostream & operator << (std::ostream & Strm, const Cuboid & Rc);    
- 

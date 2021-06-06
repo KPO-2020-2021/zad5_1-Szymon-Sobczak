@@ -74,7 +74,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_cuboid_8cpp.html",
-"class_vector.html#ae2bd2cdff2dd7e5baea847c2f9536ab0"
+"files.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

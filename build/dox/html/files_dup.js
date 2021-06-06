@@ -1,10 +1,10 @@
 var files_dup =
 [
-    [ "src/cuboid.cpp", "src_2cuboid_8cpp.html", null ],
-    [ "src/cuboid.cpp", "src_2cuboid_8cpp.html", "src_2cuboid_8cpp" ],
-    [ "inc/Cuboid.hh", "inc_2_cuboid_8hh.html", null ],
-    [ "inc/Cuboid.hh", "inc_2_cuboid_8hh.html", "inc_2_cuboid_8hh" ],
-    [ "Drone.cpp", "_drone_8cpp.html", "_drone_8cpp" ],
+    [ "Cuboid.cpp", "_cuboid_8cpp.html", null ],
+    [ "Cuboid.hh", "_cuboid_8hh.html", [
+      [ "Cuboid", "class_cuboid.html", "class_cuboid" ]
+    ] ],
+    [ "Drone.cpp", "_drone_8cpp.html", null ],
     [ "Drone.hh", "_drone_8hh.html", [
       [ "Drone", "class_drone.html", "class_drone" ]
     ] ],
@@ -22,10 +22,8 @@ var files_dup =
     [ "matrix.hh", "matrix_8hh.html", "matrix_8hh" ],
     [ "matrix3x3.cpp", "matrix3x3_8cpp.html", "matrix3x3_8cpp" ],
     [ "matrix3x3.hh", "matrix3x3_8hh.html", "matrix3x3_8hh" ],
-    [ "src/scene.cpp", "src_2scene_8cpp.html", null ],
-    [ "src/scene.cpp", "src_2scene_8cpp.html", null ],
-    [ "inc/scene.hh", "inc_2scene_8hh.html", null ],
-    [ "inc/scene.hh", "inc_2scene_8hh.html", [
+    [ "Scene.cpp", "_scene_8cpp.html", null ],
+    [ "Scene.hh", "_scene_8hh.html", [
       [ "Scene", "class_scene.html", "class_scene" ]
     ] ],
     [ "size.hh", "size_8hh.html", "size_8hh" ],

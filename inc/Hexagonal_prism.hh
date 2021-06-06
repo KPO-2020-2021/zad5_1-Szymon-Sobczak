@@ -71,5 +71,3 @@ class Hexagonal_prism: public Geometrical_solid{
         /*! \brief Przeciazenie operatora funkcyjnego */
         Vector3D & operator () (int index);
 };
-
-std::ostream & operator << (std::ostream & Out, const Hexagonal_prism & Rc);

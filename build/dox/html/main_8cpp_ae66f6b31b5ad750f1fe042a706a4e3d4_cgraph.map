@@ -6,7 +6,7 @@
 <area shape="rect" id="node16" href="$class_scene.html#a7d0991c087762bee7f6e3dcd1089ef8b" title="Metoda sluzaca pobraniu informacji o aktywnym dronie." alt="" coords="114,690,295,717"/>
 <area shape="rect" id="node17" href="$class_vector.html#ada5b13803805ee4ae6e73fc6ec575cec" title="Metoda statyczna pozwalajaca pobrac liczbe aktualnie istniejacych instancji obietkow Vector&lt;Size&gt;." alt="" coords="111,741,298,783"/>
 <area shape="rect" id="node18" href="$class_vector.html#ab732e95a2e378c1447cf6e45849a3d63" title="Metoda statyczna pozwalajaca pobrac liczbe wszystich instancji obietkow Vector&lt;Size&gt;." alt="" coords="111,807,298,848"/>
-<area shape="rect" id="node19" href="$class_drone.html#aa79cafa21736bcc0479cb43150915c5f" title="Metoda pozwlajaca pobrac informacje o polozeniu srodka drona." alt="" coords="108,873,301,899"/>
+<area shape="rect" id="node19" href="$class_drone.html#aa79cafa21736bcc0479cb43150915c5f" title="Metoda pozwlajaca pobrac informacje o polozeniu srodka kadluba drona." alt="" coords="108,873,301,899"/>
 <area shape="rect" id="node20" href="$class_drone.html#a5234bff0299f09ee04975cf95ad3703d" title="Metoda realizujaca przelot drona w poziomie." alt="" coords="126,294,283,321"/>
 <area shape="rect" id="node22" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335" title="Generuje polecenie rysowania i przesyła je do gnuplota." alt="" coords="605,388,779,429"/>
 <area shape="rect" id="node31" href="$class_drone.html#ad59d8053449d0d45036b4c927dc5e079" title="Metoda realizujaca przelot drona w pionie." alt="" coords="381,167,517,194"/>
@@ -15,9 +15,9 @@
 <area shape="rect" id="node34" href="$class_drone.html#a3c99b69b08004b87e3555839b0b319dd" title="Metoda pozwalajaca zaktualizowac kat obrotu drona o wybrany kat." alt="" coords="126,923,283,950"/>
 <area shape="rect" id="node35" href="$class_scene.html#abcd5f2a64a93d7bccb2d8bf2177f17f6" title="Metoda sluzaca probranu aktywnego drona aby dokonywac w nim zmian." alt="" coords="113,974,296,1001"/>
 <area shape="rect" id="node36" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a7fa4e775e1aee74869fae174c567c2a6" title="Usuwa z listy nazw plików z danymi do rysowania usuwa wybraną nazwę." alt="" coords="118,1025,291,1067"/>
-<area shape="rect" id="node3" href="$class_drone.html#ad004be2850d0e4f39b69bacfc8c5dbd4" title="Metoda realizujaca obliczenie i zapisywanie danych o wierzcholkach globalnych kamery przedniej do pli..." alt="" coords="851,188,1053,229"/>
-<area shape="rect" id="node10" href="$class_drone.html#a720acea4a98e74872e80c88a2f24faa6" title="Metoda realizujaca obliczenie i zapisywanie danych o wierzcholkach globalnych kadluba do pliku." alt="" coords="867,57,1037,99"/>
-<area shape="rect" id="node12" href="$class_drone.html#a272c0597d236f80545bff08a4d29b330" title="Metoda realizujaca obliczenie i zapisywanie danych o wierzcholkach globalnych wybranego rotora do pli..." alt="" coords="871,123,1033,164"/>
+<area shape="rect" id="node3" href="$class_drone.html#ad004be2850d0e4f39b69bacfc8c5dbd4" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych kamery przedniej do pli..." alt="" coords="851,188,1053,229"/>
+<area shape="rect" id="node10" href="$class_drone.html#a720acea4a98e74872e80c88a2f24faa6" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych kadluba do pliku." alt="" coords="867,57,1037,99"/>
+<area shape="rect" id="node12" href="$class_drone.html#a272c0597d236f80545bff08a4d29b330" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych wybranego rotora do pli..." alt="" coords="871,123,1033,164"/>
 <area shape="rect" id="node4" href="$class_cuboid.html#a46a9dbfb801dcd0e0a7e9773be14520a" title="Metoda pozwaljaca pobrac aktualny kat obrotu prostopadloscianu." alt="" coords="1153,137,1291,163"/>
 <area shape="rect" id="node5" href="$class_geometrical__solid.html#a1c03748a689e6596927b1358f141ff85" title="Metoda pozwalajaca na pobranie nazwy bryly geometrycznej." alt="" coords="1129,71,1315,112"/>
 <area shape="rect" id="node6" href="$class_hexagonal__prism.html#a816173bc7296b7b9ae88da8cf3a56872" title="Metoda pozawlajaca na transforamacje graniastoslupa prawidlowego szesciokatnego z ukladu lokalnego do..." alt="" coords="1117,188,1327,229"/>
@@ -27,8 +27,8 @@
 <area shape="rect" id="node11" href="$class_cuboid.html#a940aebd7222c87874c7e780f0d9376d5" title="Metoda pozawlajaca na transforamacje prostopadloscianu z ukladu lokalnego do globalnego sceny." alt="" coords="1142,5,1302,47"/>
 <area shape="rect" id="node15" href="$namespace_pz_g.html#ae1aad0c681853d7e47da4cdfccefc102" title="Funkcja pomocnicza, sprawdza czy plik o podanej nazwie jest na dysku." alt="" coords="386,631,513,658"/>
 <area shape="rect" id="node21" href="$class_drone.html#ae55ed7a073e64ce02fdc61566534d6a0" title="Metoda realizujaca obrot drona w osi Z." alt="" coords="373,269,525,295"/>
-<area shape="rect" id="node29" href="$class_hexagonal__prism.html#a9e24f10d2bb12eb2e941f318b681e77c" title="Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego." alt="" coords="597,203,787,244"/>
-<area shape="rect" id="node30" href="$class_cuboid.html#aa7e28082277e96871e189ff01e12b825" title="Metoda pozwalaja na aktualizowanie kata obrotu prostopadloscianu." alt="" coords="606,269,778,295"/>
+<area shape="rect" id="node30" href="$class_hexagonal__prism.html#a6ea7417039a3d731cbc572d52ffb554c" title="Metoda pozwalaja na aktualizowanie kata obrotu graniastoslupa prawidlowego szesciokatnego." alt="" coords="597,203,787,244"/>
+<area shape="rect" id="node29" href="$class_cuboid.html#aa7e28082277e96871e189ff01e12b825" title="Metoda pozwalaja na aktualizowanie kata obrotu prostopadloscianu." alt="" coords="606,269,778,295"/>
 <area shape="rect" id="node23" href="$namespace_pz_g.html#aa010184f31b26bb561b42f22438b821e" title="Funkcja pomocnicza, dopisuje do polecenia wpisy związane z rysowaniem z pliku." alt="" coords="841,395,1063,422"/>
 <area shape="rect" id="node24" href="$namespace_pz_g.html#a7227cb39c785b1c746b6bb5515c0b781" title="Dodaje do listy rysowanych punktów, punkty o różnych rozmiarach." alt="" coords="835,556,1069,597"/>
 <area shape="rect" id="node25" href="$namespace_pz_g.html#a169c311f0e0b6ffadcd44e91e749f72d" title="Wczytuje z pliku listę punktów." alt="" coords="1125,556,1319,597"/>

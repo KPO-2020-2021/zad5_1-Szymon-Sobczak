@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rotacje 3D: Plik źródłowy matrix.hh</title>
+<title>Dron Dragonfly Faza 1.: Plik źródłowy matrix.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Rotacje 3D
+   <div id="projectname">Dron Dragonfly Faza 1.
    &#160;<span id="projectnumber">1.0 v.</span>
    </div>
    <div id="projectbrief">Szymon Sobczak nr 259275.</div>
@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('matrix_8hh_source.html',''); initResiz
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_matrix.html#a80c1366959dd6b71f6da4b1a04178b24">Matrix</a>();                 </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_matrix.html#a80c1366959dd6b71f6da4b1a04178b24">Matrix</a>(<span class="keywordtype">double</span> [Size][Size]);         </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_matrix.html#a80c1366959dd6b71f6da4b1a04178b24">Matrix</a>(<span class="keywordtype">double</span> tmp[Size][Size]);         </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_vector.html">Vector&lt;Size&gt;</a> <a class="code" href="class_matrix.html#aa01b934598a1eabb2c8d3e800e6a7686">operator * </a>(<a class="code" href="class_vector.html">Vector&lt;Size&gt;</a> <span class="keyword">const</span> &amp;tmp);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('matrix_8hh_source.html',''); initResiz
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Size&gt;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_matrix.html#a0939572cf8a31191c69ae1e07b433498">   97</a></span>&#160;<a class="code" href="class_matrix.html#a80c1366959dd6b71f6da4b1a04178b24">Matrix&lt;Size&gt;::Matrix</a>(<span class="keywordtype">double</span> tmp[Size][Size]){</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_matrix.html#ae600de101da25f1071409e1afe02834b">   97</a></span>&#160;<a class="code" href="class_matrix.html#a80c1366959dd6b71f6da4b1a04178b24">Matrix&lt;Size&gt;::Matrix</a>(<span class="keywordtype">double</span> tmp[Size][Size]){</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; Size; ++i){</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; Size; ++j){</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            value[i][j] = tmp[i][j];</div>

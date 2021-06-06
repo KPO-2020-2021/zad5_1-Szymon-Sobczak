@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['infoplikudorysowania_247',['InfoPlikuDoRysowania',['../class_pz_g_1_1_info_pliku_do_rysowania.html',1,'PzG']]],
-  ['infopunktydorysowania_248',['InfoPunktyDoRysowania',['../class_pz_g_1_1_info_punkty_do_rysowania.html',1,'PzG']]]
+  ['infoplikudorysowania_246',['InfoPlikuDoRysowania',['../class_pz_g_1_1_info_pliku_do_rysowania.html',1,'PzG']]],
+  ['infopunktydorysowania_247',['InfoPunktyDoRysowania',['../class_pz_g_1_1_info_punkty_do_rysowania.html',1,'PzG']]]
 ];

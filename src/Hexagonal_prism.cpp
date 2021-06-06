@@ -1,15 +1,5 @@
 #include "Hexagonal_prism.hh"
 
-
-std::ostream & operator << (std::ostream & Out, const Hexagonal_prism & Rc){
-    for (int i = 0; i < 12; i++){
-        Out << Rc[i] << std::endl;
-        if(i%2==1)
-            Out << std::endl;
-    }
-    return Out;
-}
-
 /*!
     \file
         \brief Definicje metod klasy Cuboid

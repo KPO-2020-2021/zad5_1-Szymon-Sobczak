@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['hexagonal_5fprism_2ecpp_276',['Hexagonal_prism.cpp',['../_hexagonal__prism_8cpp.html',1,'']]],
-  ['hexagonal_5fprism_2ehh_277',['Hexagonal_prism.hh',['../_hexagonal__prism_8hh.html',1,'']]],
-  ['home_5fpage_2edox_278',['home_page.dox',['../home__page_8dox.html',1,'']]]
+  ['geometrical_5fsolid_2ecpp_259',['Geometrical_solid.cpp',['../_geometrical__solid_8cpp.html',1,'']]],
+  ['geometrical_5fsolid_2ehh_260',['Geometrical_solid.hh',['../_geometrical__solid_8hh.html',1,'']]]
 ];

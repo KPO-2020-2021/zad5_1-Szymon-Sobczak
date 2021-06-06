@@ -27,4 +27,4 @@ constexpr int REACON_RADIUS = 40;
 #define ROTOR_SCALE 8, 8, 2 
 
 /*! \brief Skala kamery */ 
-#define CAM_SCALE 3, 8, 2
+#define CAM_SCALE 4, 8, 3

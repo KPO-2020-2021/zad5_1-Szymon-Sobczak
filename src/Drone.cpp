@@ -240,17 +240,20 @@ void Drone::Calculate_and_save_to_file_rotor(unsigned int index, Vector3D const 
 */
 
 void Drone::Calculate_and_save_to_file_drone(){
-    double val_rot1[3]={5,4,4},val_rot2[3]={-5,4,4},val_rot3[3]={5,-4,4},val_rot4[3]={-5,-4,4},val_cam[3]={5,0,0};
-    Vector3D vec_rot1(val_rot1), vec_rot2(val_rot2), vec_rot3(val_rot3), vec_rot4(val_rot4),vec_cam(val_cam);
+    double Tval_rot2[3]={-1,1,1},Tval_rot3[3]={1,-1,1},Tval_rot4[3]={-1,-1,1},Tval_cam[3]={1,0,0}, T_offset[3] = {0,0,0.5};
     
+    Vector3D Tr_rot2(Tval_rot2), Tr_rot3(Tval_rot3), Tr_rot4(Tval_rot4), Tr_cam(Tval_cam), Tr_offset(T_offset);
+
+    Vector3D rotor_offset = rotors[0].get_scale() * Tr_offset;
+
     Calculate_and_save_to_file_fuselage();
 
-    Calculate_and_save_to_file_front_camera(vec_cam);
+    Calculate_and_save_to_file_front_camera(fuselage.get_scale()/2 * Tr_cam);
 
-    Calculate_and_save_to_file_rotor(0,vec_rot1);
-    Calculate_and_save_to_file_rotor(1,vec_rot2);
-    Calculate_and_save_to_file_rotor(2,vec_rot3);
-    Calculate_and_save_to_file_rotor(3,vec_rot4);
+    Calculate_and_save_to_file_rotor(0,fuselage.get_scale() / 2 + rotor_offset);
+    Calculate_and_save_to_file_rotor(1,fuselage.get_scale() / 2 * Tr_rot2 + rotor_offset);
+    Calculate_and_save_to_file_rotor(2,fuselage.get_scale() / 2 * Tr_rot3 + rotor_offset);
+    Calculate_and_save_to_file_rotor(3,fuselage.get_scale() / 2 * Tr_rot4 + rotor_offset);
 }
 
 /*!

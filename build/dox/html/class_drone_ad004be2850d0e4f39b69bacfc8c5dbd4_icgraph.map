@@ -1,5 +1,5 @@
 <map id="Drone::Calculate_and_save_to_file_front_camera" name="Drone::Calculate_and_save_to_file_front_camera">
-<area shape="rect" id="node1" title="Metoda realizujaca obliczenie i zapisywanie danych o wierzcholkach globalnych kamery przedniej do pli..." alt="" coords="723,42,924,83"/>
+<area shape="rect" id="node1" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych kamery przedniej do pli..." alt="" coords="723,42,924,83"/>
 <area shape="rect" id="node2" href="$class_drone.html#aa10733e2e71e7316ee19f1a09c67331e" title="Metoda realizujaca zapis calego drona do pliku." alt="" coords="513,42,675,83"/>
 <area shape="rect" id="node3" href="$class_drone.html#a5234bff0299f09ee04975cf95ad3703d" title="Metoda realizujaca przelot drona w poziomie." alt="" coords="108,24,265,51"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Glowna funkcja programu." alt="" coords="5,75,60,101"/>

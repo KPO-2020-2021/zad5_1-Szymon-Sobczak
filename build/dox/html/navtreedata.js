@@ -24,11 +24,12 @@
 */
 var NAVTREE =
 [
-  [ "Rotacje 3D", "index.html", [
-    [ "Rotacja3D - Zadanie 4.", "index.html", [
+  [ "Dron Dragonfly Faza 1.", "index.html", [
+    [ "Dron Dragonfly Faza 1. - Zadanie 5.1.", "index.html", [
       [ "Cel ćwiczenia", "index.html#etykieta-cel-cw", null ],
       [ "Najwazniejsze elementy programu.", "index.html#etykieta-najw-elem", null ],
-      [ "Dodatkowe elementy programu.", "index.html#etykieta-dodatkowe-elem", null ]
+      [ "Dodatkowe elementy programu.", "index.html#etykieta-dodatkowe-elem", null ],
+      [ "Diagram UML projektu.", "index.html#etykieta-diagram", null ]
     ] ],
     [ "Uruchamianie Programu", "md__home_ader__pulpit__zad_5__g_i_t_zad5_1__szymon__sobczak__r_e_a_d_m_e.html", [
       [ "Uruchamianie Testów Programu", "md__home_ader__pulpit__zad_5__g_i_t_zad5_1__szymon__sobczak__r_e_a_d_m_e.html#autotoc_md1", null ],
@@ -72,8 +73,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_drone_8cpp.html",
-"class_vector.html#a59ee5e203f19dbce98e81b256cbbe227"
+"_cuboid_8cpp.html",
+"files.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

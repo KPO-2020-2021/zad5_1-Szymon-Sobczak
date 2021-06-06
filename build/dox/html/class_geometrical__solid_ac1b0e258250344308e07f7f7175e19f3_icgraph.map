@@ -1,7 +1,8 @@
 <map id="Geometrical_solid::update_scale" name="Geometrical_solid::update_scale">
-<area shape="rect" id="node1" title="Metoda pozwalajaca na aktualizacje skali bryly geometrycznej." alt="" coords="985,75,1133,117"/>
-<area shape="rect" id="node2" href="$class_drone.html#ad004be2850d0e4f39b69bacfc8c5dbd4" title="Metoda realizujaca obliczenie i zapisywanie danych o wierzcholkach globalnych kamery przedniej do pli..." alt="" coords="729,42,931,83"/>
-<area shape="rect" id="node8" href="$class_hexagonal__prism.html#a0a4a4742c43235703c3968db146b2f9d" title="Bezparametryczny konstrukotr klasy." alt="" coords="723,107,937,149"/>
+<area shape="rect" id="node1" title="Metoda pozwalajaca na aktualizacje skali bryly geometrycznej." alt="" coords="985,101,1133,142"/>
+<area shape="rect" id="node2" href="$class_drone.html#ad004be2850d0e4f39b69bacfc8c5dbd4" title="Metoda realizujaca obliczanie i zapisywanie danych o wierzcholkach globalnych kamery przedniej do pli..." alt="" coords="729,42,931,83"/>
+<area shape="rect" id="node8" href="$class_cuboid.html#a1abf60e93d024b7a01ee5b1a48f1f08a" title="Bezparametryczny konstrukotr klasy." alt="" coords="770,108,890,135"/>
+<area shape="rect" id="node9" href="$class_hexagonal__prism.html#a0a4a4742c43235703c3968db146b2f9d" title="Bezparametryczny konstrukotr klasy." alt="" coords="723,159,937,201"/>
 <area shape="rect" id="node3" href="$class_drone.html#aa10733e2e71e7316ee19f1a09c67331e" title="Metoda realizujaca zapis calego drona do pliku." alt="" coords="513,42,675,83"/>
 <area shape="rect" id="node4" href="$class_drone.html#a5234bff0299f09ee04975cf95ad3703d" title="Metoda realizujaca przelot drona w poziomie." alt="" coords="108,24,265,51"/>
 <area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Glowna funkcja programu." alt="" coords="5,75,60,101"/>

@@ -1,15 +1,5 @@
 #include "Cuboid.hh"
 
-std::ostream & operator << (std::ostream & Out, const Cuboid & Rc){
-    for (int i = 0; i < CORNERS; i++){
-        Out << Rc[i] << std::endl;
-        if(i%2==1)
-            Out << std::endl;
-    }
-    return Out;
-}
-
-
 /*!
     \file
         \brief Definicje metod klasy Cuboid.

@@ -93,8 +93,6 @@ TEST_CASE("Test metody pozwlajacej na transformacje prostopadloscianu z ukladu l
 
     Example.Transform_to_global_coords(vector);
 
-    std::cout << Example << std::endl;
-
     CHECK(( Example[0][0]==95  && Example[0][1]==104 &&  Example[0][2]==0 &&
             Example[1][0]==95  && Example[1][1]==96  &&  Example[1][2]==0 &&
             Example[2][0]==105 && Example[2][1]==104 &&  Example[2][2]==0 &&

@@ -9,7 +9,7 @@ var indexSectionsWithContent =
   6: "mtv",
   7: "t",
   8: "dst",
-  9: "cdfrs",
+  9: "dfrs",
   10: "du"
 };
 
