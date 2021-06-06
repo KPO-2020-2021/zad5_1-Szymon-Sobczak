@@ -35,7 +35,7 @@ public:
     Matrix();                 
 
     /*! \brief Konstruktor klasy z parametrem. */                
-    Matrix(double [Size][Size]);         
+    Matrix(double tmp[Size][Size]);         
 
     /*! \brief Operator mnożenia macierzy przez wektor. */
     Vector<Size> operator * (Vector<Size> const &tmp);

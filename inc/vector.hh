@@ -44,7 +44,7 @@ class Vector{
         Vector<Size>(const Vector<Size> & Ob);
 
         /*! \brief Konstruktor klasy z parametrem. */
-        Vector<Size>(double [Size]); 
+        Vector<Size>(double tmp[Size]); 
 
         /*! \brief Destruktor klasy Vector<Size>. */
         ~Vector<Size>();

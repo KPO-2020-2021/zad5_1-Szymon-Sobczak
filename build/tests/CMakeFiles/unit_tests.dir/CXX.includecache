@@ -6,6 +6,70 @@
 
 #IncludeRegexTransform: 
 
+../inc/Cuboid.hh
+iostream
+-
+fstream
+-
+cmath
+-
+iomanip
+-
+vector3D.hh
+../inc/vector3D.hh
+matrix3x3.hh
+../inc/matrix3x3.hh
+Geometrical_solid.hh
+../inc/Geometrical_solid.hh
+
+../inc/Geometrical_solid.hh
+iostream
+-
+fstream
+-
+cmath
+-
+iomanip
+-
+vector3D.hh
+../inc/vector3D.hh
+
+../inc/matrix.hh
+size.hh
+../inc/size.hh
+vector.hh
+../inc/vector.hh
+iostream
+-
+cstdlib
+-
+cmath
+-
+
+../inc/matrix3x3.hh
+matrix.hh
+../inc/matrix.hh
+
+../inc/size.hh
+
+../inc/vector.hh
+size.hh
+../inc/size.hh
+iostream
+-
+iomanip
+-
+fstream
+-
+stdexcept
+-
+cmath
+-
+
+../inc/vector3D.hh
+vector.hh
+../inc/vector.hh
+
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
 signal.h
 -
@@ -90,7 +154,9 @@ sys/time.h
 unistd.h
 -
 
-/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/main.cpp
+/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/test_Cuboid.cpp
 ../tests/doctest/doctest.h
 /home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/doctest/doctest.h
+Cuboid.hh
+/home/ader/Pulpit/Zad 5 GIT/zad5_1-Szymon-Sobczak/tests/Cuboid.hh
 
